@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <collide comment="false" x="3" y="16">
+            <group eventID="1" id="-1">
+                <die comment="false" x="14" y="46">
+                    <this-actor comment="false" id="0" x="0" y="0"/>
+                </die>
+                <set-game-val-0 comment="false" x="14" y="78">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-game-val-0 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-game-val-0>
+                <play-sound4 comment="false" x="14" y="108">
+                    <int id="0" val="0"/>
+                    <sound eid="47" id="1"/>
+                </play-sound4>
+            </group>
+        </collide>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

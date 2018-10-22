@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <draw comment="false" x="8" y="29">
+            <group eventID="1" id="-1">
+                <draw-text comment="false" x="19" y="54">
+                    <get-game-val-0 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="45"/>
+                    <int id="2" val="45"/>
+                </draw-text>
+            </group>
+        </draw>
+    </group>
+    <group eventID="1" id="-1"/>
+</groups>

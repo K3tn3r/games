@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="2" id="0">
+        <event-collide-typetotype comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <die comment="false" x="26" y="47">
+                    <first-actor comment="false" id="0" x="0" y="0"/>
+                </die>
+                <set-val-21-1 comment="false" x="26" y="79">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-val-21-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="5"/>
+                    </minus>
+                </set-val-21-1>
+                <if comment="false" x="26" y="109">
+                    <group eventID="2" id="-1">
+                        <die comment="false" x="37" y="139">
+                            <second-actor comment="false" id="0" x="0" y="0"/>
+                        </die>
+                    </group>
+                    <less comment="false" id="0" x="0" y="0">
+                        <get-val-21-1 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </less>
+                </if>
+            </group>
+            <actortype eid="52" id="0"/>
+            <actortype eid="50" id="1"/>
+        </event-collide-typetotype>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>
