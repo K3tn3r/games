@@ -18,7 +18,7 @@
                             <ACTOR eid="this" id="0"/>
                         </clear-filter>
                     </group>
-                    <int id="0" val=".1"/>
+                    <int id="0" val=".5"/>
                     <ACTOR eid="this" id="2"/>
                 </dolater>
             </group>
