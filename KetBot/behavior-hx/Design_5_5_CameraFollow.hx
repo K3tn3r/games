@@ -69,25 +69,29 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_4_4_Jumping extends ActorScript
+class Design_5_5_CameraFollow extends ActorScript
 {
-	public var _JumpKey:String;
-	public var _JumpForce:Float;
-	public var _JumpSound:Sound;
-	public var _JumpRightAnimation:String;
-	public var _JumpLeftAnimation:String;
+	public var _intendedCameraX:Float;
+	public var _intendedCameraY:Float;
+	public var _currentCameraX:Float;
+	public var _currentCameraY:Float;
+	public var _ScrollSpeed:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
 		nameMap.set("Actor", "actor");
-		nameMap.set("Jump Key", "_JumpKey");
-		nameMap.set("Jump Force", "_JumpForce");
-		_JumpForce = 25.0;
-		nameMap.set("Jump Sound", "_JumpSound");
-		nameMap.set("Jump Right Animation", "_JumpRightAnimation");
-		nameMap.set("Jump Left Animation", "_JumpLeftAnimation");
+		nameMap.set("intendedCameraX", "_intendedCameraX");
+		_intendedCameraX = 0.0;
+		nameMap.set("intendedCameraY", "_intendedCameraY");
+		_intendedCameraY = 0.0;
+		nameMap.set("currentCameraX", "_currentCameraX");
+		_currentCameraX = 0.0;
+		nameMap.set("currentCameraY", "_currentCameraY");
+		_currentCameraY = 0.0;
+		nameMap.set("Scroll Speed", "_ScrollSpeed");
+		_ScrollSpeed = 0.0;
 		
 	}
 	
@@ -95,61 +99,77 @@ class Design_4_4_Jumping extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		actor.setActorValue("On Ground?", false);
+		_intendedCameraX = asNumber(actor.getXCenter());
+		propertyChanged("_intendedCameraX", _intendedCameraX);
+		_intendedCameraY = asNumber(actor.getYCenter());
+		propertyChanged("_intendedCameraY", _intendedCameraY);
+		_currentCameraX = asNumber(_intendedCameraX);
+		propertyChanged("_currentCameraX", _currentCameraX);
+		_currentCameraY = asNumber(_intendedCameraY);
+		propertyChanged("_currentCameraY", _currentCameraY);
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				trace("" + actor.getCurrentFrame());
-				/* Jump */
-				if((isKeyPressed(_JumpKey) && (actor.getActorValue("On Ground?") == true)))
+				_intendedCameraX = asNumber(actor.getXCenter());
+				propertyChanged("_intendedCameraX", _intendedCameraX);
+				_intendedCameraY = asNumber(actor.getYCenter());
+				propertyChanged("_intendedCameraY", _intendedCameraY);
+				if(!(_currentCameraX == _intendedCameraX))
 				{
-					playSound(_JumpSound);
-					actor.applyImpulse(0, -1, _JumpForce);
-					/* Give the Actor a chance to get off the ground */
-					runLater(1000 * 0.075, function(timeTask:TimedTask):Void
+					if(!(Math.abs(_ScrollSpeed) == 0))
 					{
-						if(actor.isAlive())
+						if((_currentCameraX < (_intendedCameraX - _ScrollSpeed)))
 						{
-							actor.setActorValue("On Ground?", false);
+							_currentCameraX += Math.abs(_ScrollSpeed);
+							propertyChanged("_currentCameraX", _currentCameraX);
 						}
-					}, actor);
-				}
-				/* Switch to jumping animations */
-				if((actor.getActorValue("On Ground?") == false))
-				{
-					if((actor.getActorValue("Facing Right?") == true))
-					{
-						actor.setAnimation("" + _JumpRightAnimation);
-						actor.setCurrentFrame(Std.int(0));
+						else if((_currentCameraX > (_intendedCameraX + _ScrollSpeed)))
+						{
+							_currentCameraX -= Math.abs(_ScrollSpeed);
+							propertyChanged("_currentCameraX", _currentCameraX);
+						}
+						else
+						{
+							_currentCameraX = asNumber(_intendedCameraX);
+							propertyChanged("_currentCameraX", _currentCameraX);
+						}
 					}
 					else
 					{
-						actor.setAnimation("" + _JumpLeftAnimation);
-						actor.setCurrentFrame(Std.int(0));
+						_currentCameraX = asNumber(_intendedCameraX);
+						propertyChanged("_currentCameraX", _currentCameraX);
 					}
 				}
-			}
-		});
-		
-		/* ======================== Something Else ======================== */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				/* Has the Actor collided with the ground? */
-				if(event.thisCollidedWithTile)
+				if(!(_currentCameraY == _intendedCameraY))
 				{
-					for(point in event.points)
+					if(!(Math.abs(_ScrollSpeed) == 0))
 					{
-						if((Math.abs(Math.round(Engine.toPixelUnits(point.normalY))) > 0.1))
+						if((_currentCameraY < (_intendedCameraY - _ScrollSpeed)))
 						{
-							actor.setActorValue("On Ground?", true);
+							_currentCameraY += Math.abs(_ScrollSpeed);
+							propertyChanged("_currentCameraY", _currentCameraY);
+						}
+						else if((_currentCameraY > (_intendedCameraY + _ScrollSpeed)))
+						{
+							_currentCameraY -= Math.abs(_ScrollSpeed);
+							propertyChanged("_currentCameraY", _currentCameraY);
+						}
+						else
+						{
+							_currentCameraY = asNumber(_intendedCameraY);
+							propertyChanged("_currentCameraY", _currentCameraY);
 						}
 					}
+					else
+					{
+						_currentCameraY = asNumber(_intendedCameraY);
+						propertyChanged("_currentCameraY", _currentCameraY);
+					}
 				}
+				engine.moveCamera(_currentCameraX, _currentCameraY);
 			}
 		});
 		

@@ -27,7 +27,7 @@
                     <group eventID="-1" id="-1">
                         <play-sound4 comment="false" x="37" y="136">
                             <int id="0" val="0"/>
-                            <SOUND eid="var" id="1" vid="3"/>
+                            <sound eid="var" id="1" vid="3"/>
                         </play-sound4>
                         <push-shove comment="false" x="37" y="163">
                             <ACTOR eid="this" id="0"/>
