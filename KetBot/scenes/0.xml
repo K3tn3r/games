@@ -9,13 +9,14 @@
     <regions/>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="1" c="false" group="3" id="2" name="Andy 1" sx="1.0" sy="1.0" x="37" y="408" z="0"/>
-        <actor a="0.0" aid="2" c="false" group="3" id="7" name="Blob 2" sx="1.0" sy="1.0" x="1998" y="431" z="0"/>
-        <actor a="0.0" aid="3" c="false" group="3" id="7" name="Blob 3" sx="1.0" sy="1.0" x="411" y="423" z="0"/>
+        <actor a="0.0" aid="1" c="false" group="5" id="2" name="Andy 1" sx="1.0" sy="1.0" x="270" y="374" z="0"/>
+        <actor a="0.0" aid="2" c="false" group="4" id="7" name="Blob 2" sx="1.0" sy="1.0" x="215" y="423" z="0"/>
+        <actor a="0.0" aid="3" c="false" group="4" id="7" name="Blob 3" sx="1.0" sy="1.0" x="522" y="423" z="0"/>
+        <actor a="0.0" aid="4" c="false" group="4" id="7" name="Blob 4" sx="1.0" sy="1.0" x="444" y="421" z="0"/>
     </actors>
     <snippets/>
     <terrain>
-        <p pts="4,6400.0,0.0,6400.0,32.0,0.0,32.0,0.0,0.0" x="0.0" y="448.0"/>
+        <p pts="16,256.0,32.0,256.0,0.0,288.0,0.0,288.0,32.0,384.0,32.0,384.0,0.0,416.0,0.0,416.0,32.0,608.0,32.0,608.0,0.0,704.0,0.0,704.0,32.0,6400.0,32.0,6400.0,64.0,0.0,64.0,0.0,32.0" x="0.0" y="416.0"/>
     </terrain>
     <atlases members="" retainAtlases="true"/>
 </scene>

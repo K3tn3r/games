@@ -64,14 +64,18 @@
                                 <int id="1" val="right"/>
                             </eq>
                         </if>
-                        <else comment="false" x="37" y="409">
+                        <else-if comment="false" x="37" y="409">
                             <group eventID="1" id="-1">
-                                <setanim comment="false" x="48" y="429">
+                                <setanim comment="false" x="48" y="439">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="idle left"/>
                                 </setanim>
                             </group>
-                        </else>
+                            <eq comment="false" id="0" x="0" y="0">
+                                <get-val-2-2 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="left"/>
+                            </eq>
+                        </else-if>
                     </group>
                 </else>
             </group>
