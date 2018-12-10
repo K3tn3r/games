@@ -18,8 +18,8 @@
             <event displayName="Created" enabled="true" id="2" name="init" order="5" repeats="true"/>
             <event displayName="Jump" enabled="true" id="3" name="step" order="3" repeats="true"/>
             <event displayName="touchfloor?" enabled="true" id="4" name="event-collide-actortogroup" order="2" repeats="true"/>
-            <event displayName="Updating" enabled="true" id="5" name="step" order="6" repeats="true"/>
-            <event displayName="Custom Event" enabled="true" id="6" name="event-custom" order="7" repeats="true"/>
+            <event displayName="dead" enabled="true" id="5" name="step" order="6" repeats="true"/>
+            <event displayName="blob score" enabled="true" id="6" name="event-custom" order="7" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_0" classname="scripts.SceneEvents_0" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="3" name="SceneEvents_0" oid="-1" package="scripts." sceneid="0" shared="false" type="scene">
@@ -40,7 +40,7 @@
             <event displayName="turn collision" enabled="true" id="7" name="collide" order="7" repeats="true"/>
             <event displayName="dead" enabled="true" id="8" name="event-collide-typetotype" order="11" repeats="true"/>
             <event displayName="walk" enabled="true" id="9" name="step" order="6" repeats="true"/>
-            <event displayName="Custom Event" enabled="true" id="10" name="event-custom" order="12" repeats="true"/>
+            <event displayName="death" enabled="true" id="10" name="event-custom" order="12" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_5_5_CameraFollow" classname="scripts.Design_5_5_CameraFollow" desc="Attach to an actor to make the camera follow it. You can then specify the speed at which the camera should &quot;scroll&quot; towards the actor." description="Attach to an actor to make the camera follow it. You can then specify the speed at which the camera should &quot;scroll&quot; towards the actor." design="true" drawOrder="0" id="5" name="Camera Follow" oid="-1" package="scripts" shared="false" type="actor">
