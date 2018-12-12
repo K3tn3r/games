@@ -35,6 +35,9 @@
     <tileset across="1" atlasID="0" desc="" down="1" id="12" name="andy title" oid="-1" shared="false" th="32" tw="32">
         <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
     </tileset>
+    <tileset across="1" atlasID="0" desc="" down="1" id="45" name="blank direction" oid="-1" shared="false" th="32" tw="32">
+        <tile collision="-1" data="" durations="100" frames="0" id="0" order="-1"/>
+    </tileset>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="4" fixedrot="true" fric="0.2" gid="4" id="7" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Blob" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="8" static="false">
         <snippets/>
     </actor>
@@ -66,20 +69,32 @@
     <tileset across="1" atlasID="0" desc="" down="1" id="26" name="D" oid="-1" shared="false" th="32" tw="32">
         <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
     </tileset>
+    <tileset across="1" atlasID="0" desc="" down="1" id="47" name="double jump" oid="-1" shared="false" th="32" tw="32">
+        <tile collision="-1" data="" durations="100" frames="0" id="0" order="-1"/>
+    </tileset>
     <tileset across="1" atlasID="0" desc="" down="1" id="28" name="E" oid="-1" shared="false" th="32" tw="32">
         <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
     </tileset>
     <tileset across="1" atlasID="0" desc="" down="1" id="5" name="ground" oid="-1" shared="false" th="32" tw="32">
         <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
     </tileset>
-    <tileset across="1" atlasID="0" desc="" down="1" id="33" name="i" oid="-1" shared="false" th="32" tw="32">
+    <tileset across="1" atlasID="0" desc="" down="1" id="35" name="i" oid="-1" shared="false" th="32" tw="32">
         <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
+    </tileset>
+    <tileset across="1" atlasID="0" desc="" down="1" id="46" name="jump" oid="-1" shared="false" th="32" tw="32">
+        <tile collision="-1" data="" durations="100" frames="0" id="0" order="-1"/>
+    </tileset>
+    <tileset across="1" atlasID="0" desc="" down="1" id="43" name="left" oid="-1" shared="false" th="32" tw="32">
+        <tile collision="-1" data="" durations="100" frames="0" id="0" order="-1"/>
     </tileset>
     <tileset across="1" atlasID="0" desc="" down="1" id="29" name="N" oid="-1" shared="false" th="32" tw="32">
         <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
     </tileset>
     <tileset across="1" atlasID="0" desc="" down="1" id="31" name="R" oid="-1" shared="false" th="32" tw="32">
         <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
+    </tileset>
+    <tileset across="1" atlasID="0" desc="" down="1" id="44" name="right" oid="-1" shared="false" th="32" tw="32">
+        <tile collision="-1" data="" durations="100" frames="0" id="0" order="-1"/>
     </tileset>
     <tileset across="1" atlasID="0" desc="" down="1" id="30" name="T" oid="-1" shared="false" th="32" tw="32">
         <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>

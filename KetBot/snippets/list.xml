@@ -15,11 +15,12 @@
         <blocks/>
         <events>
             <event displayName="left/right/idle" enabled="true" id="1" name="step" order="1" repeats="true"/>
-            <event displayName="Created" enabled="true" id="2" name="init" order="5" repeats="true"/>
-            <event displayName="Jump" enabled="true" id="3" name="step" order="3" repeats="true"/>
-            <event displayName="touchfloor?" enabled="true" id="4" name="event-collide-actortogroup" order="2" repeats="true"/>
-            <event displayName="dead" enabled="true" id="5" name="step" order="6" repeats="true"/>
-            <event displayName="blob score" enabled="true" id="6" name="event-custom" order="7" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="6" repeats="true"/>
+            <event displayName="Jump" enabled="true" id="3" name="step" order="4" repeats="true"/>
+            <event displayName="touchfloor?" enabled="true" id="4" name="event-collide-actortogroup" order="3" repeats="true"/>
+            <event displayName="dead" enabled="true" id="5" name="step" order="7" repeats="true"/>
+            <event displayName="blob score" enabled="true" id="6" name="event-custom" order="8" repeats="true"/>
+            <event displayName="Actor - Type" enabled="true" id="7" name="event-collide-actortotype" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_0" classname="scripts.SceneEvents_0" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="3" name="SceneEvents_0" oid="-1" package="scripts." sceneid="0" shared="false" type="scene">
