@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <setanim comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="Animation"/>
+                </setanim>
+            </group>
+        </step>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <event-collide-typetotype comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <if comment="false" x="26" y="47">
+                    <group eventID="2" id="-1">
+                        <shout comment="false" x="37" y="85">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="death"/>
+                        </shout>
+                        <shout comment="false" x="37" y="112">
+                            <first-actor comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="killBlob"/>
+                        </shout>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <collision-top comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="1"/>
+                        </collision-top>
+                        <get-val-6-1 comment="false" id="1" x="0" y="0"/>
+                    </and>
+                </if>
+            </group>
+            <actortype eid="2" id="0"/>
+            <actortype eid="48" id="1"/>
+        </event-collide-typetotype>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-val-6-1 comment="false" x="26" y="40">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-6-1>
+                <setanim comment="false" x="26" y="65">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="dead"/>
+                </setanim>
+                <dolater comment="false" x="26" y="92">
+                    <group eventID="3" id="-1">
+                        <die comment="false" x="37" y="119">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                    <int id="0" val=".8"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+            <int id="0" val="death"/>
+        </event-custom>
+    </group>
+    <group eventID="3" id="-1"/>
+</groups>

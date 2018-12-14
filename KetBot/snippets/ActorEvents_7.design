@@ -77,11 +77,19 @@
                     <and comment="false" id="0" x="0" y="0">
                         <collision-top comment="false" id="0" x="0" y="0">
                             <int id="0" val="0"/>
-                            <int id="1" val="1"/>
+                            <int id="1" val="0"/>
                         </collision-top>
                         <get-val-4-5 comment="false" id="1" x="0" y="0"/>
                     </and>
                 </if>
+                <else comment="false" x="26" y="156">
+                    <group eventID="8" id="-1">
+                        <shout comment="false" x="37" y="176">
+                            <first-actor comment="false" id="0" x="0" y="0"/>
+                            <int id="1" val="dead"/>
+                        </shout>
+                    </group>
+                </else>
             </group>
             <actortype eid="2" id="0"/>
             <actortype eid="7" id="1"/>
