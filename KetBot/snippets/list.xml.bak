@@ -13,6 +13,7 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="dead" hidden="false" id="7" name="_dead" order="2"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="score" hidden="false" id="8" name="_score" order="3"/>
         <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="is alive" hidden="false" id="9" name="_isalive" order="7"/>
+        <number default="30" defaultValue="30" desc="" dropdown="" fullname="RunSpeed" hidden="false" id="10" name="_RunSpeed" order="8"/>
         <blocks/>
         <events>
             <event displayName="left/right/idle" enabled="true" id="1" name="step" order="2" repeats="true"/>

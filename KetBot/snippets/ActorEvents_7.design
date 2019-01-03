@@ -36,25 +36,28 @@
             <group eventID="7" id="-1">
                 <if comment="false" x="26" y="45">
                     <group eventID="7" id="-1">
-                        <set-val-4-2 comment="false" x="37" y="83">
+                        <set-val-4-2 comment="false" x="37" y="88">
                             <not comment="false" id="0" x="0" y="0">
                                 <get-val-4-2 comment="false" id="0" x="0" y="0"/>
                             </not>
                         </set-val-4-2>
-                        <set-val-4-4 comment="false" x="37" y="113">
+                        <set-val-4-4 comment="false" x="37" y="118">
                             <int id="0" val="3"/>
                         </set-val-4-4>
                     </group>
-                    <or comment="false" id="0" x="0" y="0">
-                        <collision-right comment="false" id="0" x="0" y="0">
-                            <int id="0" val="0"/>
-                            <int id="1" val="0"/>
-                        </collision-right>
-                        <collision-left comment="false" id="1" x="0" y="0">
-                            <int id="0" val="0"/>
-                            <int id="1" val="0"/>
-                        </collision-left>
-                    </or>
+                    <and comment="false" id="0" x="0" y="0">
+                        <or comment="false" id="0" x="0" y="0">
+                            <collision-right comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <int id="1" val="0"/>
+                            </collision-right>
+                            <collision-left comment="false" id="1" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <int id="1" val="0"/>
+                            </collision-left>
+                        </or>
+                        <get-val-4-5 comment="false" id="1" x="0" y="0"/>
+                    </and>
                 </if>
             </group>
         </collide>
@@ -77,19 +80,36 @@
                     <and comment="false" id="0" x="0" y="0">
                         <collision-top comment="false" id="0" x="0" y="0">
                             <int id="0" val="0"/>
-                            <int id="1" val="0"/>
+                            <int id="1" val="1"/>
                         </collision-top>
                         <get-val-4-5 comment="false" id="1" x="0" y="0"/>
                     </and>
                 </if>
-                <else comment="false" x="26" y="156">
+                <else-if comment="false" x="26" y="156">
                     <group eventID="8" id="-1">
-                        <shout comment="false" x="37" y="176">
+                        <shout comment="false" x="37" y="199">
                             <first-actor comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="dead"/>
                         </shout>
+                        <set-val-4-2 comment="false" x="37" y="231">
+                            <not comment="false" id="0" x="0" y="0">
+                                <get-val-4-2 comment="false" id="0" x="0" y="0"/>
+                            </not>
+                        </set-val-4-2>
+                        <set-val-4-4 comment="false" x="37" y="261">
+                            <int id="0" val="3"/>
+                        </set-val-4-4>
                     </group>
-                </else>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <collision-top comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <int id="1" val="1"/>
+                            </collision-top>
+                        </not>
+                        <get-val-4-5 comment="false" id="1" x="0" y="0"/>
+                    </and>
+                </else-if>
             </group>
             <actortype eid="2" id="0"/>
             <actortype eid="7" id="1"/>
@@ -140,15 +160,7 @@
             </group>
         </step>
     </group>
-    <group eventID="9" id="1">
-        <true comment="false" x="592" y="352"/>
-    </group>
-    <group eventID="9" id="-1">
-        <eq comment="false" x="444" y="104">
-            <int id="0" val=""/>
-            <false comment="false" id="1" x="0" y="0"/>
-        </eq>
-    </group>
+    <group eventID="9" id="-1"/>
     <group eventID="10" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="10" id="-1">

@@ -29,7 +29,7 @@
             <poly data="4,1,3,29,3,29,40,1,40" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 5" rest="0.0" sensor="false"/>
         </anim>
         <anim across="5" down="4" durations="100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100" height="160" id="6" loop="true" name="dead" numframes="17" originx="16" originy="20" sync="false" version="2" width="160">
-            <poly data="4,0,0,32,0,32,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="dead" rest="0.0" sensor="false"/>
+            <poly data="4,0,0,32,0,32,40,0,40" density="0.1" fric="0.2" gid="5" id="0" name="dead" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <tileset across="1" atlasID="0" desc="" down="1" id="12" name="andy title" oid="-1" shared="false" th="32" tw="32">
@@ -43,7 +43,7 @@
     </actor>
     <sprite atlasID="0" default="4" defaultAnimation="4" desc="" height="16" id="8" name="Blob" shared="false" width="32">
         <anim across="3" down="3" durations="100,100,100,100,100,100,100,100" height="48" id="2" loop="false" name="dead" numframes="8" originx="16" originy="8" sync="false" version="2" width="96">
-            <poly data="4,0,8,32,8,32,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 2" rest="0.0" sensor="false"/>
+            <poly data="4,0,8,32,8,32,16,0,16" density="0.1" fric="0.2" gid="4" id="0" name="Animation 2" rest="0.0" sensor="false"/>
         </anim>
         <anim across="3" down="3" durations="100,100,100,100,100,100,100,100,100" height="48" id="3" loop="true" name="walk right" numframes="9" originx="16" originy="8" sync="false" version="2" width="96">
             <poly data="4,0,0,32,0,32,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 3" rest="0.0" sensor="false"/>
@@ -76,6 +76,15 @@
         <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
     </tileset>
     <tileset across="1" atlasID="0" desc="" down="1" id="5" name="ground" oid="-1" shared="false" th="32" tw="32">
+        <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
+    </tileset>
+    <tileset across="1" atlasID="0" desc="" down="1" id="50" name="groundB" oid="-1" shared="false" th="32" tw="32">
+        <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
+    </tileset>
+    <tileset across="1" atlasID="0" desc="" down="1" id="51" name="groundM" oid="-1" shared="false" th="32" tw="32">
+        <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
+    </tileset>
+    <tileset across="1" atlasID="0" desc="" down="1" id="52" name="groundT" oid="-1" shared="false" th="32" tw="32">
         <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
     </tileset>
     <tileset across="1" atlasID="0" desc="" down="1" id="35" name="i" oid="-1" shared="false" th="32" tw="32">
