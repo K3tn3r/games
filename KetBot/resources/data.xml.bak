@@ -52,6 +52,29 @@
             <poly data="4,0,0,32,0,32,16,0,16" density="0.1" fric="0.2" gid="-1000" id="0" name="Box" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="6" fixedrot="false" fric="0.2" gid="3" id="53" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Bloock" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="54" static="false">
+        <snippets/>
+    </actor>
+    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="64" id="54" name="Bloock" shared="false" width="32">
+        <anim across="3" down="2" durations="100,100,100,100,100" height="128" id="0" loop="true" name="walk left" numframes="5" originx="16" originy="32" sync="false" version="2" width="96">
+            <poly data="4,0,0,32,0,32,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="walk left" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="3" down="2" durations="100,100,100,100,100" height="128" id="1" loop="true" name="walk right" numframes="5" originx="16" originy="32" sync="false" version="2" width="96">
+            <poly data="4,0,0,32,0,32,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="walk right" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="3" down="2" durations="100,100,100,100,100" height="128" id="2" loop="true" name="dead1" numframes="5" originx="16" originy="32" sync="false" version="2" width="96">
+            <poly data="4,0,0,32,0,32,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="dead1" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="3" down="2" durations="100,100,100,100,100" height="64" id="3" loop="true" name="dead1 walk left" numframes="5" originx="16" originy="16" sync="false" version="2" width="96">
+            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="dead1 walk left" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="3" down="2" durations="100,100,100,100,100" height="64" id="4" loop="true" name="dead1 walk right" numframes="5" originx="16" originy="16" sync="false" version="2" width="96">
+            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 4" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="3" down="3" durations="100,100,100,100,100,100,100,100" height="96" id="5" loop="true" name="dead2" numframes="8" originx="16" originy="16" sync="false" version="2" width="96">
+            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="dead2" rest="0.0" sensor="false"/>
+        </anim>
+    </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="1" fixedrot="false" fric="0.2" gid="3" id="0" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="bomb" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="1" static="false">
         <snippets/>
     </actor>

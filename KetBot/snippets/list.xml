@@ -58,4 +58,11 @@
             <event displayName="Created" enabled="true" id="2" name="init" order="1" repeats="true"/>
         </events>
     </snippet>
+    <snippet actorid="53" attachedevent="true" class="scripts.ActorEvents_53" classname="scripts.ActorEvents_53" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="6" name="ActorEvents_53" oid="-1" package="scripts." shared="false" type="actor">
+        <number default="5" defaultValue="5" desc="" dropdown="" fullname="speed" hidden="false" id="1" name="_speed" order="0"/>
+        <blocks/>
+        <events>
+            <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
+        </events>
+    </snippet>
 </pack>
