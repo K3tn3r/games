@@ -54,6 +54,9 @@
     <groups>
         <group desc="" id="4" name="blob"/>
         <group desc="" id="5" name="Andy"/>
+        <group desc="" id="6" name="Bloock"/>
+        <group desc="" id="7" name="Booter"/>
+        <group desc="" id="8" name="Boofer"/>
     </groups>
     <cgroups>
         <cgroup g1="0" g2="1"/>
@@ -61,9 +64,25 @@
         <cgroup g1="1" g2="3"/>
         <cgroup g1="1" g2="4"/>
         <cgroup g1="1" g2="5"/>
+        <cgroup g1="1" g2="6"/>
         <cgroup g1="3" g2="3"/>
+        <cgroup g1="3" g2="6"/>
+        <cgroup g1="3" g2="7"/>
+        <cgroup g1="3" g2="8"/>
         <cgroup g1="4" g2="4"/>
         <cgroup g1="4" g2="5"/>
+        <cgroup g1="4" g2="6"/>
+        <cgroup g1="4" g2="7"/>
+        <cgroup g1="4" g2="8"/>
+        <cgroup g1="5" g2="6"/>
+        <cgroup g1="5" g2="7"/>
+        <cgroup g1="5" g2="8"/>
+        <cgroup g1="6" g2="6"/>
+        <cgroup g1="6" g2="7"/>
+        <cgroup g1="6" g2="8"/>
+        <cgroup g1="7" g2="7"/>
+        <cgroup g1="7" g2="8"/>
+        <cgroup g1="8" g2="8"/>
     </cgroups>
     <input>
         <key id="0" keyname="UP" name="up" vk="38" vks="38"/>
@@ -110,7 +129,7 @@
     </collisions>
     <autotileFormats/>
     <atlases>
-        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,2,5,7,11,12,25,26,28,29,30,31,32,34,35,43,44,45,46,47,50,51,52,53," name="Main Atlas" pvr="false" resize="0" target="0"/>
+        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,2,5,7,11,12,25,26,28,29,30,31,32,34,35,43,44,45,46,47,50,51,52,53,55,57,59,61,62," name="Main Atlas" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="1" members="" name="Atlas 2" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="2" members="" name="Atlas 3" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="3" members="" name="Atlas 4" pvr="false" resize="0" target="0"/>
