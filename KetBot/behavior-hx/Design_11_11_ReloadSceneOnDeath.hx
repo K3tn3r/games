@@ -69,44 +69,89 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_5_5_CameraFollow extends ActorScript
+class Design_11_11_ReloadSceneOnDeath extends ActorScript
 {
-	public var _intendedCameraX:Float;
-	public var _intendedCameraY:Float;
-	public var _currentCameraX:Float;
-	public var _currentCameraY:Float;
-	public var _ScrollSpeed:Float;
+	public var _OutTime:Float;
+	public var _InTime:Float;
+	public var _TransitionStyle:String;
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_Reload():Void
+	{
+		if(!(isTransitioning()))
+		{
+			if((_TransitionStyle == "Fade"))
+			{
+				reloadCurrentScene(createFadeOut(_OutTime), createFadeIn(_InTime));
+			}
+			else if((_TransitionStyle == "Blinds"))
+			{
+				reloadCurrentScene(createBlindsOut(_OutTime), createBlindsIn(_InTime));
+			}
+			else if((_TransitionStyle == "Bubbles"))
+			{
+				reloadCurrentScene(createBubblesOut(_OutTime), createBubblesIn(_InTime));
+			}
+			else if((_TransitionStyle == "Spotlight"))
+			{
+				reloadCurrentScene(createCircleOut(_OutTime), createCircleIn(_InTime));
+			}
+			else if((_TransitionStyle == "Blur"))
+			{
+				reloadCurrentScene(createPixelizeOut(_OutTime), createPixelizeIn(_InTime));
+			}
+			else if((_TransitionStyle == "Box"))
+			{
+				reloadCurrentScene(createRectangleOut(_OutTime), createRectangleIn(_InTime));
+			}
+			else if((_TransitionStyle == "Crossfade"))
+			{
+				reloadCurrentScene(null, createCrossfadeTransition(_OutTime));
+			}
+			else if((_TransitionStyle == "Slide Up"))
+			{
+				reloadCurrentScene(null, createSlideUpTransition(_OutTime));
+			}
+			else if((_TransitionStyle == "Slide Down"))
+			{
+				reloadCurrentScene(null, createSlideDownTransition(_OutTime));
+			}
+			else if((_TransitionStyle == "Slide Left"))
+			{
+				reloadCurrentScene(null, createSlideLeftTransition(_OutTime));
+			}
+			else if((_TransitionStyle == "Slide Right"))
+			{
+				reloadCurrentScene(null, createSlideRightTransition(_OutTime));
+			}
+		}
+	}
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
 		nameMap.set("Actor", "actor");
-		nameMap.set("intendedCameraX", "_intendedCameraX");
-		_intendedCameraX = 0.0;
-		nameMap.set("intendedCameraY", "_intendedCameraY");
-		_intendedCameraY = 0.0;
-		nameMap.set("currentCameraX", "_currentCameraX");
-		_currentCameraX = 0.0;
-		nameMap.set("currentCameraY", "_currentCameraY");
-		_currentCameraY = 0.0;
-		nameMap.set("Scroll Speed", "_ScrollSpeed");
-		_ScrollSpeed = 0.0;
+		nameMap.set("Out Time", "_OutTime");
+		_OutTime = 0.5;
+		nameMap.set("In Time", "_InTime");
+		_InTime = 0.5;
+		nameMap.set("Transition Style", "_TransitionStyle");
+		_TransitionStyle = "";
 		
 	}
 	
 	override public function init()
 	{
 		
-		/* ======================== When Creating ========================= */
-		_intendedCameraX = asNumber(actor.getXCenter());
-		propertyChanged("_intendedCameraX", _intendedCameraX);
-		_intendedCameraY = asNumber(actor.getYCenter());
-		propertyChanged("_intendedCameraY", _intendedCameraY);
-		_currentCameraX = asNumber(_intendedCameraX);
-		propertyChanged("_currentCameraX", _currentCameraX);
-		_currentCameraY = asNumber(_intendedCameraY);
-		propertyChanged("_currentCameraY", _currentCameraY);
+		/* ======================== Specific Actor ======================== */
+		addWhenKilledListener(actor, function(list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				_customEvent_Reload();
+			}
+		});
 		
 	}
 	

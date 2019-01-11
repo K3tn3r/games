@@ -40,6 +40,7 @@ import box2D.common.math.B2Vec2;
 import box2D.dynamics.B2Body;
 import box2D.dynamics.B2Fixture;
 import box2D.dynamics.joints.B2Joint;
+import box2D.collision.shapes.B2Shape;
 
 import motion.Actuate;
 import motion.easing.Back;
@@ -69,45 +70,26 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_53 extends ActorScript
+class Design_10_10_BackgroundMusic extends SceneScript
 {
-	public var _speed:Float;
-	public var _left:Bool;
-	public var _Isalive:Bool;
+	public var _Channel:Float;
+	public var _StopChannelFirst:Bool;
+	public var _MusictoPlay:Sound;
 	
 	
-	public function new(dummy:Int, actor:Actor, dummy2:Engine)
+	public function new(dummy:Int, dummy2:Engine)
 	{
-		super(actor);
-		nameMap.set("speed", "_speed");
-		_speed = 5.0;
-		nameMap.set("left", "_left");
-		_left = false;
-		nameMap.set("Is alive", "_Isalive");
-		_Isalive = false;
+		super();
+		nameMap.set("Channel", "_Channel");
+		_Channel = 0.0;
+		nameMap.set("Stop Channel First", "_StopChannelFirst");
+		_StopChannelFirst = true;
+		nameMap.set("Music to Play", "_MusictoPlay");
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* ======================== When Updating ========================= */
-		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if((_left && _Isalive))
-				{
-					actor.setXVelocity(-(_speed));
-					actor.setAnimation("" + "walk left");
-				}
-				else if((!(_left) && _Isalive))
-				{
-					actor.setXVelocity(_speed);
-					actor.setAnimation("" + "walk right");
-				}
-			}
-		});
 		
 	}
 	

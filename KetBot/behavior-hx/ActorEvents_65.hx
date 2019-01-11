@@ -69,44 +69,18 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class Design_5_5_CameraFollow extends ActorScript
+class ActorEvents_65 extends ActorScript
 {
-	public var _intendedCameraX:Float;
-	public var _intendedCameraY:Float;
-	public var _currentCameraX:Float;
-	public var _currentCameraY:Float;
-	public var _ScrollSpeed:Float;
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("Actor", "actor");
-		nameMap.set("intendedCameraX", "_intendedCameraX");
-		_intendedCameraX = 0.0;
-		nameMap.set("intendedCameraY", "_intendedCameraY");
-		_intendedCameraY = 0.0;
-		nameMap.set("currentCameraX", "_currentCameraX");
-		_currentCameraX = 0.0;
-		nameMap.set("currentCameraY", "_currentCameraY");
-		_currentCameraY = 0.0;
-		nameMap.set("Scroll Speed", "_ScrollSpeed");
-		_ScrollSpeed = 0.0;
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* ======================== When Creating ========================= */
-		_intendedCameraX = asNumber(actor.getXCenter());
-		propertyChanged("_intendedCameraX", _intendedCameraX);
-		_intendedCameraY = asNumber(actor.getYCenter());
-		propertyChanged("_intendedCameraY", _intendedCameraY);
-		_currentCameraX = asNumber(_intendedCameraX);
-		propertyChanged("_currentCameraX", _currentCameraX);
-		_currentCameraY = asNumber(_intendedCameraY);
-		propertyChanged("_currentCameraY", _currentCameraY);
 		
 	}
 	
