@@ -110,12 +110,12 @@
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="7" fixedrot="true" fric="0.2" gid="7" id="55" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Booter" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="56" static="false">
         <snippets/>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="32" id="56" name="Booter" shared="false" width="32">
-        <anim across="4" down="3" durations="100,100,100,100,100,100,100,100,100,100" height="96" id="0" loop="false" name="Animation 0" numframes="10" originx="16" originy="16" sync="false" version="2" width="128">
-            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
-        </anim>
+    <sprite atlasID="0" default="2" defaultAnimation="2" desc="" height="32" id="56" name="Booter" shared="false" width="32">
         <anim across="3" down="3" durations="100,100,100,100,100,100,100" height="96" id="1" loop="true" name="Animation 1" numframes="7" originx="16" originy="16" sync="false" version="2" width="96">
             <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
+        </anim>
+        <anim across="4" down="3" durations="100,100,100,100,100,100,100,100,100,100" height="96" id="2" loop="true" name="stance" numframes="10" originx="16" originy="16" sync="false" version="2" width="128">
+            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="stance" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="8" fixedrot="false" fric="0.2" gid="3" id="57" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Booter bullet" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="58" static="false">
@@ -133,7 +133,7 @@
         <tile collision="0" data="" durations="100" frames="3" id="3" order="-1"/>
     </tileset>
     <tileset across="1" atlasID="0" desc="" down="1" id="63" name="orange" oid="-1" shared="false" th="32" tw="32">
-        <tile collision="-1" data="" durations="100" frames="0" id="0" order="-1"/>
+        <tile collision="0" data="" durations="100" frames="0" id="0" order="-1"/>
     </tileset>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="10" fixedrot="false" fric="0.2" gid="3" id="65" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="power up1" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="66" static="false">
         <snippets/>

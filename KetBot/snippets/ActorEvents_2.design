@@ -90,14 +90,17 @@
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <setanim comment="false" x="26" y="40">
+                <camera-follow comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                </camera-follow>
+                <setanim comment="false" x="26" y="67">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="idle right"/>
                 </setanim>
-                <set-val-2-1 comment="false" x="26" y="67">
+                <set-val-2-1 comment="false" x="26" y="94">
                     <int id="0" val="20"/>
                 </set-val-2-1>
-                <actor-set-prop comment="false" x="26" y="87">
+                <actor-set-prop comment="false" x="26" y="114">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="on ground?"/>
                     <false comment="false" id="2" x="0" y="0"/>
