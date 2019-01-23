@@ -114,17 +114,21 @@
             <group eventID="3" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="3" id="-1">
-                        <set-dxy comment="false" x="37" y="78">
+                        <setanim comment="false" x="37" y="78">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Jump"/>
+                        </setanim>
+                        <set-dxy comment="false" x="37" y="105">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
                             <get-val-2-3 comment="false" id="2" x="0" y="0"/>
                         </set-dxy>
-                        <set-val-2-5 comment="false" x="37" y="110">
+                        <set-val-2-5 comment="false" x="37" y="137">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-2-5>
-                        <dolater comment="false" x="37" y="135">
+                        <dolater comment="false" x="37" y="162">
                             <group eventID="3" id="-1">
-                                <set-val-2-6 comment="false" x="48" y="162">
+                                <set-val-2-6 comment="false" x="48" y="189">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-2-6>
                             </group>
@@ -143,14 +147,18 @@
                         </eq>
                     </and>
                 </if>
-                <else-if comment="false" x="26" y="211">
+                <else-if comment="false" x="26" y="238">
                     <group eventID="3" id="-1">
-                        <set-dxy comment="false" x="37" y="249">
+                        <setanim comment="false" x="37" y="276">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="Jump"/>
+                        </setanim>
+                        <set-dxy comment="false" x="37" y="303">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
                             <get-val-2-3 comment="false" id="2" x="0" y="0"/>
                         </set-dxy>
-                        <set-val-2-6 comment="false" x="37" y="281">
+                        <set-val-2-6 comment="false" x="37" y="335">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-2-6>
                     </group>
@@ -198,30 +206,6 @@
         </event-custom>
     </group>
     <group eventID="6" id="-1"/>
-    <group eventID="8" id="0">
-        <event-custom comment="false" x="15" y="15">
-            <group eventID="8" id="-1">
-                <set-val-2-9 comment="false" x="26" y="40">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-val-2-9>
-                <setanim comment="false" x="26" y="65">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="dead"/>
-                </setanim>
-                <dolater comment="false" x="26" y="92">
-                    <group eventID="8" id="-1">
-                        <die comment="false" x="37" y="119">
-                            <ACTOR eid="this" id="0"/>
-                        </die>
-                    </group>
-                    <int id="0" val="1.6"/>
-                    <ACTOR eid="this" id="2"/>
-                </dolater>
-            </group>
-            <int id="0" val="dead"/>
-        </event-custom>
-    </group>
-    <group eventID="8" id="-1"/>
     <group eventID="9" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="9" id="-1">
@@ -239,4 +223,50 @@
         </event-custom>
     </group>
     <group eventID="10" id="-1"/>
+    <group eventID="11" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="11" id="-1">
+                <set-val-2-9 comment="false" x="26" y="40">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-2-9>
+                <setanim comment="false" x="26" y="65">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="dead"/>
+                </setanim>
+                <dolater comment="false" x="26" y="92">
+                    <group eventID="11" id="-1">
+                        <die comment="false" x="37" y="119">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                        <scene-reload-color comment="false" x="37" y="146">
+                            <int id="0" val="0"/>
+                            <int id="1" val=".5"/>
+                            <color b="0" g="0" id="2" r="0"/>
+                            <int id="3" val="3"/>
+                            <int id="4" val=".5"/>
+                            <color b="0" g="0" id="5" r="0"/>
+                        </scene-reload-color>
+                    </group>
+                    <int id="0" val="1.6"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
+            </group>
+            <int id="0" val="dead"/>
+        </event-custom>
+    </group>
+    <group eventID="11" id="-1"/>
+    <group eventID="12" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="12" id="-1"/>
+            <int id="0" val="killBoofer"/>
+        </event-custom>
+    </group>
+    <group eventID="12" id="-1"/>
+    <group eventID="13" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="13" id="-1"/>
+            <int id="0" val=""/>
+        </event-custom>
+    </group>
+    <group eventID="13" id="-1"/>
 </groups>
