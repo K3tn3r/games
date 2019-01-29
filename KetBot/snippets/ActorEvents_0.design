@@ -204,18 +204,18 @@
             <group eventID="7" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="7" id="-1">
-                        <set-val-1-5 comment="false" x="37" y="98">
+                        <set-val-1-5 comment="false" x="37" y="88">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-1-5>
-                        <setanim comment="false" x="37" y="123">
+                        <setanim comment="false" x="37" y="113">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="explotion"/>
                         </setanim>
-                        <dolater comment="false" x="37" y="150">
+                        <dolater comment="false" x="37" y="140">
                             <group eventID="7" id="-1">
-                                <if comment="false" x="48" y="177">
+                                <if comment="false" x="48" y="167">
                                     <group eventID="7" id="-1">
-                                        <scene-shout comment="false" x="59" y="225">
+                                        <scene-shout comment="false" x="59" y="215">
                                             <int id="0" val="AndyDied"/>
                                         </scene-shout>
                                     </group>
@@ -232,7 +232,7 @@
                                         <get-game-val-2 comment="false" id="1" x="0" y="0"/>
                                     </lesseq>
                                 </if>
-                                <die comment="false" x="48" y="257">
+                                <die comment="false" x="48" y="247">
                                     <ACTOR eid="this" id="0"/>
                                 </die>
                             </group>
@@ -256,7 +256,7 @@
             </group>
         </step>
     </group>
-    <group eventID="7" id="17">
+    <group eventID="7" id="1">
         <say comment="false" x="465" y="427">
             <ACTOR eid="this" id="0"/>
             <int id="1" val=""/>

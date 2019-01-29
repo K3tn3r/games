@@ -31,8 +31,8 @@
         <actor a="0.0" aid="18" c="false" group="3" id="0" name="bomb 18" sx="1.0" sy="1.0" x="3068" y="413" z="0"/>
         <actor a="0.0" aid="19" c="false" group="3" id="0" name="bomb 19" sx="1.0" sy="1.0" x="4989" y="414" z="0"/>
         <actor a="0.0" aid="20" c="false" group="8" id="59" name="Boofer 20" sx="1.0" sy="1.0" x="5733" y="411" z="0"/>
-        <actor a="0.0" aid="21" c="false" group="6" id="53" name="Bloock 21" sx="1.0" sy="1.0" x="4644" y="384" z="0"/>
-        <actor a="0.0" aid="22" c="false" group="5" id="2" name="Andy 22" sx="1.0" sy="1.0" x="181" y="404" z="0"/>
+        <actor a="0.0" aid="21" c="false" group="6" id="53" name="Bloock 21" sx="1.0" sy="1.0" x="4688" y="382" z="0"/>
+        <actor a="0.0" aid="22" c="false" group="5" id="2" name="Andy 22" sx="1.0" sy="1.0" x="293" y="406" z="0"/>
         <actor a="0.0" aid="23" c="false" group="3" id="65" name="power up1 23" sx="1.0" sy="1.0" x="4610" y="92" z="0"/>
         <actor a="0.0" aid="24" c="false" group="7" id="55" name="Booter 24" sx="1.0" sy="1.0" x="6366" y="251" z="0"/>
     </actors>

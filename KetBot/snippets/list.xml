@@ -29,29 +29,31 @@
         <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="is alive" hidden="false" id="9" name="_isalive" order="7"/>
         <number default="30.0" defaultValue="30.0" desc="" dropdown="" fullname="RunSpeed" hidden="false" id="10" name="_RunSpeed" order="8"/>
         <number default="0" defaultValue="0" desc="" dropdown="" fullname="Lives" hidden="false" id="11" name="_Lives" order="9"/>
-        <number default="0" defaultValue="0" desc="" dropdown="" fullname="StartLives" hidden="false" id="12" name="_StartLives" order="10"/>
+        <number default="0.0" defaultValue="0.0" desc="" dropdown="" fullname="StartLives" hidden="false" id="12" name="_StartLives" order="10"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="isJumping" hidden="false" id="13" name="_isJumping" order="11"/>
         <blocks/>
         <events>
-            <event displayName="left/right/idle" enabled="true" id="1" name="step" order="4" repeats="true"/>
-            <event displayName="Created" enabled="true" id="2" name="init" order="3" repeats="true"/>
-            <event displayName="Jump" enabled="true" id="3" name="step" order="5" repeats="true"/>
-            <event displayName="touchfloor?" enabled="true" id="4" name="event-collide-actortogroup" order="6" repeats="true"/>
-            <event displayName="blob score" enabled="true" id="6" name="event-custom" order="9" repeats="true"/>
-            <event displayName="bloock score" enabled="true" id="10" name="event-custom" order="11" repeats="true"/>
-            <event displayName="dead" enabled="true" id="11" name="event-custom" order="14" repeats="true"/>
-            <event displayName="Boofer score" enabled="true" id="12" name="event-custom" order="12" repeats="true"/>
-            <event displayName="Custom Event" enabled="true" id="13" name="event-custom" order="13" repeats="true"/>
+            <event displayName="Time" enabled="true" id="16" name="step" order="3" repeats="true"/>
+            <event displayName="left/right/idle" enabled="true" id="1" name="step" order="5" repeats="true"/>
+            <event displayName="Created" enabled="true" id="2" name="init" order="4" repeats="true"/>
+            <event displayName="Jump" enabled="true" id="3" name="step" order="6" repeats="true"/>
+            <event displayName="touchfloor?" enabled="true" id="4" name="event-collide-actortogroup" order="7" repeats="true"/>
+            <event displayName="blob score" enabled="true" id="6" name="event-custom" order="10" repeats="true"/>
+            <event displayName="bloock score" enabled="true" id="10" name="event-custom" order="12" repeats="true"/>
+            <event displayName="dead" enabled="true" id="11" name="event-custom" order="15" repeats="true"/>
+            <event displayName="Boofer score" enabled="true" id="12" name="event-custom" order="13" repeats="true"/>
+            <event displayName="Custom Event" enabled="true" id="13" name="event-custom" order="14" repeats="true"/>
             <event displayName="screen end" enabled="true" id="14" name="step" order="2" repeats="true"/>
-            <event displayName="Pit dead" enabled="true" id="15" name="step" order="16" repeats="true"/>
+            <event displayName="Pit dead" enabled="true" id="15" name="step" order="17" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_0" classname="scripts.SceneEvents_0" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="3" name="SceneEvents_0" oid="-1" package="scripts." sceneid="0" shared="false" type="scene">
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
-            <event displayName="AndyDied" enabled="true" id="3" name="event-custom" order="6" repeats="true"/>
-            <event displayName="Time" enabled="true" id="5" name="init" order="3" repeats="true"/>
-            <event displayName="Time-1" enabled="true" id="6" name="event-periodic" order="4" repeats="true"/>
+            <event displayName="AndyDied" enabled="true" id="3" name="event-custom" order="7" repeats="true"/>
+            <event displayName="Time" enabled="true" id="5" name="init" order="4" repeats="true"/>
+            <event displayName="Time-1" enabled="true" id="6" name="event-periodic" order="5" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="7" attachedevent="true" class="scripts.ActorEvents_7" classname="scripts.ActorEvents_7" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="4" name="ActorEvents_7" oid="-1" package="scripts." shared="false" type="actor">
@@ -103,15 +105,17 @@
         <blocks/>
         <events>
             <event displayName="walk" enabled="true" id="1" name="step" order="1" repeats="true"/>
-            <event displayName="Actor - Any" enabled="true" id="2" name="collide" order="2" repeats="true"/>
-            <event displayName="Every N secs" enabled="true" id="3" name="event-periodic" order="3" repeats="true"/>
-            <event displayName="Actor - Type" enabled="true" id="4" name="event-collide-actortotype" order="4" repeats="true"/>
-            <event displayName="Custom Event" enabled="true" id="5" name="event-custom" order="5" repeats="true"/>
+            <event displayName="turn collision" enabled="true" id="2" name="collide" order="2" repeats="true"/>
+            <event displayName="turn timer" enabled="true" id="3" name="event-periodic" order="3" repeats="true"/>
+            <event displayName="dead" enabled="true" id="4" name="event-collide-actortotype" order="4" repeats="true"/>
+            <event displayName="death" enabled="true" id="5" name="event-custom" order="5" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="65" attachedevent="true" class="scripts.ActorEvents_65" classname="scripts.ActorEvents_65" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="10" name="ActorEvents_65" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="Actor - Type" enabled="true" id="1" name="event-collide-actortotype" order="1" repeats="true"/>
+        </events>
     </snippet>
     <snippet attachedevent="false" class="scripts.Design_11_11_HealthManager" classname="scripts.Design_11_11_HealthManager" desc="The Health Manager will track the Actor's current health, as well as provide blocks for healing and damaging the Actor.  It can also send messages to other behaviors to allow for a wide range of functionality." description="The Health Manager will track the Actor's current health, as well as provide blocks for healing and damaging the Actor.  It can also send messages to other behaviors to allow for a wide range of functionality." design="true" drawOrder="0" id="11" name="Health Manager" oid="-1" package="scripts" shared="false" type="actor">
         <actor default="thisactor" defaultValue="thisactor" desc="" dropdown="" fullname="Actor" hidden="true" id="2147483647" name="actor" order="0"/>
