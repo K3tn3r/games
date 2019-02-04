@@ -101,8 +101,9 @@
     <attributes>
         <number cid="-1" id="0" name="score" save="true" value="0.0"/>
         <number cid="-1" id="2" name="areaOfEffect" save="true" value="0.0"/>
-        <number cid="-1" id="3" name="Lives" save="true" value="0.0"/>
+        <number cid="-1" id="3" name="Lives" save="true" value="3.0"/>
         <number cid="-1" id="4" name="Time" save="true" value="0.0"/>
+        <number cid="-1" id="5" name="Shoot" save="true" value="0.0"/>
         <number cid="-1" id="1" name="x of Andy" save="true" value="0.0"/>
     </attributes>
     <collisions>

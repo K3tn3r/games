@@ -4,19 +4,34 @@
         <draw comment="false" x="15" y="15">
             <group eventID="1" id="-1">
                 <draw-text comment="false" x="26" y="40">
+                    <int id="0" val="SCORE"/>
+                    <int id="1" val="32"/>
+                    <int id="2" val="40"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="60">
                     <get-game-val-0 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="20"/>
-                    <int id="2" val="20"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="65">
-                    <get-game-val-3 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="100"/>
-                    <int id="2" val="20"/>
+                    <int id="2" val="40"/>
                 </draw-text>
-                <draw-text comment="false" x="26" y="90">
+                <draw-text comment="false" x="26" y="85">
+                    <int id="0" val="LIFE"/>
+                    <int id="1" val="284"/>
+                    <int id="2" val="40"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="105">
+                    <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="340"/>
+                    <int id="2" val="40"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="130">
+                    <int id="0" val="TIME"/>
+                    <int id="1" val="544"/>
+                    <int id="2" val="40"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="150">
                     <get-game-val-4 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="200"/>
-                    <int id="2" val="20"/>
+                    <int id="1" val="600"/>
+                    <int id="2" val="40"/>
                 </draw-text>
             </group>
         </draw>

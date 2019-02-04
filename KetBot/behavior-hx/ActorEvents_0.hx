@@ -76,6 +76,8 @@ class ActorEvents_0 extends ActorScript
 	public var _speed:Float;
 	public var _turntimer:Float;
 	public var _exploding:Bool;
+	public var _chase:Float;
+	public var _stuck:Bool;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_death():Void
@@ -102,14 +104,15 @@ class ActorEvents_0 extends ActorScript
 		_turntimer = 0.0;
 		nameMap.set("exploding", "_exploding");
 		_exploding = false;
+		nameMap.set("chase", "_chase");
+		_chase = 10;
+		nameMap.set("stuck", "_stuck");
+		_stuck = false;
 		
 	}
 	
 	override public function init()
 	{
-		
-		/* ======================== When Creating ========================= */
-		
 		
 		/* ======================== When Creating ========================= */
 		Engine.engine.setGameAttribute("areaOfEffect", ((actor.getWidth()) * 2));
@@ -141,12 +144,19 @@ class ActorEvents_0 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				if(((event.thisFromRight || event.thisFromLeft) && _isalive))
+				if((((event.thisFromRight || event.thisFromLeft) && _isalive) && !(_stuck)))
 				{
 					_left = !(_left);
 					propertyChanged("_left", _left);
 					_turntimer = asNumber(3);
 					propertyChanged("_turntimer", _turntimer);
+					_stuck = true;
+					propertyChanged("_stuck", _stuck);
+					runLater(1000 * .5, function(timeTask:TimedTask):Void
+					{
+						_stuck = false;
+						propertyChanged("_stuck", _stuck);
+					}, actor);
 				}
 			}
 		});
@@ -199,13 +209,29 @@ class ActorEvents_0 extends ActorScript
 					_exploding = true;
 					propertyChanged("_exploding", _exploding);
 					actor.setAnimation("" + "explotion");
-					runLater(1000 * 1.5, function(timeTask:TimedTask):Void
+					runLater(1000 * 1.6, function(timeTask:TimedTask):Void
 					{
 						if((Math.abs((actor.getX() - Engine.engine.getGameAttribute("x of Andy"))) <= Engine.engine.getGameAttribute("areaOfEffect")))
 						{
 							shoutToScene("_customEvent_" + "AndyDied");
 						}
 						recycleActor(actor);
+					}, actor);
+				}
+			}
+		});
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if((_exploding && !(actor.getX() == Engine.engine.getGameAttribute("x of Andy"))))
+				{
+					actor.applyImpulse((Engine.engine.getGameAttribute("x of Andy") - actor.getX()), actor.getY(), 150);
+					runLater(1000 * 1, function(timeTask:TimedTask):Void
+					{
+						actor.setXVelocity(0);
 					}, actor);
 				}
 			}

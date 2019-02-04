@@ -104,20 +104,17 @@
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <set-game-val-3 comment="false" x="26" y="40">
-                    <int id="0" val="3"/>
-                </set-game-val-3>
-                <camera-follow comment="false" x="26" y="60">
+                <camera-follow comment="false" x="26" y="40">
                     <ACTOR eid="this" id="0"/>
                 </camera-follow>
-                <setanim comment="false" x="26" y="87">
+                <setanim comment="false" x="26" y="67">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="idle right"/>
                 </setanim>
-                <set-val-2-1 comment="false" x="26" y="114">
+                <set-val-2-1 comment="false" x="26" y="94">
                     <int id="0" val="20"/>
                 </set-val-2-1>
-                <actor-set-prop comment="false" x="26" y="134">
+                <actor-set-prop comment="false" x="26" y="114">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="on ground?"/>
                     <false comment="false" id="2" x="0" y="0"/>
@@ -343,7 +340,17 @@
     <group eventID="6" id="-1"/>
     <group eventID="10" id="0">
         <event-custom comment="false" x="15" y="15">
-            <group eventID="10" id="-1"/>
+            <group eventID="10" id="-1">
+                <set-val-2-8 comment="false" x="26" y="40">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-2-8 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-val-2-8>
+                <set-game-val-0 comment="false" x="26" y="70">
+                    <get-val-2-8 comment="false" id="0" x="0" y="0"/>
+                </set-game-val-0>
+            </group>
             <int id="0" val="killBloock"/>
         </event-custom>
     </group>
@@ -351,35 +358,63 @@
     <group eventID="11" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="11" id="-1">
-                <set-val-2-9 comment="false" x="26" y="40">
-                    <false comment="false" id="0" x="0" y="0"/>
-                </set-val-2-9>
-                <setanim comment="false" x="26" y="65">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="dead"/>
-                </setanim>
-                <dolater comment="false" x="26" y="92">
+                <if comment="false" x="26" y="40">
                     <group eventID="11" id="-1">
-                        <scene-reload-color comment="false" x="37" y="119">
-                            <int id="0" val="0"/>
-                            <int id="1" val=".5"/>
-                            <color b="0" g="0" id="2" r="0"/>
-                            <int id="3" val="3"/>
-                            <int id="4" val=".5"/>
-                            <color b="0" g="0" id="5" r="0"/>
-                        </scene-reload-color>
+                        <set-val-2-9 comment="false" x="37" y="65">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-2-9>
+                        <setanim comment="false" x="37" y="90">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="dead"/>
+                        </setanim>
+                        <set-game-val-3 comment="false" x="37" y="117">
+                            <minus comment="false" id="0" x="0" y="0">
+                                <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="1"/>
+                            </minus>
+                        </set-game-val-3>
+                        <dolater comment="false" x="37" y="147">
+                            <group eventID="11" id="-1">
+                                <scene-reload-color comment="false" x="48" y="174">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val=".5"/>
+                                    <color b="0" g="0" id="2" r="0"/>
+                                    <int id="3" val="3"/>
+                                    <int id="4" val=".5"/>
+                                    <color b="0" g="0" id="5" r="0"/>
+                                </scene-reload-color>
+                            </group>
+                            <int id="0" val="1"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
                     </group>
-                    <int id="0" val="1"/>
-                    <ACTOR eid="this" id="2"/>
-                </dolater>
+                    <get-val-2-9 comment="false" id="0" x="0" y="0"/>
+                </if>
             </group>
             <int id="0" val="dead"/>
         </event-custom>
     </group>
-    <group eventID="11" id="-1"/>
+    <group eventID="11" id="10">
+        <set-val-2-11 comment="false" x="810" y="174">
+            <get-val-2-11 comment="false" id="0" x="0" y="0"/>
+        </set-val-2-11>
+    </group>
+    <group eventID="11" id="-1">
+        <get-val-2-11 comment="false" x="850" y="95"/>
+    </group>
     <group eventID="12" id="0">
         <event-custom comment="false" x="15" y="15">
-            <group eventID="12" id="-1"/>
+            <group eventID="12" id="-1">
+                <set-val-2-8 comment="false" x="26" y="40">
+                    <plus comment="false" id="0" x="0" y="0">
+                        <get-val-2-8 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </plus>
+                </set-val-2-8>
+                <set-game-val-0 comment="false" x="26" y="70">
+                    <get-val-2-8 comment="false" id="0" x="0" y="0"/>
+                </set-game-val-0>
+            </group>
             <int id="0" val="killBoofer"/>
         </event-custom>
     </group>
@@ -454,23 +489,10 @@
             <group eventID="15" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="15" id="-1">
-                        <dolater comment="false" x="37" y="78">
-                            <group eventID="15" id="-1">
-                                <die comment="false" x="48" y="105">
-                                    <ACTOR eid="this" id="0"/>
-                                </die>
-                                <scene-reload-color comment="false" x="48" y="132">
-                                    <int id="0" val="0"/>
-                                    <int id="1" val=".5"/>
-                                    <color b="0" g="0" id="2" r="0"/>
-                                    <int id="3" val="3"/>
-                                    <int id="4" val=".5"/>
-                                    <color b="0" g="0" id="5" r="0"/>
-                                </scene-reload-color>
-                            </group>
-                            <int id="0" val=".5"/>
-                            <ACTOR eid="this" id="2"/>
-                        </dolater>
+                        <shout comment="false" x="37" y="78">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="dead"/>
+                        </shout>
                     </group>
                     <more comment="false" id="0" x="0" y="0">
                         <get-xy comment="false" id="0" x="0" y="0">
@@ -491,27 +513,10 @@
             <group eventID="16" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="16" id="-1">
-                        <set-val-2-9 comment="false" x="37" y="70">
-                            <false comment="false" id="0" x="0" y="0"/>
-                        </set-val-2-9>
-                        <setanim comment="false" x="37" y="95">
+                        <shout comment="false" x="37" y="70">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="dead"/>
-                        </setanim>
-                        <dolater comment="false" x="37" y="122">
-                            <group eventID="16" id="-1">
-                                <scene-reload-color comment="false" x="48" y="149">
-                                    <int id="0" val="0"/>
-                                    <int id="1" val=".5"/>
-                                    <color b="0" g="0" id="2" r="0"/>
-                                    <int id="3" val="3"/>
-                                    <int id="4" val=".5"/>
-                                    <color b="0" g="0" id="5" r="0"/>
-                                </scene-reload-color>
-                            </group>
-                            <int id="0" val="1"/>
-                            <ACTOR eid="this" id="2"/>
-                        </dolater>
+                        </shout>
                     </group>
                     <lesseq comment="false" id="0" x="0" y="0">
                         <get-game-val-4 comment="false" id="0" x="0" y="0"/>

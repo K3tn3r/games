@@ -77,6 +77,7 @@ class ActorEvents_53 extends ActorScript
 	public var _Isalive1:Bool;
 	public var _Isalive2:Bool;
 	public var _speed2:Float;
+	public var _stuck:Bool;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_death1():Void
@@ -119,6 +120,8 @@ class ActorEvents_53 extends ActorScript
 		_Isalive2 = false;
 		nameMap.set("speed2", "_speed2");
 		_speed2 = 10.0;
+		nameMap.set("stuck", "_stuck");
+		_stuck = false;
 		
 	}
 	
@@ -175,12 +178,19 @@ class ActorEvents_53 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				if(((event.thisFromRight || event.thisFromLeft) && _Isalive1))
+				if((((event.thisFromRight || event.thisFromLeft) && _Isalive1) && !(_stuck)))
 				{
 					_left = !(_left);
 					propertyChanged("_left", _left);
+					_stuck = true;
+					propertyChanged("_stuck", _stuck);
 					_turntimer = asNumber(3);
 					propertyChanged("_turntimer", _turntimer);
+					runLater(1000 * .5, function(timeTask:TimedTask):Void
+					{
+						_stuck = false;
+						propertyChanged("_stuck", _stuck);
+					}, actor);
 				}
 			}
 		});
@@ -190,12 +200,19 @@ class ActorEvents_53 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				if(((event.thisFromRight || event.thisFromLeft) && _Isalive2))
+				if((((event.thisFromRight || event.thisFromLeft) && _Isalive2) && !(_stuck)))
 				{
 					_left = !(_left);
 					propertyChanged("_left", _left);
+					_stuck = true;
+					propertyChanged("_stuck", _stuck);
 					_turntimer = asNumber(3);
 					propertyChanged("_turntimer", _turntimer);
+					runLater(1000 * .5, function(timeTask:TimedTask):Void
+					{
+						_stuck = false;
+						propertyChanged("_stuck", _stuck);
+					}, actor);
 				}
 			}
 		});

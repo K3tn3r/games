@@ -5,40 +5,40 @@
             <group eventID="1" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="1" id="-1">
-                        <set-dxy comment="false" x="37" y="70">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="1"/>
-                            <get-val-9-1 comment="false" id="2" x="0" y="0"/>
-                        </set-dxy>
-                        <setanim comment="false" x="37" y="102">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="walk right"/>
-                        </setanim>
-                    </group>
-                    <and comment="false" id="0" x="0" y="0">
-                        <get-val-4-2 comment="false" id="0" x="0" y="0"/>
-                        <get-val-4-5 comment="false" id="1" x="0" y="0"/>
-                    </and>
-                </if>
-                <else-if comment="false" x="26" y="141">
-                    <group eventID="1" id="-1">
-                        <set-dxy comment="false" x="37" y="176">
+                        <set-dxy comment="false" x="37" y="75">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
                             <neg comment="false" id="2" x="0" y="0">
                                 <get-val-9-1 comment="false" id="0" x="0" y="0"/>
                             </neg>
                         </set-dxy>
-                        <setanim comment="false" x="37" y="213">
+                        <setanim comment="false" x="37" y="112">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="walk left"/>
                         </setanim>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
                         <not comment="false" id="0" x="0" y="0">
-                            <get-val-4-2 comment="false" id="0" x="0" y="0"/>
+                            <get-val-9-2 comment="false" id="0" x="0" y="0"/>
                         </not>
-                        <get-val-4-5 comment="false" id="1" x="0" y="0"/>
+                        <get-val-9-3 comment="false" id="1" x="0" y="0"/>
+                    </and>
+                </if>
+                <else-if comment="false" x="26" y="151">
+                    <group eventID="1" id="-1">
+                        <set-dxy comment="false" x="37" y="181">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <get-val-9-1 comment="false" id="2" x="0" y="0"/>
+                        </set-dxy>
+                        <setanim comment="false" x="37" y="213">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="walk right"/>
+                        </setanim>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <get-val-9-2 comment="false" id="0" x="0" y="0"/>
+                        <get-val-9-3 comment="false" id="1" x="0" y="0"/>
                     </and>
                 </else-if>
             </group>
@@ -48,31 +48,54 @@
     <group eventID="2" id="0">
         <collide comment="false" x="15" y="15">
             <group eventID="2" id="-1">
-                <if comment="false" x="26" y="45">
+                <dolater comment="false" x="26" y="45">
                     <group eventID="2" id="-1">
-                        <set-val-4-2 comment="false" x="37" y="88">
-                            <not comment="false" id="0" x="0" y="0">
-                                <get-val-4-2 comment="false" id="0" x="0" y="0"/>
-                            </not>
-                        </set-val-4-2>
-                        <set-val-4-4 comment="false" x="37" y="118">
-                            <int id="0" val="3"/>
-                        </set-val-4-4>
+                        <if comment="false" x="37" y="72">
+                            <group eventID="2" id="-1">
+                                <set-val-9-2 comment="false" x="48" y="120">
+                                    <not comment="false" id="0" x="0" y="0">
+                                        <get-val-9-2 comment="false" id="0" x="0" y="0"/>
+                                    </not>
+                                </set-val-9-2>
+                                <set-val-9-4 comment="false" x="48" y="150">
+                                    <int id="0" val="3"/>
+                                </set-val-9-4>
+                                <set-val-9-5 comment="false" x="48" y="170">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-9-5>
+                                <dolater comment="false" x="48" y="195">
+                                    <group eventID="2" id="-1">
+                                        <set-val-9-5 comment="false" x="59" y="222">
+                                            <false comment="false" id="0" x="0" y="0"/>
+                                        </set-val-9-5>
+                                    </group>
+                                    <int id="0" val=".5"/>
+                                    <ACTOR eid="this" id="2"/>
+                                </dolater>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <and comment="false" id="0" x="0" y="0">
+                                    <or comment="false" id="0" x="0" y="0">
+                                        <collision-right comment="false" id="0" x="0" y="0">
+                                            <int id="0" val="0"/>
+                                            <int id="1" val="0"/>
+                                        </collision-right>
+                                        <collision-left comment="false" id="1" x="0" y="0">
+                                            <int id="0" val="0"/>
+                                            <int id="1" val="0"/>
+                                        </collision-left>
+                                    </or>
+                                    <get-val-9-3 comment="false" id="1" x="0" y="0"/>
+                                </and>
+                                <not comment="false" id="1" x="0" y="0">
+                                    <get-val-9-5 comment="false" id="0" x="0" y="0"/>
+                                </not>
+                            </and>
+                        </if>
                     </group>
-                    <and comment="false" id="0" x="0" y="0">
-                        <or comment="false" id="0" x="0" y="0">
-                            <collision-right comment="false" id="0" x="0" y="0">
-                                <int id="0" val="0"/>
-                                <int id="1" val="0"/>
-                            </collision-right>
-                            <collision-left comment="false" id="1" x="0" y="0">
-                                <int id="0" val="0"/>
-                                <int id="1" val="0"/>
-                            </collision-left>
-                        </or>
-                        <get-val-4-5 comment="false" id="1" x="0" y="0"/>
-                    </and>
-                </if>
+                    <int id="0" val=".05"/>
+                    <ACTOR eid="this" id="2"/>
+                </dolater>
             </group>
         </collide>
     </group>
@@ -80,25 +103,25 @@
     <group eventID="3" id="0">
         <event-periodic comment="false" x="15" y="15">
             <group eventID="3" id="-1">
-                <set-val-4-4 comment="false" x="26" y="42">
+                <set-val-9-4 comment="false" x="26" y="42">
                     <minus comment="false" id="0" x="0" y="0">
-                        <get-val-4-4 comment="false" id="0" x="0" y="0"/>
+                        <get-val-9-4 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="1"/>
                     </minus>
-                </set-val-4-4>
+                </set-val-9-4>
                 <if comment="false" x="26" y="72">
                     <group eventID="3" id="-1">
-                        <set-val-4-2 comment="false" x="37" y="102">
+                        <set-val-9-2 comment="false" x="37" y="102">
                             <not comment="false" id="0" x="0" y="0">
-                                <get-val-4-2 comment="false" id="0" x="0" y="0"/>
+                                <get-val-9-2 comment="false" id="0" x="0" y="0"/>
                             </not>
-                        </set-val-4-2>
-                        <set-val-4-4 comment="false" x="37" y="132">
+                        </set-val-9-2>
+                        <set-val-9-4 comment="false" x="37" y="132">
                             <int id="0" val="3"/>
-                        </set-val-4-4>
+                        </set-val-9-4>
                     </group>
                     <lesseq comment="false" id="0" x="0" y="0">
-                        <get-val-4-4 comment="false" id="0" x="0" y="0"/>
+                        <get-val-9-4 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="0"/>
                     </lesseq>
                 </if>
