@@ -225,6 +225,7 @@ class ActorEvents_53 extends ActorScript
 				if((event.thisFromTop && _Isalive1))
 				{
 					actor.shout("_customEvent_" + "death1");
+					actor.shout("_customEvent_" + "killBloock1");
 				}
 				else if((!(event.thisFromTop) && _Isalive1))
 				{
@@ -245,6 +246,7 @@ class ActorEvents_53 extends ActorScript
 				if((event.thisFromTop && _Isalive2))
 				{
 					actor.shout("_customEvent_" + "death2");
+					actor.shout("_customEvent_" + "killBloock2");
 				}
 				else if((!(event.thisFromTop) && _Isalive2))
 				{

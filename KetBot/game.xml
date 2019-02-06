@@ -57,6 +57,7 @@
         <group desc="" id="6" name="Bloock"/>
         <group desc="" id="7" name="Booter"/>
         <group desc="" id="8" name="Boofer"/>
+        <group desc="" id="9" name="Booter Bullet"/>
     </groups>
     <cgroups>
         <cgroup g1="0" g2="1"/>
@@ -67,6 +68,7 @@
         <cgroup g1="1" g2="6"/>
         <cgroup g1="1" g2="7"/>
         <cgroup g1="1" g2="8"/>
+        <cgroup g1="1" g2="9"/>
         <cgroup g1="3" g2="3"/>
         <cgroup g1="3" g2="6"/>
         <cgroup g1="3" g2="7"/>
@@ -75,15 +77,21 @@
         <cgroup g1="4" g2="6"/>
         <cgroup g1="4" g2="7"/>
         <cgroup g1="4" g2="8"/>
+        <cgroup g1="4" g2="9"/>
         <cgroup g1="5" g2="6"/>
         <cgroup g1="5" g2="7"/>
         <cgroup g1="5" g2="8"/>
+        <cgroup g1="5" g2="9"/>
         <cgroup g1="6" g2="6"/>
         <cgroup g1="6" g2="7"/>
         <cgroup g1="6" g2="8"/>
+        <cgroup g1="6" g2="9"/>
         <cgroup g1="7" g2="7"/>
         <cgroup g1="7" g2="8"/>
+        <cgroup g1="7" g2="9"/>
         <cgroup g1="8" g2="8"/>
+        <cgroup g1="8" g2="9"/>
+        <cgroup g1="9" g2="9"/>
     </cgroups>
     <input>
         <key id="0" keyname="UP" name="up" vk="38" vks="38"/>
@@ -102,7 +110,9 @@
         <number cid="-1" id="0" name="score" save="true" value="0.0"/>
         <number cid="-1" id="2" name="areaOfEffect" save="true" value="0.0"/>
         <number cid="-1" id="3" name="Lives" save="true" value="3.0"/>
+        <number cid="-1" id="6" name="X of Booter" save="true" value="0.0"/>
         <number cid="-1" id="4" name="Time" save="true" value="0.0"/>
+        <number cid="-1" id="7" name="Y of Booter" save="true" value="0.0"/>
         <number cid="-1" id="5" name="Shoot" save="true" value="0.0"/>
         <number cid="-1" id="1" name="x of Andy" save="true" value="0.0"/>
     </attributes>

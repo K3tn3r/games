@@ -80,7 +80,7 @@
                             </not>
                         </set-val-1-1>
                         <set-val-1-4 comment="false" x="37" y="132">
-                            <int id="0" val="3"/>
+                            <int id="0" val="5"/>
                         </set-val-1-4>
                     </group>
                     <lesseq comment="false" id="0" x="0" y="0">
@@ -128,7 +128,7 @@
                             </not>
                         </set-val-1-1>
                         <set-val-1-4 comment="false" x="37" y="261">
-                            <int id="0" val="3"/>
+                            <int id="0" val="5"/>
                         </set-val-1-4>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
@@ -158,7 +158,7 @@
                             </not>
                         </set-val-1-1>
                         <set-val-1-4 comment="false" x="37" y="123">
-                            <int id="0" val="3"/>
+                            <int id="0" val="5"/>
                         </set-val-1-4>
                         <set-val-1-7 comment="false" x="37" y="143">
                             <true comment="false" id="0" x="0" y="0"/>

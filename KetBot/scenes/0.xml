@@ -7,9 +7,6 @@
     </layers>
     <joints/>
     <regions>
-        <region b="64" g="64" h="444" id="0" name="Region 0" pts="4,11.0,0.0,11.0,444.0,0.0,444.0,0.0,0.0" r="64" type="box" w="11" x="4" y="2"/>
-        <region b="64" g="64" h="9" id="1" name="Region 1" pts="4,6379.0,0.0,6379.0,9.0,0.0,9.0,0.0,0.0" r="64" type="box" w="6379" x="20" y="0"/>
-        <region b="64" g="64" h="233" id="2" name="Region 2" pts="4,11.0,0.0,11.0,233.0,0.0,233.0,0.0,0.0" r="64" type="box" w="11" x="6386" y="13"/>
         <region b="64" g="64" h="85" id="3" name="Region 3" pts="4,0.0,0.0,0.0,85.0,22.0,85.0,22.0,0.0" r="64" type="box" w="22" x="6376" y="363"/>
     </regions>
     <terrainRegions/>
@@ -17,7 +14,6 @@
         <actor a="0.0" aid="2" c="false" group="4" id="7" name="Blob 2" sx="1.0" sy="1.0" x="895" y="429" z="0"/>
         <actor a="0.0" aid="3" c="false" group="4" id="7" name="Blob 3" sx="1.0" sy="1.0" x="1310" y="366" z="0"/>
         <actor a="0.0" aid="4" c="false" group="4" id="7" name="Blob 4" sx="1.0" sy="1.0" x="1213" y="398" z="0"/>
-        <actor a="0.0" aid="5" c="false" group="4" id="7" name="Blob 5" sx="1.0" sy="1.0" x="1778" y="431" z="0"/>
         <actor a="0.0" aid="6" c="false" group="4" id="7" name="Blob 6" sx="1.0" sy="1.0" x="1702" y="431" z="0"/>
         <actor a="0.0" aid="7" c="false" group="4" id="7" name="Blob 7" sx="1.0" sy="1.0" x="1855" y="432" z="0"/>
         <actor a="0.0" aid="8" c="false" group="6" id="53" name="Bloock 8" sx="1.0" sy="1.0" x="1960" y="384" z="0"/>
@@ -32,7 +28,7 @@
         <actor a="0.0" aid="19" c="false" group="3" id="0" name="bomb 19" sx="1.0" sy="1.0" x="4989" y="414" z="0"/>
         <actor a="0.0" aid="20" c="false" group="8" id="59" name="Boofer 20" sx="1.0" sy="1.0" x="5733" y="411" z="0"/>
         <actor a="0.0" aid="21" c="false" group="6" id="53" name="Bloock 21" sx="1.0" sy="1.0" x="4688" y="382" z="0"/>
-        <actor a="0.0" aid="22" c="false" group="5" id="2" name="Andy 22" sx="1.0" sy="1.0" x="290" y="404" z="0"/>
+        <actor a="0.0" aid="22" c="false" group="5" id="2" name="Andy 22" sx="1.0" sy="1.0" x="5850" y="4" z="0"/>
         <actor a="0.0" aid="23" c="false" group="3" id="65" name="power up1 23" sx="1.0" sy="1.0" x="4610" y="92" z="0"/>
         <actor a="0.0" aid="24" c="false" group="7" id="55" name="Booter 24" sx="1.0" sy="1.0" x="6366" y="251" z="0"/>
     </actors>

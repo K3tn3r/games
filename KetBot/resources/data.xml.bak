@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <pack>
-    <custom-block blocktag="custom-75" blocktype="ACTION" code=".say(&quot;Health Manager&quot;, &quot;_customBlock_&quot;);" desc="" global="false" gui="Missing" id="75" message="" name="" oid="-1" return="void" shared="false" snippetID="11">
+    <custom-block blocktag="custom-75" blocktype="ACTION" code=".say(&quot;Health Manager&quot;, &quot;_customBlock_&quot;);" desc="" global="false" gui="Missing" id="75" message="" name="" oid="-1" return="void" shared="false" snippetID="-1">
         <blank name="Self" order="0" type="actor"/>
     </custom-block>
     <tileset across="9" atlasID="0" desc="" down="1" id="25" name="A" oid="-1" shared="false" th="32" tw="32">
@@ -88,10 +88,10 @@
             <poly data="4,0,19,32,19,32,64,0,64" density="0.1" fric="0.2" gid="-1000" id="0" name="dead1" rest="0.0" sensor="false"/>
         </anim>
         <anim across="3" down="2" durations="100,100,100,100,100" height="64" id="3" loop="true" name="dead1 walk left" numframes="5" originx="16" originy="16" sync="false" version="2" width="96">
-            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="dead1 walk left" rest="0.0" sensor="false"/>
+            <poly data="4,0,2,32,2,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="dead1 walk left" rest="0.0" sensor="false"/>
         </anim>
         <anim across="3" down="2" durations="100,100,100,100,100" height="64" id="4" loop="true" name="dead1 walk right" numframes="5" originx="16" originy="16" sync="false" version="2" width="96">
-            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 4" rest="0.0" sensor="false"/>
+            <poly data="4,0,2,32,2,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 4" rest="0.0" sensor="false"/>
         </anim>
         <anim across="3" down="2" durations="100,100,100,100,100,100" height="64" id="5" loop="true" name="dead2" numframes="6" originx="16" originy="16" sync="false" version="2" width="96">
             <poly data="4,0,12,32,12,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="dead2" rest="0.0" sensor="false"/>
@@ -126,14 +126,14 @@
         <snippets/>
     </actor>
     <sprite atlasID="0" default="2" defaultAnimation="2" desc="" height="32" id="56" name="Booter" shared="false" width="32">
-        <anim across="3" down="3" durations="100,100,100,100,100,100,100" height="96" id="1" loop="true" name="Animation 1" numframes="7" originx="16" originy="16" sync="false" version="2" width="96">
+        <anim across="3" down="3" durations="100,100,100,100,100,100,100" height="96" id="1" loop="true" name="shoot" numframes="7" originx="16" originy="16" sync="false" version="2" width="96">
             <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 1" rest="0.0" sensor="false"/>
         </anim>
         <anim across="4" down="3" durations="100,100,100,100,100,100,100,100,100,100" height="96" id="2" loop="true" name="stance" numframes="10" originx="16" originy="16" sync="false" version="2" width="128">
             <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="stance" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="8" fixedrot="false" fric="0.2" gid="3" id="57" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Booter bullet" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="58" static="false">
+    <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="8" fixedrot="false" fric="0.2" gid="9" id="57" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Booter bullet" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="58" static="false">
         <snippets/>
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="9" id="58" name="Booter bullet" shared="false" width="18">
@@ -141,20 +141,20 @@
             <poly data="4,0,0,18,0,18,9,0,9" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <custom-block blocktag="custom-71" blocktype="ACTION" code=".say(&quot;Health Manager&quot;, &quot;_customBlock_Damage&quot;, []);" desc="Subtracts a specific amount of health from the Actor." global="false" gui="Damage %0 By %1" id="71" message="Damage" name="Damage" oid="-1" return="void" shared="false" snippetID="11">
+    <custom-block blocktag="custom-71" blocktype="ACTION" code=".say(&quot;Health Manager&quot;, &quot;_customBlock_Damage&quot;, []);" desc="Subtracts a specific amount of health from the Actor." global="false" gui="Damage %0 By %1" id="71" message="Damage" name="Damage" oid="-1" return="void" shared="false" snippetID="-1">
         <blank name="Self" order="0" type="actor"/>
         <blank name="Amount" order="1" type="number"/>
     </custom-block>
-    <custom-block blocktag="custom-69" blocktype="ACTION" code=".say(&quot;Health Manager&quot;, &quot;_customBlock_FullRestore&quot;);" desc="" global="false" gui="Restore %0 To Full Health" id="69" message="FullRestore" name="FullRestore" oid="-1" return="void" shared="false" snippetID="11">
+    <custom-block blocktag="custom-69" blocktype="ACTION" code=".say(&quot;Health Manager&quot;, &quot;_customBlock_FullRestore&quot;);" desc="" global="false" gui="Restore %0 To Full Health" id="69" message="FullRestore" name="FullRestore" oid="-1" return="void" shared="false" snippetID="-1">
         <blank name="Self" order="0" type="actor"/>
     </custom-block>
-    <custom-block blocktag="custom-74" blocktype="NORMAL" code="cast(.say(&quot;Health Manager&quot;, &quot;_customBlock_GetCurrentHealth&quot;), Float)" desc="" global="false" gui="Current Health for %0" id="74" message="GetCurrentHealth" name="GetCurrentHealth" oid="-1" return="number" shared="false" snippetID="11">
+    <custom-block blocktag="custom-74" blocktype="NORMAL" code="cast(.say(&quot;Health Manager&quot;, &quot;_customBlock_GetCurrentHealth&quot;), Float)" desc="" global="false" gui="Current Health for %0" id="74" message="GetCurrentHealth" name="GetCurrentHealth" oid="-1" return="number" shared="false" snippetID="-1">
         <blank name="Self" order="0" type="actor"/>
     </custom-block>
-    <custom-block blocktag="custom-72" blocktype="NORMAL" code="cast(.say(&quot;Health Manager&quot;, &quot;_customBlock_GetInvincibility&quot;), Bool)" desc="" global="false" gui="%0 Is Invincible?" id="72" message="GetInvincibility" name="GetInvincibility" oid="-1" return="boolean" shared="false" snippetID="11">
+    <custom-block blocktag="custom-72" blocktype="NORMAL" code="cast(.say(&quot;Health Manager&quot;, &quot;_customBlock_GetInvincibility&quot;), Bool)" desc="" global="false" gui="%0 Is Invincible?" id="72" message="GetInvincibility" name="GetInvincibility" oid="-1" return="boolean" shared="false" snippetID="-1">
         <blank name="Self" order="0" type="actor"/>
     </custom-block>
-    <custom-block blocktag="custom-73" blocktype="NORMAL" code="cast(.say(&quot;Health Manager&quot;, &quot;_customBlock_GetMaxHealth&quot;), Float)" desc="" global="false" gui="Maximum Health For %0" id="73" message="GetMaxHealth" name="GetMaxHealth" oid="-1" return="number" shared="false" snippetID="11">
+    <custom-block blocktag="custom-73" blocktype="NORMAL" code="cast(.say(&quot;Health Manager&quot;, &quot;_customBlock_GetMaxHealth&quot;), Float)" desc="" global="false" gui="Maximum Health For %0" id="73" message="GetMaxHealth" name="GetMaxHealth" oid="-1" return="number" shared="false" snippetID="-1">
         <blank name="Self" order="0" type="actor"/>
     </custom-block>
     <tileset across="4" atlasID="0" desc="" down="1" id="5" name="ground" oid="-1" shared="false" th="32" tw="32">
@@ -163,7 +163,7 @@
         <tile collision="0" data="" durations="100" frames="2" id="2" order="-1"/>
         <tile collision="0" data="" durations="100" frames="3" id="3" order="-1"/>
     </tileset>
-    <custom-block blocktag="custom-70" blocktype="ACTION" code=".say(&quot;Health Manager&quot;, &quot;_customBlock_Heal&quot;, []);" desc="Adds a specific amount of health to the Actor." global="false" gui="Heal %0 By %1" id="70" message="Heal" name="Heal" oid="-1" return="void" shared="false" snippetID="11">
+    <custom-block blocktag="custom-70" blocktype="ACTION" code=".say(&quot;Health Manager&quot;, &quot;_customBlock_Heal&quot;, []);" desc="Adds a specific amount of health to the Actor." global="false" gui="Heal %0 By %1" id="70" message="Heal" name="Heal" oid="-1" return="void" shared="false" snippetID="-1">
         <blank name="Self" order="0" type="actor"/>
         <blank name="Amount" order="1" type="number"/>
     </custom-block>
@@ -178,11 +178,11 @@
             <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
-    <custom-block blocktag="custom-68" blocktype="ACTION" code=".say(&quot;Health Manager&quot;, &quot;_customBlock_SetHealth&quot;, []);" desc="" global="false" gui="Set Health For %0 To %1" id="68" message="SetHealth" name="SetHealth" oid="-1" return="void" shared="false" snippetID="11">
+    <custom-block blocktag="custom-68" blocktype="ACTION" code=".say(&quot;Health Manager&quot;, &quot;_customBlock_SetHealth&quot;, []);" desc="" global="false" gui="Set Health For %0 To %1" id="68" message="SetHealth" name="SetHealth" oid="-1" return="void" shared="false" snippetID="-1">
         <blank name="Self" order="0" type="actor"/>
         <blank name="Amount" order="1" type="number"/>
     </custom-block>
-    <custom-block blocktag="custom-67" blocktype="ACTION" code=".say(&quot;Health Manager&quot;, &quot;_customBlock_SetInvincibility&quot;, []);" desc="" global="false" gui="Set Invincibility For %0 to %1" id="67" message="SetInvincibility" name="SetInvincibility" oid="-1" return="void" shared="false" snippetID="11">
+    <custom-block blocktag="custom-67" blocktype="ACTION" code=".say(&quot;Health Manager&quot;, &quot;_customBlock_SetInvincibility&quot;, []);" desc="" global="false" gui="Set Invincibility For %0 to %1" id="67" message="SetInvincibility" name="SetInvincibility" oid="-1" return="void" shared="false" snippetID="-1">
         <blank name="Self" order="0" type="actor"/>
         <blank name="Status" order="1" type="boolean"/>
     </custom-block>

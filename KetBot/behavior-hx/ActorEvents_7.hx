@@ -75,6 +75,7 @@ class ActorEvents_7 extends ActorScript
 	public var _left:Bool;
 	public var _turntimer:Float;
 	public var _isalive:Bool;
+	public var _stuck:Bool;
 	
 	/* ========================= Custom Event ========================= */
 	public function _customEvent_death():Void
@@ -100,6 +101,8 @@ class ActorEvents_7 extends ActorScript
 		_turntimer = 0.0;
 		nameMap.set("is alive", "_isalive");
 		_isalive = true;
+		nameMap.set("stuck", "_stuck");
+		_stuck = false;
 		
 	}
 	
@@ -129,12 +132,19 @@ class ActorEvents_7 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				if(((event.thisFromRight || event.thisFromLeft) && _isalive))
+				if((((event.thisFromRight || event.thisFromLeft) && _isalive) && !(_stuck)))
 				{
 					_left = !(_left);
 					propertyChanged("_left", _left);
+					_stuck = true;
+					propertyChanged("_stuck", _stuck);
 					_turntimer = asNumber(3);
 					propertyChanged("_turntimer", _turntimer);
+					runLater(1000 * .5, function(timeTask:TimedTask):Void
+					{
+						_stuck = false;
+						propertyChanged("_stuck", _stuck);
+					}, actor);
 				}
 			}
 		});

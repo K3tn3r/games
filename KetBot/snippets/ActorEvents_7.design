@@ -36,27 +36,44 @@
             <group eventID="7" id="-1">
                 <if comment="false" x="26" y="45">
                     <group eventID="7" id="-1">
-                        <set-val-4-2 comment="false" x="37" y="88">
+                        <set-val-4-2 comment="false" x="37" y="93">
                             <not comment="false" id="0" x="0" y="0">
                                 <get-val-4-2 comment="false" id="0" x="0" y="0"/>
                             </not>
                         </set-val-4-2>
-                        <set-val-4-4 comment="false" x="37" y="118">
+                        <set-val-4-6 comment="false" x="37" y="123">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-4-6>
+                        <set-val-4-4 comment="false" x="37" y="148">
                             <int id="0" val="3"/>
                         </set-val-4-4>
+                        <dolater comment="false" x="37" y="168">
+                            <group eventID="7" id="-1">
+                                <set-val-4-6 comment="false" x="48" y="195">
+                                    <false comment="false" id="0" x="0" y="0"/>
+                                </set-val-4-6>
+                            </group>
+                            <int id="0" val=".5"/>
+                            <ACTOR eid="this" id="2"/>
+                        </dolater>
                     </group>
                     <and comment="false" id="0" x="0" y="0">
-                        <or comment="false" id="0" x="0" y="0">
-                            <collision-right comment="false" id="0" x="0" y="0">
-                                <int id="0" val="0"/>
-                                <int id="1" val="0"/>
-                            </collision-right>
-                            <collision-left comment="false" id="1" x="0" y="0">
-                                <int id="0" val="0"/>
-                                <int id="1" val="0"/>
-                            </collision-left>
-                        </or>
-                        <get-val-4-5 comment="false" id="1" x="0" y="0"/>
+                        <and comment="false" id="0" x="0" y="0">
+                            <or comment="false" id="0" x="0" y="0">
+                                <collision-right comment="false" id="0" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="0"/>
+                                </collision-right>
+                                <collision-left comment="false" id="1" x="0" y="0">
+                                    <int id="0" val="0"/>
+                                    <int id="1" val="0"/>
+                                </collision-left>
+                            </or>
+                            <get-val-4-5 comment="false" id="1" x="0" y="0"/>
+                        </and>
+                        <not comment="false" id="1" x="0" y="0">
+                            <get-val-4-6 comment="false" id="0" x="0" y="0"/>
+                        </not>
                     </and>
                 </if>
             </group>
