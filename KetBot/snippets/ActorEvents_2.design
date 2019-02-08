@@ -241,7 +241,7 @@
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-val-2-13>
                                     </group>
-                                    <int id="0" val=".4"/>
+                                    <int id="0" val=".3"/>
                                     <ACTOR eid="this" id="2"/>
                                 </dolater>
                             </group>
@@ -284,7 +284,7 @@
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-val-2-13>
                                     </group>
-                                    <int id="0" val=".4"/>
+                                    <int id="0" val=".3"/>
                                     <ACTOR eid="this" id="2"/>
                                 </dolater>
                             </group>

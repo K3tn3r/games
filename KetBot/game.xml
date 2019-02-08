@@ -77,7 +77,6 @@
         <cgroup g1="4" g2="6"/>
         <cgroup g1="4" g2="7"/>
         <cgroup g1="4" g2="8"/>
-        <cgroup g1="4" g2="9"/>
         <cgroup g1="5" g2="6"/>
         <cgroup g1="5" g2="7"/>
         <cgroup g1="5" g2="8"/>
@@ -108,12 +107,12 @@
     <props/>
     <attributes>
         <number cid="-1" id="0" name="score" save="true" value="0.0"/>
+        <text cid="-1" id="8" name="debug" save="true" value="0"/>
         <number cid="-1" id="2" name="areaOfEffect" save="true" value="0.0"/>
         <number cid="-1" id="3" name="Lives" save="true" value="3.0"/>
-        <number cid="-1" id="6" name="X of Booter" save="true" value="0.0"/>
         <number cid="-1" id="4" name="Time" save="true" value="0.0"/>
-        <number cid="-1" id="7" name="Y of Booter" save="true" value="0.0"/>
         <number cid="-1" id="5" name="Shoot" save="true" value="0.0"/>
+        <number cid="-1" id="9" name="booter bullets active" save="true" value="0"/>
         <number cid="-1" id="1" name="x of Andy" save="true" value="0.0"/>
     </attributes>
     <collisions>

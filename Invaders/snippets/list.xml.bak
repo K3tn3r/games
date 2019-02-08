@@ -5,9 +5,8 @@
         <blocks/>
         <events>
             <event displayName="Updating" enabled="true" id="1" name="step" order="1" repeats="true"/>
-            <event displayName="Updating" enabled="false" id="2" name="step" order="2" repeats="true"/>
+            <event displayName="Updating" enabled="true" id="2" name="step" order="2" repeats="true"/>
             <event displayName="Keyboard" enabled="true" id="3" name="event-key-press-release" order="4" repeats="true"/>
-            <event displayName="Updating" enabled="true" id="4" name="step" order="3" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="2" attachedevent="true" class="scripts.ActorEvents_2" classname="scripts.ActorEvents_2" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="1" name="ActorEvents_2" oid="-1" package="scripts." shared="false" type="actor">

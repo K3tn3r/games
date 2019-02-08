@@ -1,30 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
-    <group eventID="1" id="0">
-        <event-custom comment="false" x="15" y="15">
-            <group eventID="1" id="-1">
-                <create-actor3 comment="false" x="26" y="40">
-                    <actortype eid="57" id="0"/>
-                    <get-game-val-6 comment="false" id="1" x="0" y="0"/>
-                    <get-game-val-7 comment="false" id="2" x="0" y="0"/>
-                    <int id="3" val="0"/>
-                </create-actor3>
-                <push-shove comment="false" x="26" y="72">
+    <group eventID="4" id="0">
+        <init comment="false" x="21" y="21">
+            <group eventID="4" id="-1">
+                <push-shove comment="false" x="32" y="46">
                     <ACTOR eid="this" id="0"/>
                     <int id="1" val="1"/>
-                    <int id="2" val="1"/>
-                    <get-game-val-7 comment="false" id="3" x="0" y="0"/>
+                    <int id="2" val="-1"/>
+                    <int id="3" val="0"/>
                     <int id="4" val="30"/>
                 </push-shove>
             </group>
-            <int id="0" val="Bullet"/>
-        </event-custom>
+        </init>
     </group>
-    <group eventID="1" id="-1"/>
-    <group eventID="2" id="0">
-        <step comment="false" x="15" y="15">
-            <group eventID="2" id="-1"/>
-        </step>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-actor-screen comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <die comment="false" x="26" y="42">
+                    <ACTOR eid="this" id="0"/>
+                </die>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="1"/>
+            <int id="2" val="1"/>
+        </event-actor-screen>
     </group>
-    <group eventID="2" id="-1"/>
+    <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-collide-actortotype comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <shout comment="false" x="26" y="47">
+                    <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="dead"/>
+                </shout>
+                <die comment="false" x="26" y="79">
+                    <ACTOR eid="this" id="0"/>
+                </die>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <actortype eid="2" id="1"/>
+        </event-collide-actortotype>
+    </group>
+    <group eventID="6" id="-1"/>
 </groups>
