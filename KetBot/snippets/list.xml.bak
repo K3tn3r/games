@@ -35,27 +35,27 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="isJumping" hidden="false" id="13" name="_isJumping" order="11"/>
         <blocks/>
         <events>
-            <event displayName="Time" enabled="true" id="16" name="step" order="3" repeats="true"/>
             <event displayName="left/right/idle" enabled="true" id="1" name="step" order="5" repeats="true"/>
-            <event displayName="bloock score2" enabled="true" id="17" name="event-custom" order="13" repeats="true"/>
             <event displayName="Created" enabled="true" id="2" name="init" order="4" repeats="true"/>
             <event displayName="Jump" enabled="true" id="3" name="step" order="6" repeats="true"/>
             <event displayName="touchfloor?" enabled="true" id="4" name="event-collide-actortogroup" order="7" repeats="true"/>
-            <event displayName="blob score" enabled="true" id="6" name="event-custom" order="10" repeats="true"/>
-            <event displayName="bloock score1" enabled="true" id="10" name="event-custom" order="12" repeats="true"/>
-            <event displayName="dead" enabled="true" id="11" name="event-custom" order="16" repeats="true"/>
+            <event displayName="blob score" enabled="true" id="6" name="event-custom" order="8" repeats="true"/>
+            <event displayName="bloock score1" enabled="true" id="10" name="event-custom" order="11" repeats="true"/>
+            <event displayName="dead" enabled="true" id="11" name="event-custom" order="15" repeats="true"/>
             <event displayName="Boofer score" enabled="true" id="12" name="event-custom" order="14" repeats="true"/>
             <event displayName="screen end" enabled="true" id="14" name="step" order="2" repeats="true"/>
-            <event displayName="Pit dead" enabled="true" id="15" name="step" order="18" repeats="true"/>
+            <event displayName="Pit dead" enabled="true" id="15" name="step" order="17" repeats="true"/>
+            <event displayName="bloock score2" enabled="true" id="17" name="event-custom" order="13" repeats="true"/>
+            <event displayName="Time dead" enabled="true" id="18" name="step" order="19" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_0" classname="scripts.SceneEvents_0" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="3" name="SceneEvents_0" oid="-1" package="scripts." sceneid="0" shared="false" type="scene">
         <blocks/>
         <events>
-            <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
-            <event displayName="AndyDied" enabled="true" id="3" name="event-custom" order="7" repeats="true"/>
-            <event displayName="Time" enabled="true" id="5" name="init" order="4" repeats="true"/>
-            <event displayName="Time-1" enabled="true" id="6" name="event-periodic" order="5" repeats="true"/>
+            <event displayName=" drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
+            <event displayName="Time" enabled="true" id="5" name="init" order="6" repeats="true"/>
+            <event displayName="Time-1" enabled="true" id="6" name="event-periodic" order="7" repeats="true"/>
+            <event displayName="Game Over" enabled="true" id="8" name="step" order="2" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="7" attachedevent="true" class="scripts.ActorEvents_7" classname="scripts.ActorEvents_7" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="4" name="ActorEvents_7" oid="-1" package="scripts." shared="false" type="actor">
@@ -128,6 +128,12 @@
         <blocks/>
         <events>
             <event displayName="Actor - Type" enabled="true" id="1" name="event-collide-actortotype" order="1" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_1" classname="scripts.SceneEvents_1" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="11" name="SceneEvents_1" oid="-1" package="scripts." sceneid="1" shared="false" type="scene">
+        <blocks/>
+        <events>
+            <event displayName="Keyboard" enabled="true" id="1" name="event-key-press-release" order="1" repeats="true"/>
         </events>
     </snippet>
 </pack>

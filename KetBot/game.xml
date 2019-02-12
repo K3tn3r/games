@@ -97,9 +97,10 @@
         <key id="1" keyname="DOWN" name="down" vk="40" vks="40"/>
         <key id="2" keyname="LEFT" name="left" vk="37" vks="37"/>
         <key id="3" keyname="RIGHT" name="right" vk="39" vks="39"/>
-        <key id="4" keyname="Z" name="action1" vk="90" vks="90"/>
+        <key id="4" keyname="Z" name="Shoot" vk="90" vks="90"/>
         <key id="5" keyname="X" name="action2" vk="88" vks="88"/>
         <key id="6" keyname="ENTER" name="enter" vk="10" vks="10"/>
+        <key id="7" keyname="SPACE" name="Space" vk="32" vks="32"/>
     </input>
     <attcats>
         <cat id="-1" name="Default"/>
@@ -112,7 +113,7 @@
         <number cid="-1" id="3" name="Lives" save="true" value="3.0"/>
         <number cid="-1" id="4" name="Time" save="true" value="0.0"/>
         <number cid="-1" id="5" name="Shoot" save="true" value="0.0"/>
-        <number cid="-1" id="9" name="booter bullets active" save="true" value="0"/>
+        <number cid="-1" id="9" name="booter bullets active" save="true" value="0.0"/>
         <number cid="-1" id="1" name="x of Andy" save="true" value="0.0"/>
     </attributes>
     <collisions>
@@ -144,7 +145,7 @@
     </collisions>
     <autotileFormats/>
     <atlases>
-        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,65,2,5,7,11,12,25,45,53,55,57,59,61,62,63," name="Main Atlas" pvr="false" resize="0" target="0"/>
+        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,65,2,5,7,11,12,76,25,45,53,55,57,59,61,62,63," name="Main Atlas" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="1" members="" name="Atlas 2" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="2" members="" name="Atlas 3" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="3" members="" name="Atlas 4" pvr="false" resize="0" target="0"/>

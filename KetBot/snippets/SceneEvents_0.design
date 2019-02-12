@@ -36,28 +36,7 @@
             </group>
         </draw>
     </group>
-    <group eventID="1" id="3">
-        <draw-text comment="false" x="141" y="342">
-            <get-game-val-9 comment="false" id="0" x="0" y="0"/>
-            <int id="1" val="200"/>
-            <int id="2" val="200"/>
-        </draw-text>
-    </group>
-    <group eventID="1" id="-1">
-        <get-game-val-8 comment="false" x="148" y="249"/>
-    </group>
-    <group eventID="3" id="0">
-        <event-custom comment="false" x="15" y="15">
-            <group eventID="3" id="-1">
-                <shout comment="false" x="26" y="40">
-                    <ACTOR eid="22" id="0"/>
-                    <int id="1" val="dead"/>
-                </shout>
-            </group>
-            <int id="0" val="AndyDied"/>
-        </event-custom>
-    </group>
-    <group eventID="3" id="-1"/>
+    <group eventID="1" id="-1"/>
     <group eventID="5" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="5" id="-1">
@@ -83,4 +62,30 @@
         </event-periodic>
     </group>
     <group eventID="6" id="-1"/>
+    <group eventID="8" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="8" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="8" id="-1">
+                        <dolater comment="false" x="37" y="70">
+                            <group eventID="8" id="-1">
+                                <scene-change-through comment="false" x="48" y="97">
+                                    <scene eid="1" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1"/>
+                                </scene-change-through>
+                            </group>
+                            <int id="0" val=".8"/>
+                            <ACTOR eid="lastcreated" id="2"/>
+                        </dolater>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="8" id="-1"/>
 </groups>

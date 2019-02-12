@@ -501,25 +501,6 @@
         </step>
     </group>
     <group eventID="15" id="-1"/>
-    <group eventID="16" id="0">
-        <step comment="false" x="15" y="15">
-            <group eventID="16" id="-1">
-                <if comment="false" x="26" y="40">
-                    <group eventID="16" id="-1">
-                        <shout comment="false" x="37" y="70">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="dead"/>
-                        </shout>
-                    </group>
-                    <lesseq comment="false" id="0" x="0" y="0">
-                        <get-game-val-4 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="0"/>
-                    </lesseq>
-                </if>
-            </group>
-        </step>
-    </group>
-    <group eventID="16" id="-1"/>
     <group eventID="17" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="17" id="-1">
@@ -537,4 +518,23 @@
         </event-custom>
     </group>
     <group eventID="17" id="-1"/>
+    <group eventID="18" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="18" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="18" id="-1">
+                        <shout comment="false" x="37" y="70">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="dead"/>
+                        </shout>
+                    </group>
+                    <lesseq comment="false" id="0" x="0" y="0">
+                        <get-game-val-4 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </lesseq>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="18" id="-1"/>
 </groups>
