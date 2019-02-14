@@ -8,6 +8,7 @@
     <joints/>
     <regions>
         <region b="64" g="64" h="85" id="3" name="Region 3" pts="4,0.0,0.0,0.0,85.0,22.0,85.0,22.0,0.0" r="64" type="box" w="22" x="6376" y="363"/>
+        <region b="64" g="64" h="450" id="4" name="Region 4" pts="4,-16.0,-225.0,16.0,-225.0,16.0,225.0,-16.0,225.0" r="64" type="box" w="32" x="4421" y="-1"/>
     </regions>
     <terrainRegions/>
     <actors>

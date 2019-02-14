@@ -88,4 +88,42 @@
         </step>
     </group>
     <group eventID="8" id="-1"/>
+    <group eventID="9" id="0">
+        <event-type-region comment="false" x="15" y="15">
+            <group eventID="9" id="-1">
+                <if comment="false" x="26" y="47">
+                    <group eventID="9" id="-1">
+                        <set-game-val-10 comment="false" x="37" y="80">
+                            <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-10>
+                        <set-game-val-10 comment="false" x="37" y="105">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-10>
+                    </group>
+                    <is-in-region comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="22" id="0"/>
+                        <REGION eid="4" id="1"/>
+                    </is-in-region>
+                </if>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="4" id="1"/>
+            <actortype eid="2" id="2"/>
+        </event-type-region>
+    </group>
+    <group eventID="9" id="-1"/>
+    <group eventID="10" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="10" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="10" id="-1"/>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-10 comment="false" id="0" x="0" y="0"/>
+                        <true comment="false" id="1" x="0" y="0"/>
+                    </eq>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="10" id="-1"/>
 </groups>

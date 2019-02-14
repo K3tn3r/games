@@ -107,11 +107,14 @@
     </attcats>
     <props/>
     <attributes>
+        <number cid="-1" id="12" name="Y of Andy" save="true" value="0"/>
         <number cid="-1" id="0" name="score" save="true" value="0.0"/>
         <text cid="-1" id="8" name="debug" save="true" value="0"/>
+        <boolean cid="-1" id="10" name="Checkpiont" save="true" value="false"/>
         <number cid="-1" id="2" name="areaOfEffect" save="true" value="0.0"/>
         <number cid="-1" id="3" name="Lives" save="true" value="3.0"/>
         <number cid="-1" id="4" name="Time" save="true" value="0.0"/>
+        <boolean cid="-1" id="11" name="shoot" save="true" value="false"/>
         <number cid="-1" id="5" name="Shoot" save="true" value="0.0"/>
         <number cid="-1" id="9" name="booter bullets active" save="true" value="0.0"/>
         <number cid="-1" id="1" name="x of Andy" save="true" value="0.0"/>
@@ -145,7 +148,7 @@
     </collisions>
     <autotileFormats/>
     <atlases>
-        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,65,2,5,7,11,12,76,25,45,53,55,57,59,61,62,63," name="Main Atlas" pvr="false" resize="0" target="0"/>
+        <atlas allScenes="true" desc="" dirty="true" id="0" members="0,65,2,5,7,11,12,76,77,25,45,53,55,57,59,61,62,63," name="Main Atlas" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="1" members="" name="Atlas 2" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="2" members="" name="Atlas 3" pvr="false" resize="0" target="0"/>
         <atlas allScenes="true" desc="" dirty="true" id="3" members="" name="Atlas 4" pvr="false" resize="0" target="0"/>
