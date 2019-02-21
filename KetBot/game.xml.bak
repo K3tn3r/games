@@ -58,8 +58,21 @@
         <group desc="" id="7" name="Booter"/>
         <group desc="" id="8" name="Boofer"/>
         <group desc="" id="9" name="Booter Bullet"/>
+        <group desc="" id="10" name="Bomb"/>
+        <group desc="" id="11" name="PowerUp"/>
+        <group desc="" id="12" name="Bullet"/>
     </groups>
     <cgroups>
+        <cgroup g1="1" g2="11"/>
+        <cgroup g1="5" g2="11"/>
+        <cgroup g1="12" g2="12"/>
+        <cgroup g1="1" g2="12"/>
+        <cgroup g1="4" g2="12"/>
+        <cgroup g1="5" g2="12"/>
+        <cgroup g1="6" g2="12"/>
+        <cgroup g1="7" g2="12"/>
+        <cgroup g1="8" g2="12"/>
+        <cgroup g1="10" g2="12"/>
         <cgroup g1="0" g2="1"/>
         <cgroup g1="1" g2="1"/>
         <cgroup g1="1" g2="3"/>
@@ -69,28 +82,36 @@
         <cgroup g1="1" g2="7"/>
         <cgroup g1="1" g2="8"/>
         <cgroup g1="1" g2="9"/>
+        <cgroup g1="1" g2="10"/>
         <cgroup g1="3" g2="3"/>
         <cgroup g1="3" g2="6"/>
         <cgroup g1="3" g2="7"/>
+        <cgroup g1="3" g2="10"/>
         <cgroup g1="4" g2="4"/>
         <cgroup g1="4" g2="5"/>
         <cgroup g1="4" g2="6"/>
         <cgroup g1="4" g2="7"/>
         <cgroup g1="4" g2="8"/>
+        <cgroup g1="4" g2="10"/>
         <cgroup g1="5" g2="6"/>
         <cgroup g1="5" g2="7"/>
         <cgroup g1="5" g2="8"/>
         <cgroup g1="5" g2="9"/>
+        <cgroup g1="5" g2="10"/>
         <cgroup g1="6" g2="6"/>
         <cgroup g1="6" g2="7"/>
         <cgroup g1="6" g2="8"/>
         <cgroup g1="6" g2="9"/>
+        <cgroup g1="6" g2="10"/>
         <cgroup g1="7" g2="7"/>
         <cgroup g1="7" g2="8"/>
         <cgroup g1="7" g2="9"/>
+        <cgroup g1="7" g2="10"/>
         <cgroup g1="8" g2="8"/>
         <cgroup g1="8" g2="9"/>
+        <cgroup g1="8" g2="10"/>
         <cgroup g1="9" g2="9"/>
+        <cgroup g1="10" g2="10"/>
     </cgroups>
     <input>
         <key id="0" keyname="UP" name="up" vk="38" vks="38"/>
@@ -107,13 +128,14 @@
     </attcats>
     <props/>
     <attributes>
-        <number cid="-1" id="12" name="Y of Andy" save="true" value="0"/>
-        <number cid="-1" id="0" name="score" save="true" value="0.0"/>
         <text cid="-1" id="8" name="debug" save="true" value="0"/>
-        <boolean cid="-1" id="10" name="Checkpiont" save="true" value="false"/>
         <number cid="-1" id="2" name="areaOfEffect" save="true" value="0.0"/>
         <number cid="-1" id="3" name="Lives" save="true" value="3.0"/>
         <number cid="-1" id="4" name="Time" save="true" value="0.0"/>
+        <number cid="-1" id="12" name="Y of Andy" save="true" value="0.0"/>
+        <number cid="-1" id="0" name="score" save="true" value="0.0"/>
+        <boolean cid="-1" id="14" name="checkpiont" save="true" value="false"/>
+        <boolean cid="-1" id="13" name="left" save="true" value="false"/>
         <boolean cid="-1" id="11" name="shoot" save="true" value="false"/>
         <number cid="-1" id="5" name="Shoot" save="true" value="0.0"/>
         <number cid="-1" id="9" name="booter bullets active" save="true" value="0.0"/>

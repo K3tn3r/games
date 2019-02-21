@@ -400,14 +400,33 @@
             <int id="0" val="dead"/>
         </event-custom>
     </group>
-    <group eventID="11" id="1">
-        <set-val-2-11 comment="false" x="810" y="174">
-            <get-val-2-11 comment="false" id="0" x="0" y="0"/>
-        </set-val-2-11>
+    <group eventID="11" id="2">
+        <set-xy comment="false" x="240" y="280">
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="0"/>
+            <int id="2" val=""/>
+        </set-xy>
     </group>
-    <group eventID="11" id="-1">
-        <get-val-2-11 comment="false" x="850" y="95"/>
+    <group eventID="11" id="3">
+        <set-xy comment="false" x="235" y="358">
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="0"/>
+            <int id="2" val=""/>
+        </set-xy>
     </group>
+    <group eventID="11" id="4">
+        <if comment="false" x="673" y="262">
+            <group eventID="11" id="-1"/>
+            <int id="0" val=""/>
+        </if>
+    </group>
+    <group eventID="11" id="5">
+        <else-if comment="false" x="708" y="349">
+            <group eventID="11" id="-1"/>
+            <int id="0" val=""/>
+        </else-if>
+    </group>
+    <group eventID="11" id="-1"/>
     <group eventID="12" id="0">
         <event-custom comment="false" x="15" y="15">
             <group eventID="12" id="-1">
@@ -553,20 +572,26 @@
                                 <set-val-2-14 comment="false" x="48" y="108">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-2-14>
-                                <create-actor3 comment="false" x="48" y="133">
+                                <set-game-val-13 comment="false" x="48" y="133">
+                                    <false comment="false" id="0" x="0" y="0"/>
+                                </set-game-val-13>
+                                <create-actor3 comment="false" x="48" y="158">
                                     <actortype eid="77" id="0"/>
                                     <plus comment="false" id="1" x="0" y="0">
                                         <get-game-val-1 comment="false" id="0" x="0" y="0"/>
                                         <int id="1" val="15"/>
                                     </plus>
-                                    <get-game-val-12 comment="false" id="2" x="0" y="0"/>
+                                    <plus comment="false" id="2" x="0" y="0">
+                                        <get-game-val-12 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="15"/>
+                                    </plus>
                                     <int id="3" val="0"/>
                                 </create-actor3>
                             </group>
                             <and comment="false" id="0" x="0" y="0">
                                 <and comment="false" id="0" x="0" y="0">
                                     <keystate comment="false" id="0" x="0" y="0">
-                                        <int id="0" val="0"/>
+                                        <int id="0" val="1"/>
                                         <control eid="4" id="1"/>
                                     </keystate>
                                     <get-val-2-9 comment="false" id="1" x="0" y="0"/>
@@ -577,17 +602,49 @@
                                 </eq>
                             </and>
                         </if>
+                        <else-if comment="false" x="37" y="207">
+                            <group eventID="19" id="-1">
+                                <set-val-2-14 comment="false" x="48" y="250">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-2-14>
+                                <set-game-val-13 comment="false" x="48" y="275">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-game-val-13>
+                                <create-actor3 comment="false" x="48" y="300">
+                                    <actortype eid="77" id="0"/>
+                                    <minus comment="false" id="1" x="0" y="0">
+                                        <get-game-val-1 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="15"/>
+                                    </minus>
+                                    <plus comment="false" id="2" x="0" y="0">
+                                        <get-game-val-12 comment="false" id="0" x="0" y="0"/>
+                                        <int id="1" val="15"/>
+                                    </plus>
+                                    <int id="3" val="0"/>
+                                </create-actor3>
+                                <set-game-val-13 comment="false" x="48" y="337">
+                                    <false comment="false" id="0" x="0" y="0"/>
+                                </set-game-val-13>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <and comment="false" id="0" x="0" y="0">
+                                    <keystate comment="false" id="0" x="0" y="0">
+                                        <int id="0" val="1"/>
+                                        <control eid="4" id="1"/>
+                                    </keystate>
+                                    <get-val-2-9 comment="false" id="1" x="0" y="0"/>
+                                </and>
+                                <eq comment="false" id="1" x="0" y="0">
+                                    <get-val-2-2 comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="left"/>
+                                </eq>
+                            </and>
+                        </else-if>
                     </group>
                     <get-game-val-11 comment="false" id="0" x="0" y="0"/>
                 </if>
             </group>
         </step>
-    </group>
-    <group eventID="19" id="6">
-        <plus comment="false" x="556" y="144">
-            <int id="0" val=""/>
-            <int id="1" val=""/>
-        </plus>
     </group>
     <group eventID="19" id="-1"/>
 </groups>

@@ -6,7 +6,10 @@
                 <set-game-val-11 comment="false" x="26" y="47">
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-game-val-11>
-                <die comment="false" x="26" y="72">
+                <set-game-val-14 comment="false" x="26" y="72">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-game-val-14>
+                <die comment="false" x="26" y="97">
                     <ACTOR eid="this" id="0"/>
                 </die>
             </group>

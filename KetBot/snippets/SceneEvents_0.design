@@ -126,4 +126,16 @@
         </step>
     </group>
     <group eventID="10" id="-1"/>
+    <group eventID="11" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="11" id="-1">
+                <shout comment="false" x="26" y="40">
+                    <ACTOR eid="22" id="0"/>
+                    <int id="1" val="dead"/>
+                </shout>
+            </group>
+            <int id="0" val="AndyDied"/>
+        </event-custom>
+    </group>
+    <group eventID="11" id="-1"/>
 </groups>

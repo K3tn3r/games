@@ -88,17 +88,17 @@
             <group eventID="3" id="-1">
                 <if comment="false" x="26" y="45">
                     <group eventID="3" id="-1">
-                        <set-val-4-2 comment="false" x="37" y="93">
+                        <set-val-6-2 comment="false" x="37" y="93">
                             <not comment="false" id="0" x="0" y="0">
-                                <get-val-4-2 comment="false" id="0" x="0" y="0"/>
+                                <get-val-6-2 comment="false" id="0" x="0" y="0"/>
                             </not>
-                        </set-val-4-2>
+                        </set-val-6-2>
                         <set-val-6-9 comment="false" x="37" y="123">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-6-9>
-                        <set-val-4-4 comment="false" x="37" y="148">
+                        <set-val-6-4 comment="false" x="37" y="148">
                             <int id="0" val="3"/>
-                        </set-val-4-4>
+                        </set-val-6-4>
                         <dolater comment="false" x="37" y="168">
                             <group eventID="3" id="-1">
                                 <set-val-6-9 comment="false" x="48" y="195">
@@ -135,25 +135,25 @@
     <group eventID="4" id="0">
         <event-periodic comment="false" x="15" y="15">
             <group eventID="4" id="-1">
-                <set-val-4-4 comment="false" x="26" y="42">
+                <set-val-6-4 comment="false" x="26" y="42">
                     <minus comment="false" id="0" x="0" y="0">
-                        <get-val-4-4 comment="false" id="0" x="0" y="0"/>
+                        <get-val-6-4 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="1"/>
                     </minus>
-                </set-val-4-4>
+                </set-val-6-4>
                 <if comment="false" x="26" y="72">
                     <group eventID="4" id="-1">
-                        <set-val-4-2 comment="false" x="37" y="102">
+                        <set-val-6-2 comment="false" x="37" y="102">
                             <not comment="false" id="0" x="0" y="0">
-                                <get-val-4-2 comment="false" id="0" x="0" y="0"/>
+                                <get-val-6-2 comment="false" id="0" x="0" y="0"/>
                             </not>
-                        </set-val-4-2>
-                        <set-val-4-4 comment="false" x="37" y="132">
+                        </set-val-6-2>
+                        <set-val-6-4 comment="false" x="37" y="132">
                             <int id="0" val="3"/>
-                        </set-val-4-4>
+                        </set-val-6-4>
                     </group>
                     <lesseq comment="false" id="0" x="0" y="0">
-                        <get-val-4-4 comment="false" id="0" x="0" y="0"/>
+                        <get-val-6-4 comment="false" id="0" x="0" y="0"/>
                         <int id="1" val="0"/>
                     </lesseq>
                 </if>

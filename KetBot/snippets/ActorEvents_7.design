@@ -145,7 +145,7 @@
                     <ACTOR eid="this" id="2"/>
                 </dolater>
             </group>
-            <int id="0" val="death"/>
+            <int id="0" val="Blobdeath"/>
         </event-custom>
     </group>
     <group eventID="10" id="-1"/>
@@ -156,7 +156,7 @@
                     <group eventID="11" id="-1">
                         <shout comment="false" x="31" y="82">
                             <ACTOR eid="this" id="0"/>
-                            <int id="1" val="death"/>
+                            <int id="1" val="Blobdeath"/>
                         </shout>
                         <shout comment="false" x="31" y="109">
                             <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
