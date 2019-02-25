@@ -400,27 +400,27 @@
             <int id="0" val="dead"/>
         </event-custom>
     </group>
-    <group eventID="11" id="2">
+    <group eventID="11" id="1">
         <set-xy comment="false" x="240" y="280">
             <ACTOR eid="this" id="0"/>
             <int id="1" val="0"/>
             <int id="2" val=""/>
         </set-xy>
     </group>
-    <group eventID="11" id="3">
+    <group eventID="11" id="2">
         <set-xy comment="false" x="235" y="358">
             <ACTOR eid="this" id="0"/>
             <int id="1" val="0"/>
             <int id="2" val=""/>
         </set-xy>
     </group>
-    <group eventID="11" id="4">
+    <group eventID="11" id="3">
         <if comment="false" x="673" y="262">
             <group eventID="11" id="-1"/>
             <int id="0" val=""/>
         </if>
     </group>
-    <group eventID="11" id="5">
+    <group eventID="11" id="4">
         <else-if comment="false" x="708" y="349">
             <group eventID="11" id="-1"/>
             <int id="0" val=""/>

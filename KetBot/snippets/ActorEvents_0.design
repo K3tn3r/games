@@ -327,15 +327,15 @@
         </step>
     </group>
     <group eventID="12" id="-1">
+        <and comment="false" x="435" y="135">
+            <int id="0" val=""/>
+            <int id="1" val=""/>
+        </and>
         <and comment="false" x="538" y="240">
             <int id="0" val=""/>
             <not comment="false" id="1" x="0" y="0">
                 <get-val-1-5 comment="false" id="0" x="0" y="0"/>
             </not>
-        </and>
-        <and comment="false" x="435" y="135">
-            <int id="0" val=""/>
-            <int id="1" val=""/>
         </and>
     </group>
 </groups>
