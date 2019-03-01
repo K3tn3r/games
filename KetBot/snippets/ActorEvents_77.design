@@ -162,10 +162,4 @@
         </event-collide-actortogroup>
     </group>
     <group eventID="8" id="-1"/>
-    <group eventID="9" id="0">
-        <step comment="false" x="15" y="15">
-            <group eventID="9" id="-1"/>
-        </step>
-    </group>
-    <group eventID="9" id="-1"/>
 </groups>

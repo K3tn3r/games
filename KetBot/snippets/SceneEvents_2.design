@@ -1,2 +1,103 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<groups/>
+<groups>
+    <group eventID="1" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="1" id="-1">
+                <draw-text comment="false" x="26" y="40">
+                    <int id="0" val="SCORE"/>
+                    <int id="1" val="32"/>
+                    <int id="2" val="40"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="60">
+                    <get-game-val-0 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="100"/>
+                    <int id="2" val="40"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="85">
+                    <int id="0" val="LIFE"/>
+                    <int id="1" val="284"/>
+                    <int id="2" val="40"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="105">
+                    <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="340"/>
+                    <int id="2" val="40"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="130">
+                    <int id="0" val="TIME"/>
+                    <int id="1" val="544"/>
+                    <int id="2" val="40"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="150">
+                    <get-game-val-4 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="600"/>
+                    <int id="2" val="40"/>
+                </draw-text>
+            </group>
+        </draw>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="2" id="-1">
+                <set-game-val-4 comment="false" x="26" y="40">
+                    <int id="0" val="180"/>
+                </set-game-val-4>
+            </group>
+        </init>
+    </group>
+    <group eventID="2" id="-1"/>
+    <group eventID="3" id="0">
+        <event-periodic comment="false" x="15" y="15">
+            <group eventID="3" id="-1">
+                <set-game-val-4 comment="false" x="26" y="42">
+                    <minus comment="false" id="0" x="0" y="0">
+                        <get-game-val-4 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="1"/>
+                    </minus>
+                </set-game-val-4>
+            </group>
+            <int id="0" val="1"/>
+            <ACTOR eid="lastcreated" id="2"/>
+        </event-periodic>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="4" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="4" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="4" id="-1">
+                        <dolater comment="false" x="37" y="70">
+                            <group eventID="4" id="-1">
+                                <scene-change-through comment="false" x="48" y="97">
+                                    <scene eid="1" id="0"/>
+                                    <int id="1" val="0"/>
+                                    <int id="2" val="1"/>
+                                </scene-change-through>
+                            </group>
+                            <int id="0" val=".8"/>
+                            <ACTOR eid="lastcreated" id="2"/>
+                        </dolater>
+                    </group>
+                    <eq comment="false" id="0" x="0" y="0">
+                        <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                        <int id="1" val="0"/>
+                    </eq>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="4" id="-1"/>
+    <group eventID="5" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="5" id="-1">
+                <shout comment="false" x="26" y="40">
+                    <ACTOR eid="1" id="0"/>
+                    <int id="1" val="dead"/>
+                </shout>
+            </group>
+            <int id="0" val="AndyDied"/>
+        </event-custom>
+    </group>
+    <group eventID="5" id="-1"/>
+</groups>

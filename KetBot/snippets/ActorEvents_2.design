@@ -366,29 +366,35 @@
             <group eventID="11" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="11" id="-1">
-                        <set-val-2-9 comment="false" x="37" y="65">
+                        <set-game-val-11 comment="false" x="37" y="65">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-game-val-11>
+                        <set-val-2-9 comment="false" x="37" y="90">
                             <false comment="false" id="0" x="0" y="0"/>
                         </set-val-2-9>
-                        <setanim comment="false" x="37" y="90">
+                        <setanim comment="false" x="37" y="115">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="dead"/>
                         </setanim>
-                        <set-game-val-3 comment="false" x="37" y="117">
+                        <set-game-val-3 comment="false" x="37" y="142">
                             <minus comment="false" id="0" x="0" y="0">
                                 <get-game-val-3 comment="false" id="0" x="0" y="0"/>
                                 <int id="1" val="1"/>
                             </minus>
                         </set-game-val-3>
-                        <dolater comment="false" x="37" y="147">
+                        <dolater comment="false" x="37" y="172">
                             <group eventID="11" id="-1">
-                                <scene-reload-color comment="false" x="48" y="174">
-                                    <int id="0" val="0"/>
-                                    <int id="1" val=".5"/>
-                                    <color b="0" g="0" id="2" r="0"/>
-                                    <int id="3" val="3"/>
-                                    <int id="4" val=".5"/>
-                                    <color b="0" g="0" id="5" r="0"/>
-                                </scene-reload-color>
+                                <if comment="false" x="48" y="199">
+                                    <group eventID="11" id="-1"/>
+                                    <eq comment="false" id="0" x="0" y="0">
+                                        <get-game-val-14 comment="false" id="0" x="0" y="0"/>
+                                        <false comment="false" id="1" x="0" y="0"/>
+                                    </eq>
+                                </if>
+                                <else-if comment="false" x="48" y="261">
+                                    <group eventID="11" id="-1"/>
+                                    <get-game-val-14 comment="false" id="0" x="0" y="0"/>
+                                </else-if>
                             </group>
                             <int id="0" val="1"/>
                             <ACTOR eid="this" id="2"/>
@@ -400,31 +406,27 @@
             <int id="0" val="dead"/>
         </event-custom>
     </group>
-    <group eventID="11" id="1">
-        <set-xy comment="false" x="240" y="280">
-            <ACTOR eid="this" id="0"/>
-            <int id="1" val="0"/>
-            <int id="2" val=""/>
-        </set-xy>
-    </group>
-    <group eventID="11" id="2">
-        <set-xy comment="false" x="235" y="358">
-            <ACTOR eid="this" id="0"/>
-            <int id="1" val="0"/>
-            <int id="2" val=""/>
-        </set-xy>
-    </group>
-    <group eventID="11" id="3">
-        <if comment="false" x="673" y="262">
-            <group eventID="11" id="-1"/>
-            <int id="0" val=""/>
-        </if>
-    </group>
     <group eventID="11" id="4">
-        <else-if comment="false" x="708" y="349">
-            <group eventID="11" id="-1"/>
-            <int id="0" val=""/>
-        </else-if>
+        <scene-reload-color comment="false" x="189" y="408">
+            <int id="0" val="0"/>
+            <int id="1" val=".5"/>
+            <color b="0" g="0" id="2" r="0"/>
+            <int id="3" val="3"/>
+            <int id="4" val=".5"/>
+            <color b="0" g="0" id="5" r="0"/>
+        </scene-reload-color>
+    </group>
+    <group eventID="11" id="9">
+        <set-xy comment="false" x="406" y="234">
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="0"/>
+            <int id="2" val="4232"/>
+        </set-xy>
+        <set-xy comment="false" x="406" y="261">
+            <ACTOR eid="this" id="0"/>
+            <int id="1" val="1"/>
+            <int id="2" val="410"/>
+        </set-xy>
     </group>
     <group eventID="11" id="-1"/>
     <group eventID="12" id="0">
