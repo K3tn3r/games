@@ -161,23 +161,25 @@
                 <set-game-val-15 comment="false" x="26" y="42">
                     <true comment="false" id="0" x="0" y="0"/>
                 </set-game-val-15>
+                <save-game comment="false" x="26" y="67">
+                    <group eventID="15" id="-1">
+                        <set-xy comment="false" x="37" y="92">
+                            <ACTOR eid="22" id="0"/>
+                            <int id="1" val="0"/>
+                            <get-game-val-1 comment="false" id="2" x="0" y="0"/>
+                        </set-xy>
+                        <set-xy comment="false" x="37" y="124">
+                            <ACTOR eid="22" id="0"/>
+                            <int id="1" val="1"/>
+                            <get-game-val-12 comment="false" id="2" x="0" y="0"/>
+                        </set-xy>
+                    </group>
+                </save-game>
             </group>
             <int id="0" val="0"/>
             <REGION eid="4" id="1"/>
             <ACTOR eid="22" id="2"/>
         </event-actor-region>
-    </group>
-    <group eventID="15" id="2">
-        <set-xy comment="false" x="59" y="142">
-            <ACTOR eid="lastcreated" id="0"/>
-            <int id="1" val="0"/>
-            <int id="2" val=""/>
-        </set-xy>
-        <set-xy comment="false" x="59" y="169">
-            <ACTOR eid="lastcreated" id="0"/>
-            <int id="1" val="1"/>
-            <int id="2" val=""/>
-        </set-xy>
     </group>
     <group eventID="15" id="-1"/>
 </groups>

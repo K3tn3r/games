@@ -39,15 +39,18 @@
             <event displayName="Created" enabled="true" id="2" name="init" order="4" repeats="true"/>
             <event displayName="Jump" enabled="true" id="3" name="step" order="6" repeats="true"/>
             <event displayName="touchfloor?" enabled="true" id="4" name="event-collide-actortogroup" order="8" repeats="true"/>
-            <event displayName="blob score" enabled="true" id="6" name="event-custom" order="11" repeats="true"/>
-            <event displayName="bloock score1" enabled="true" id="10" name="event-custom" order="13" repeats="true"/>
-            <event displayName="dead" enabled="true" id="11" name="event-custom" order="19" repeats="true"/>
-            <event displayName="Boofer score" enabled="true" id="12" name="event-custom" order="18" repeats="true"/>
+            <event displayName="blob score" enabled="true" id="6" name="event-custom" order="15" repeats="true"/>
+            <event displayName="bloock score1" enabled="true" id="10" name="event-custom" order="17" repeats="true"/>
+            <event displayName="dead" enabled="true" id="11" name="event-custom" order="23" repeats="true"/>
+            <event displayName="Boofer score" enabled="true" id="12" name="event-custom" order="22" repeats="true"/>
             <event displayName="screen end" enabled="true" id="14" name="step" order="2" repeats="true"/>
-            <event displayName="Pit dead" enabled="true" id="15" name="step" order="21" repeats="true"/>
-            <event displayName="bloock score2" enabled="true" id="17" name="event-custom" order="14" repeats="true"/>
-            <event displayName="Time dead" enabled="true" id="18" name="step" order="22" repeats="true"/>
+            <event displayName="Pit dead" enabled="true" id="15" name="step" order="25" repeats="true"/>
+            <event displayName="bloock score2" enabled="true" id="17" name="event-custom" order="18" repeats="true"/>
+            <event displayName="Time dead" enabled="true" id="18" name="step" order="26" repeats="true"/>
             <event displayName="shoot" enabled="true" id="19" name="step" order="7" repeats="true"/>
+            <event displayName="Blob jump" enabled="true" id="20" name="event-collide-actortogroup" order="9" repeats="true"/>
+            <event displayName="Bloock jump" enabled="true" id="21" name="event-collide-actortogroup" order="10" repeats="true"/>
+            <event displayName="Actor - Group" enabled="true" id="22" name="event-collide-actortogroup" order="11" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_0" classname="scripts.SceneEvents_0" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="3" name="SceneEvents_0" oid="-1" package="scripts." sceneid="0" shared="false" type="scene">
