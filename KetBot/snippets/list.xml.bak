@@ -56,15 +56,15 @@
     <snippet attachedevent="true" class="scripts.SceneEvents_0" classname="scripts.SceneEvents_0" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="3" name="SceneEvents_0" oid="-1" package="scripts." sceneid="0" shared="false" type="scene">
         <blocks/>
         <events>
-            <event displayName="level 2" enabled="true" id="16" name="event-actor-region" order="3" repeats="true"/>
+            <event displayName="level 2" enabled="true" id="16" name="event-actor-region" order="20" repeats="true"/>
             <event displayName=" drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
-            <event displayName="Time" enabled="true" id="5" name="init" order="15" repeats="true"/>
-            <event displayName="Time-1" enabled="true" id="6" name="event-periodic" order="16" repeats="true"/>
-            <event displayName="Game Over" enabled="true" id="8" name="step" order="11" repeats="true"/>
-            <event displayName="Custom Event" enabled="true" id="11" name="event-custom" order="17" repeats="true"/>
-            <event displayName="Custom Event" enabled="true" id="12" name="event-custom" order="18" repeats="true"/>
-            <event displayName="Custom Event" enabled="true" id="13" name="event-custom" order="19" repeats="true"/>
-            <event displayName="Custom Event" enabled="true" id="14" name="event-custom" order="20" repeats="true"/>
+            <event displayName="Time" enabled="true" id="5" name="init" order="11" repeats="true"/>
+            <event displayName="Time-1" enabled="true" id="6" name="event-periodic" order="15" repeats="true"/>
+            <event displayName="Game Over" enabled="true" id="8" name="step" order="3" repeats="true"/>
+            <event displayName="Custom Event" enabled="true" id="11" name="event-custom" order="16" repeats="true"/>
+            <event displayName="Custom Event" enabled="true" id="12" name="event-custom" order="17" repeats="true"/>
+            <event displayName="Custom Event" enabled="true" id="13" name="event-custom" order="18" repeats="true"/>
+            <event displayName="Custom Event" enabled="true" id="14" name="event-custom" order="19" repeats="true"/>
             <event displayName="checkpiont" enabled="true" id="15" name="event-actor-region" order="2" repeats="true"/>
         </events>
     </snippet>
@@ -148,6 +148,7 @@
     </snippet>
     <snippet actorid="77" attachedevent="true" class="scripts.ActorEvents_77" classname="scripts.ActorEvents_77" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="12" name="ActorEvents_77" oid="-1" package="scripts." shared="false" type="actor">
         <text default="right" defaultValue="right" desc="" dropdown="" fullname="direction" hidden="false" id="1" name="_direction" order="0"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="stuck" hidden="false" id="2" name="_stuck" order="1"/>
         <blocks/>
         <events>
             <event displayName="Created" enabled="true" id="1" name="init" order="1" repeats="true"/>

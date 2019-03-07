@@ -136,6 +136,7 @@
         <number cid="-1" id="12" name="Y of Andy" save="true" value="0.0"/>
         <number cid="-1" id="0" name="score" save="true" value="0.0"/>
         <boolean cid="-1" id="14" name="checkpiont" save="true" value="false"/>
+        <number cid="-1" id="16" name="N of Bullet" save="true" value="0"/>
         <boolean cid="-1" id="13" name="left" save="true" value="false"/>
         <boolean cid="-1" id="11" name="shoot" save="true" value="false"/>
         <number cid="-1" id="5" name="Shoot" save="true" value="0.0"/>
