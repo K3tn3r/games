@@ -132,31 +132,57 @@
     <group eventID="3" id="0">
         <step comment="false" x="15" y="15">
             <group eventID="3" id="-1">
-                <if comment="false" x="26" y="40">
+                <set-game-val-8 comment="false" x="26" y="40">
+                    <tostring comment="false" id="0" x="0" y="0">
+                        <get-val-2-5 comment="false" id="0" x="0" y="0"/>
+                    </tostring>
+                </set-game-val-8>
+                <if comment="false" x="26" y="70">
                     <group eventID="3" id="-1">
-                        <if comment="false" x="37" y="65">
+                        <set-fric-bounce comment="false" x="37" y="100">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val="0"/>
+                        </set-fric-bounce>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-val-2-5 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+                <else comment="false" x="26" y="139">
+                    <group eventID="3" id="-1">
+                        <set-fric-bounce comment="false" x="37" y="159">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="0"/>
+                            <int id="2" val=".2"/>
+                        </set-fric-bounce>
+                    </group>
+                </else>
+                <if comment="false" x="26" y="198">
+                    <group eventID="3" id="-1">
+                        <if comment="false" x="37" y="223">
                             <group eventID="3" id="-1">
-                                <set-val-2-13 comment="false" x="48" y="113">
+                                <set-val-2-13 comment="false" x="48" y="271">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-2-13>
-                                <setanim comment="false" x="48" y="138">
+                                <setanim comment="false" x="48" y="296">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="Jump right"/>
                                 </setanim>
-                                <set-dxy comment="false" x="48" y="165">
+                                <set-dxy comment="false" x="48" y="323">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="1"/>
                                     <get-val-2-3 comment="false" id="2" x="0" y="0"/>
                                 </set-dxy>
-                                <set-val-2-5 comment="false" x="48" y="197">
+                                <set-val-2-5 comment="false" x="48" y="355">
                                     <false comment="false" id="0" x="0" y="0"/>
                                 </set-val-2-5>
-                                <dolater comment="false" x="48" y="222">
+                                <dolater comment="false" x="48" y="380">
                                     <group eventID="3" id="-1">
-                                        <set-val-2-6 comment="false" x="59" y="249">
+                                        <set-val-2-6 comment="false" x="59" y="407">
                                             <true comment="false" id="0" x="0" y="0"/>
                                         </set-val-2-6>
-                                        <set-val-2-13 comment="false" x="59" y="274">
+                                        <set-val-2-13 comment="false" x="59" y="432">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-val-2-13>
                                     </group>
@@ -180,29 +206,29 @@
                                 <get-val-2-5 comment="false" id="1" x="0" y="0"/>
                             </and>
                         </if>
-                        <else-if comment="false" x="37" y="323">
+                        <else-if comment="false" x="37" y="481">
                             <group eventID="3" id="-1">
-                                <set-val-2-13 comment="false" x="48" y="366">
+                                <set-val-2-13 comment="false" x="48" y="524">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-2-13>
-                                <setanim comment="false" x="48" y="391">
+                                <setanim comment="false" x="48" y="549">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="Jump left"/>
                                 </setanim>
-                                <set-dxy comment="false" x="48" y="418">
+                                <set-dxy comment="false" x="48" y="576">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="1"/>
                                     <get-val-2-3 comment="false" id="2" x="0" y="0"/>
                                 </set-dxy>
-                                <set-val-2-5 comment="false" x="48" y="450">
+                                <set-val-2-5 comment="false" x="48" y="608">
                                     <false comment="false" id="0" x="0" y="0"/>
                                 </set-val-2-5>
-                                <dolater comment="false" x="48" y="475">
+                                <dolater comment="false" x="48" y="633">
                                     <group eventID="3" id="-1">
-                                        <set-val-2-6 comment="false" x="59" y="502">
+                                        <set-val-2-6 comment="false" x="59" y="660">
                                             <true comment="false" id="0" x="0" y="0"/>
                                         </set-val-2-6>
-                                        <set-val-2-13 comment="false" x="59" y="527">
+                                        <set-val-2-13 comment="false" x="59" y="685">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-val-2-13>
                                     </group>
@@ -224,26 +250,26 @@
                                 <get-val-2-5 comment="false" id="1" x="0" y="0"/>
                             </and>
                         </else-if>
-                        <else-if comment="false" x="37" y="576">
+                        <else-if comment="false" x="37" y="734">
                             <group eventID="3" id="-1">
-                                <set-val-2-13 comment="false" x="48" y="624">
+                                <set-val-2-13 comment="false" x="48" y="782">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-2-13>
-                                <setanim comment="false" x="48" y="649">
+                                <setanim comment="false" x="48" y="807">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="Jump right"/>
                                 </setanim>
-                                <set-dxy comment="false" x="48" y="676">
+                                <set-dxy comment="false" x="48" y="834">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="1"/>
                                     <get-val-2-3 comment="false" id="2" x="0" y="0"/>
                                 </set-dxy>
-                                <set-val-2-6 comment="false" x="48" y="708">
+                                <set-val-2-6 comment="false" x="48" y="866">
                                     <false comment="false" id="0" x="0" y="0"/>
                                 </set-val-2-6>
-                                <dolater comment="false" x="48" y="733">
+                                <dolater comment="false" x="48" y="891">
                                     <group eventID="3" id="-1">
-                                        <set-val-2-13 comment="false" x="59" y="760">
+                                        <set-val-2-13 comment="false" x="59" y="918">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-val-2-13>
                                     </group>
@@ -267,26 +293,26 @@
                                 <get-val-2-6 comment="false" id="1" x="0" y="0"/>
                             </and>
                         </else-if>
-                        <if comment="false" x="37" y="809">
+                        <if comment="false" x="37" y="967">
                             <group eventID="3" id="-1">
-                                <set-val-2-13 comment="false" x="48" y="852">
+                                <set-val-2-13 comment="false" x="48" y="1010">
                                     <true comment="false" id="0" x="0" y="0"/>
                                 </set-val-2-13>
-                                <setanim comment="false" x="48" y="877">
+                                <setanim comment="false" x="48" y="1035">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="Jump left"/>
                                 </setanim>
-                                <set-dxy comment="false" x="48" y="904">
+                                <set-dxy comment="false" x="48" y="1062">
                                     <ACTOR eid="this" id="0"/>
                                     <int id="1" val="1"/>
                                     <get-val-2-3 comment="false" id="2" x="0" y="0"/>
                                 </set-dxy>
-                                <set-val-2-6 comment="false" x="48" y="936">
+                                <set-val-2-6 comment="false" x="48" y="1094">
                                     <false comment="false" id="0" x="0" y="0"/>
                                 </set-val-2-6>
-                                <dolater comment="false" x="48" y="961">
+                                <dolater comment="false" x="48" y="1119">
                                     <group eventID="3" id="-1">
-                                        <set-val-2-13 comment="false" x="59" y="988">
+                                        <set-val-2-13 comment="false" x="59" y="1146">
                                             <false comment="false" id="0" x="0" y="0"/>
                                         </set-val-2-13>
                                     </group>
@@ -316,11 +342,54 @@
     </group>
     <group eventID="3" id="-1"/>
     <group eventID="4" id="0">
-        <event-collide-actortogroup comment="false" x="15" y="15">
+        <event-collide-actortogroup comment="false" x="29" y="23">
             <group eventID="4" id="-1">
-                <set-val-2-5 comment="false" x="26" y="47">
-                    <true comment="false" id="0" x="0" y="0"/>
-                </set-val-2-5>
+                <if comment="false" x="40" y="55">
+                    <group eventID="4" id="-1">
+                        <set-val-2-5 comment="false" x="51" y="93">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-2-5>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <collision-bottom comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="0"/>
+                        </collision-bottom>
+                        <collision-top comment="false" id="1" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="1"/>
+                        </collision-top>
+                    </and>
+                </if>
+                <else-if comment="false" x="40" y="130">
+                    <group eventID="4" id="-1">
+                        <set-val-2-5 comment="false" x="51" y="173">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-2-5>
+                    </group>
+                    <or comment="false" id="0" x="0" y="0">
+                        <and comment="false" id="0" x="0" y="0">
+                            <collision-left comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <int id="1" val="0"/>
+                            </collision-left>
+                            <collision-right comment="false" id="1" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <int id="1" val="1"/>
+                            </collision-right>
+                        </and>
+                        <and comment="false" id="1" x="0" y="0">
+                            <collision-left comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <int id="1" val="0"/>
+                            </collision-left>
+                            <collision-right comment="false" id="1" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <int id="1" val="1"/>
+                            </collision-right>
+                        </and>
+                    </or>
+                </else-if>
             </group>
             <ACTOR eid="this" id="0"/>
             <actorgroup eid="1" id="1"/>
@@ -403,7 +472,7 @@
             <int id="0" val="dead"/>
         </event-custom>
     </group>
-    <group eventID="11" id="5">
+    <group eventID="11" id="1">
         <if comment="false" x="77" y="362">
             <group eventID="11" id="-1">
                 <scene-reload-color comment="false" x="88" y="392">
