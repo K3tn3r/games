@@ -36,7 +36,7 @@
             </group>
         </draw>
     </group>
-    <group eventID="1" id="2">
+    <group eventID="1" id="1">
         <draw-text comment="false" x="0" y="239">
             <get-game-val-8 comment="false" id="0" x="0" y="0"/>
             <int id="1" val="200"/>
