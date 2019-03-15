@@ -56,8 +56,10 @@
     <snippet attachedevent="true" class="scripts.SceneEvents_0" classname="scripts.SceneEvents_0" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="3" name="SceneEvents_0" oid="-1" package="scripts." sceneid="0" shared="false" type="scene">
         <blocks/>
         <events>
-            <event displayName="level 2" enabled="true" id="16" name="event-actor-region" order="20" repeats="true"/>
+            <event displayName="level 2" enabled="true" id="16" name="event-actor-region" order="22" repeats="true"/>
             <event displayName=" drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
+            <event displayName="Custom Event" enabled="true" id="17" name="event-custom" order="20" repeats="true"/>
+            <event displayName="Custom Event" enabled="false" id="18" name="event-custom" order="21" repeats="true"/>
             <event displayName="Time" enabled="true" id="5" name="init" order="11" repeats="true"/>
             <event displayName="Time-1" enabled="true" id="6" name="event-periodic" order="15" repeats="true"/>
             <event displayName="Game Over" enabled="true" id="8" name="step" order="3" repeats="true"/>
@@ -133,6 +135,7 @@
             <event displayName="turn timer" enabled="true" id="3" name="event-periodic" order="3" repeats="true"/>
             <event displayName="dead" enabled="true" id="4" name="event-collide-actortotype" order="4" repeats="true"/>
             <event displayName="death" enabled="true" id="5" name="event-custom" order="5" repeats="true"/>
+            <event displayName="shot death" enabled="true" id="6" name="event-collide-typetotype" order="6" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="65" attachedevent="true" class="scripts.ActorEvents_65" classname="scripts.ActorEvents_65" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="10" name="ActorEvents_65" oid="-1" package="scripts." shared="false" type="actor">

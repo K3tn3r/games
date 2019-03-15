@@ -136,15 +136,11 @@
             <group eventID="4" id="-1">
                 <if comment="false" x="26" y="47">
                     <group eventID="4" id="-1">
-                        <setanim comment="false" x="37" y="85">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="dead"/>
-                        </setanim>
-                        <shout comment="false" x="37" y="112">
+                        <shout comment="false" x="37" y="85">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="death"/>
                         </shout>
-                        <shout comment="false" x="37" y="139">
+                        <shout comment="false" x="37" y="112">
                             <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="killBoofer"/>
                         </shout>
@@ -157,18 +153,18 @@
                         <get-val-9-3 comment="false" id="1" x="0" y="0"/>
                     </and>
                 </if>
-                <else-if comment="false" x="26" y="183">
+                <else-if comment="false" x="26" y="156">
                     <group eventID="4" id="-1">
-                        <shout comment="false" x="37" y="226">
+                        <shout comment="false" x="37" y="199">
                             <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
                             <int id="1" val="dead"/>
                         </shout>
-                        <set-val-9-2 comment="false" x="37" y="258">
+                        <set-val-9-2 comment="false" x="37" y="231">
                             <not comment="false" id="0" x="0" y="0">
                                 <get-val-9-2 comment="false" id="0" x="0" y="0"/>
                             </not>
                         </set-val-9-2>
-                        <set-val-9-4 comment="false" x="37" y="288">
+                        <set-val-9-4 comment="false" x="37" y="261">
                             <int id="0" val="3"/>
                         </set-val-9-4>
                     </group>
@@ -194,13 +190,17 @@
                 <set-val-9-3 comment="false" x="26" y="40">
                     <false comment="false" id="0" x="0" y="0"/>
                 </set-val-9-3>
-                <dolater comment="false" x="26" y="65">
+                <setanim comment="false" x="26" y="65">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="dead"/>
+                </setanim>
+                <dolater comment="false" x="26" y="92">
                     <group eventID="5" id="-1">
-                        <die comment="false" x="37" y="92">
+                        <die comment="false" x="37" y="119">
                             <ACTOR eid="this" id="0"/>
                         </die>
                     </group>
-                    <int id="0" val=".5"/>
+                    <int id="0" val=".7"/>
                     <ACTOR eid="this" id="2"/>
                 </dolater>
             </group>
@@ -208,4 +208,21 @@
         </event-custom>
     </group>
     <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-collide-typetotype comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <shout comment="false" x="26" y="47">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="death"/>
+                </shout>
+                <shout comment="false" x="26" y="74">
+                    <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="killBoofer"/>
+                </shout>
+            </group>
+            <actortype eid="77" id="0"/>
+            <actortype eid="59" id="1"/>
+        </event-collide-typetotype>
+    </group>
+    <group eventID="6" id="-1"/>
 </groups>
