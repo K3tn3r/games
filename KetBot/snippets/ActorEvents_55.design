@@ -49,7 +49,7 @@
                     </isonscreen>
                 </if>
             </group>
-            <int id="0" val="3"/>
+            <int id="0" val="2"/>
             <ACTOR eid="this" id="2"/>
         </event-periodic>
     </group>

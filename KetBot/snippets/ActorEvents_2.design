@@ -786,4 +786,17 @@
         </event-collide-actortogroup>
     </group>
     <group eventID="22" id="-1"/>
+    <group eventID="23" id="0">
+        <event-collide-actortotype comment="false" x="15" y="15">
+            <group eventID="23" id="-1">
+                <shout comment="false" x="26" y="47">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="dead"/>
+                </shout>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <actortype eid="83" id="1"/>
+        </event-collide-actortotype>
+    </group>
+    <group eventID="23" id="-1"/>
 </groups>

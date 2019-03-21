@@ -85,7 +85,7 @@ class ActorEvents_55 extends ActorScript
 	{
 		
 		/* ======================= Every N seconds ======================== */
-		runPeriodically(1000 * 3, function(timeTask:TimedTask):Void
+		runPeriodically(1000 * 2, function(timeTask:TimedTask):Void
 		{
 			if(wrapper.enabled)
 			{
