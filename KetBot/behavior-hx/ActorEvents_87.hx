@@ -69,7 +69,7 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_65 extends ActorScript
+class ActorEvents_87 extends ActorScript
 {
 	
 	
@@ -87,8 +87,7 @@ class ActorEvents_65 extends ActorScript
 		{
 			if(wrapper.enabled && sameAsAny(getActorType(2), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				Engine.engine.setGameAttribute("shoot", true);
-				Engine.engine.setGameAttribute("checkpiont", true);
+				Engine.engine.setGameAttribute("shoot2", true);
 				recycleActor(actor);
 			}
 		});

@@ -41,7 +41,7 @@
         <init comment="false" x="15" y="15">
             <group eventID="5" id="-1">
                 <set-game-val-4 comment="false" x="26" y="40">
-                    <int id="0" val="180"/>
+                    <int id="0" val="120"/>
                 </set-game-val-4>
             </group>
         </init>
@@ -206,4 +206,21 @@
         </event-custom>
     </group>
     <group eventID="18" id="-1"/>
+    <group eventID="19" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="19" id="-1">
+                <set-game-val-3 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-game-val-3>
+            </group>
+        </init>
+    </group>
+    <group eventID="19" id="-1"/>
+    <group eventID="20" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="20" id="-1"/>
+            <int id="0" val=""/>
+        </event-custom>
+    </group>
+    <group eventID="20" id="-1"/>
 </groups>

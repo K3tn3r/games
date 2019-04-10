@@ -202,4 +202,26 @@
         </event-collide-actortotype>
     </group>
     <group eventID="11" id="-1"/>
+    <group eventID="12" id="0">
+        <event-collide-actortotype comment="false" x="15" y="15">
+            <group eventID="12" id="-1">
+                <shout comment="false" x="26" y="47">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="Blobdeath"/>
+                </shout>
+                <shout comment="false" x="26" y="74">
+                    <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="killBlob"/>
+                </shout>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <actortype eid="77" id="1"/>
+        </event-collide-actortotype>
+    </group>
+    <group eventID="12" id="1">
+        <die comment="false" x="26" y="186">
+            <ACTOR eid="this" id="0"/>
+        </die>
+    </group>
+    <group eventID="12" id="-1"/>
 </groups>

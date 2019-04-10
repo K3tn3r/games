@@ -69,40 +69,22 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_59 extends ActorScript
+class ActorEvents_81 extends ActorScript
 {
-	public var _speed:Float;
-	public var _left:Bool;
-	public var _isalive:Bool;
+	public var _up:Bool;
+	public var _jump:Float;
 	public var _turntimer:Float;
-	public var _stuck:Bool;
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_death():Void
-	{
-		_isalive = false;
-		propertyChanged("_isalive", _isalive);
-		actor.setAnimation("" + "dead");
-		runLater(1000 * .7, function(timeTask:TimedTask):Void
-		{
-			recycleActor(actor);
-		}, actor);
-	}
 	
 	
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("speed", "_speed");
-		_speed = 20.0;
-		nameMap.set("left", "_left");
-		_left = false;
-		nameMap.set("is alive", "_isalive");
-		_isalive = true;
+		nameMap.set("up", "_up");
+		_up = false;
+		nameMap.set("jump", "_jump");
+		_jump = 30.0;
 		nameMap.set("turn timer", "_turntimer");
-		_turntimer = 0.0;
-		nameMap.set("stuck", "_stuck");
-		_stuck = false;
+		_turntimer = 1.0;
 		
 	}
 	
@@ -114,41 +96,30 @@ class ActorEvents_59 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				if((!(_left) && _isalive))
+				if(_up)
 				{
-					actor.setXVelocity(-(_speed));
-					actor.setAnimation("" + "walk left");
+					actor.setYVelocity(_jump);
 				}
-				else if((_left && _isalive))
+				else if(!(_up))
 				{
-					actor.setXVelocity(_speed);
-					actor.setAnimation("" + "walk right");
+					actor.setYVelocity(-(_jump));
 				}
 			}
 		});
 		
-		/* ======================== Something Else ======================== */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				runLater(1000 * .05, function(timeTask:TimedTask):Void
+				if((actor.getScreenY() < 0))
 				{
-					if((((event.thisFromRight || event.thisFromLeft) && _isalive) && !(_stuck)))
-					{
-						_left = !(_left);
-						propertyChanged("_left", _left);
-						_turntimer = asNumber(3);
-						propertyChanged("_turntimer", _turntimer);
-						_stuck = true;
-						propertyChanged("_stuck", _stuck);
-						runLater(1000 * .5, function(timeTask:TimedTask):Void
-						{
-							_stuck = false;
-							propertyChanged("_stuck", _stuck);
-						}, actor);
-					}
-				}, actor);
+					actor.setY(1);
+				}
+				else if((actor.getScreenY() > (getScreenHeight() - (actor.getHeight()))))
+				{
+					actor.setY((getScreenWidth() - ((actor.getHeight()) - 1)));
+				}
 			}
 		});
 		
@@ -161,9 +132,9 @@ class ActorEvents_59 extends ActorScript
 				propertyChanged("_turntimer", _turntimer);
 				if((_turntimer <= 0))
 				{
-					_left = !(_left);
-					propertyChanged("_left", _left);
-					_turntimer = asNumber(3);
+					_up = !(_up);
+					propertyChanged("_up", _up);
+					_turntimer = asNumber(1);
 					propertyChanged("_turntimer", _turntimer);
 				}
 			}
@@ -174,29 +145,7 @@ class ActorEvents_59 extends ActorScript
 		{
 			if(wrapper.enabled && sameAsAny(getActorType(2), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				if((event.thisFromTop && _isalive))
-				{
-					actor.shout("_customEvent_" + "death");
-					event.otherActor.shout("_customEvent_" + "killBoofer");
-				}
-				else if((!(event.thisFromTop) && _isalive))
-				{
-					event.otherActor.shout("_customEvent_" + "dead");
-					_left = !(_left);
-					propertyChanged("_left", _left);
-					_turntimer = asNumber(3);
-					propertyChanged("_turntimer", _turntimer);
-				}
-			}
-		});
-		
-		/* ========================= Type & Type ========================== */
-		addSceneCollisionListener(getActorType(77).ID, getActorType(59).ID, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				actor.shout("_customEvent_" + "death");
-				event.otherActor.shout("_customEvent_" + "killBoofer");
+				event.otherActor.shout("_customEvent_" + "dead");
 			}
 		});
 		

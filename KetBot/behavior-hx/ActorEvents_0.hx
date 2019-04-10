@@ -69,58 +69,29 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_53 extends ActorScript
+class ActorEvents_0 extends ActorScript
 {
-	public var _speed:Float;
 	public var _left:Bool;
+	public var _isalive:Bool;
+	public var _speed:Float;
 	public var _turntimer:Float;
-	public var _Isalive1:Bool;
-	public var _Isalive2:Bool;
-	public var _speed2:Float;
+	public var _exploding:Bool;
+	public var _chase:Float;
 	public var _stuck:Bool;
 	
 	/* ========================= Custom Event ========================= */
-	public function _customEvent_death1():Void
+	public function _customEvent_shot():Void
 	{
-		_Isalive1 = false;
-		propertyChanged("_Isalive1", _Isalive1);
-		actor.setAnimation("" + "dead1");
-		runLater(1000 * .5, function(timeTask:TimedTask):Void
+		_exploding = true;
+		propertyChanged("_exploding", _exploding);
+		actor.setAnimation("" + "explosion");
+		runLater(1000 * 1.6, function(timeTask:TimedTask):Void
 		{
-			_Isalive2 = true;
-			propertyChanged("_Isalive2", _Isalive2);
-		}, actor);
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_death2():Void
-	{
-		_Isalive2 = false;
-		propertyChanged("_Isalive2", _Isalive2);
-		actor.setAnimation("" + "dead2");
-		runLater(1000 * .5, function(timeTask:TimedTask):Void
-		{
-			recycleActor(actor);
-		}, actor);
-	}
-	
-	/* ========================= Custom Event ========================= */
-	public function _customEvent_sh0t():Void
-	{
-		_Isalive1 = false;
-		propertyChanged("_Isalive1", _Isalive1);
-		actor.setAnimation("" + "dead1");
-		runLater(1000 * .5, function(timeTask:TimedTask):Void
-		{
-			_Isalive2 = true;
-			propertyChanged("_Isalive2", _Isalive2);
-			_Isalive2 = false;
-			propertyChanged("_Isalive2", _Isalive2);
-			actor.setAnimation("" + "dead2");
-			runLater(1000 * .5, function(timeTask:TimedTask):Void
+			if(((Math.abs((actor.getX() - Engine.engine.getGameAttribute("x of Andy"))) <= Engine.engine.getGameAttribute("areaOfEffect")) && (Math.abs((actor.getY() - Engine.engine.getGameAttribute("Y of Andy"))) <= Engine.engine.getGameAttribute("areaOfEffectY"))))
 			{
-				recycleActor(actor);
-			}, actor);
+				shoutToScene("_customEvent_" + "dead");
+			}
+			recycleActor(actor);
 		}, actor);
 	}
 	
@@ -128,18 +99,18 @@ class ActorEvents_53 extends ActorScript
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("speed", "_speed");
-		_speed = 5.0;
 		nameMap.set("left", "_left");
 		_left = false;
+		nameMap.set("is alive", "_isalive");
+		_isalive = true;
+		nameMap.set("speed", "_speed");
+		_speed = 5.0;
 		nameMap.set("turn timer", "_turntimer");
 		_turntimer = 0.0;
-		nameMap.set("Is alive1", "_Isalive1");
-		_Isalive1 = true;
-		nameMap.set("Is alive2", "_Isalive2");
-		_Isalive2 = false;
-		nameMap.set("speed2", "_speed2");
-		_speed2 = 10.0;
+		nameMap.set("exploding", "_exploding");
+		_exploding = false;
+		nameMap.set("chase", "_chase");
+		_chase = 10.0;
 		nameMap.set("stuck", "_stuck");
 		_stuck = false;
 		
@@ -148,30 +119,61 @@ class ActorEvents_53 extends ActorScript
 	override public function init()
 	{
 		
+		/* ======================== When Creating ========================= */
+		Engine.engine.setGameAttribute("areaOfEffect", ((actor.getWidth()) * 3));
+		Engine.engine.setGameAttribute("areaOfEffectY", ((actor.getHeight()) * 2));
+		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				if((_left && _Isalive1))
+				if(!(_exploding))
 				{
-					actor.setXVelocity(-(_speed));
-					actor.setAnimation("" + "walk left");
+					if((_left && _isalive))
+					{
+						actor.setXVelocity(_speed);
+						actor.setAnimation("" + "walk right");
+					}
+					else if((!(_left) && _isalive))
+					{
+						actor.setXVelocity(-(_speed));
+						actor.setAnimation("" + "walk left");
+					}
 				}
-				else if((!(_left) && _Isalive1))
+				else
 				{
-					actor.setXVelocity(_speed);
-					actor.setAnimation("" + "walk right");
+					actor.setAnimation("" + "explosion");
+					if(((Engine.engine.getGameAttribute("x of Andy") - actor.getX()) > 0))
+					{
+						actor.setXVelocity((_speed * 2));
+					}
+					else
+					{
+						actor.setXVelocity((-(_speed) * 2));
+					}
 				}
-				else if((_left && _Isalive2))
+			}
+		});
+		
+		/* ======================== Something Else ======================== */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if((((event.thisFromRight || event.thisFromLeft) && _isalive) && !(_stuck)))
 				{
-					actor.setXVelocity(-(_speed2));
-					actor.setAnimation("" + "dead1 walk left");
-				}
-				else if((!(_left) && _Isalive2))
-				{
-					actor.setXVelocity(_speed2);
-					actor.setAnimation("" + "dead1 walk right");
+					_left = !(_left);
+					propertyChanged("_left", _left);
+					_turntimer = asNumber(5);
+					propertyChanged("_turntimer", _turntimer);
+					_stuck = true;
+					propertyChanged("_stuck", _stuck);
+					runLater(1000 * .5, function(timeTask:TimedTask):Void
+					{
+						_stuck = false;
+						propertyChanged("_stuck", _stuck);
+					}, actor);
 				}
 			}
 		});
@@ -187,94 +189,46 @@ class ActorEvents_53 extends ActorScript
 				{
 					_left = !(_left);
 					propertyChanged("_left", _left);
-					_turntimer = asNumber(3);
+					_turntimer = asNumber(5);
 					propertyChanged("_turntimer", _turntimer);
 				}
 			}
 		}, actor);
 		
-		/* ======================== Something Else ======================== */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if((((event.thisFromRight || event.thisFromLeft) && _Isalive1) && !(_stuck)))
-				{
-					_left = !(_left);
-					propertyChanged("_left", _left);
-					_stuck = true;
-					propertyChanged("_stuck", _stuck);
-					_turntimer = asNumber(3);
-					propertyChanged("_turntimer", _turntimer);
-					runLater(1000 * .5, function(timeTask:TimedTask):Void
-					{
-						_stuck = false;
-						propertyChanged("_stuck", _stuck);
-					}, actor);
-				}
-			}
-		});
-		
-		/* ======================== Something Else ======================== */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
-		{
-			if(wrapper.enabled)
-			{
-				if((((event.thisFromRight || event.thisFromLeft) && _Isalive2) && !(_stuck)))
-				{
-					_left = !(_left);
-					propertyChanged("_left", _left);
-					_stuck = true;
-					propertyChanged("_stuck", _stuck);
-					_turntimer = asNumber(3);
-					propertyChanged("_turntimer", _turntimer);
-					runLater(1000 * .5, function(timeTask:TimedTask):Void
-					{
-						_stuck = false;
-						propertyChanged("_stuck", _stuck);
-					}, actor);
-				}
-			}
-		});
-		
 		/* ======================== Actor of Type ========================= */
 		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled && sameAsAny(getActorType(2), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				if((event.thisFromTop && _Isalive1))
-				{
-					actor.shout("_customEvent_" + "death1");
-					event.otherActor.shout("_customEvent_" + "killBlock1");
-				}
-				else if((!(event.thisFromTop) && _Isalive1))
+				if((!(event.thisFromBottom) && _isalive))
 				{
 					event.otherActor.shout("_customEvent_" + "dead");
 					_left = !(_left);
 					propertyChanged("_left", _left);
-					_turntimer = asNumber(3);
+					_turntimer = asNumber(5);
 					propertyChanged("_turntimer", _turntimer);
 				}
 			}
 		});
 		
-		/* ======================== Actor of Type ========================= */
-		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
 		{
-			if(wrapper.enabled && sameAsAny(getActorType(2), event.otherActor.getType(),event.otherActor.getGroup()))
+			if(wrapper.enabled)
 			{
-				if((event.thisFromTop && _Isalive2))
+				if((Math.abs((actor.getX() - Engine.engine.getGameAttribute("x of Andy"))) <= Engine.engine.getGameAttribute("areaOfEffect")))
 				{
-					actor.shout("_customEvent_" + "death2");
-					event.otherActor.shout("_customEvent_" + "killBloock2");
-				}
-				else if((!(event.thisFromTop) && _Isalive2))
-				{
-					event.otherActor.shout("_customEvent_" + "dead");
-					_left = !(_left);
-					propertyChanged("_left", _left);
-					_turntimer = asNumber(3);
-					propertyChanged("_turntimer", _turntimer);
+					_exploding = true;
+					propertyChanged("_exploding", _exploding);
+					actor.setAnimation("" + "explosion");
+					runLater(1000 * 1.6, function(timeTask:TimedTask):Void
+					{
+						if(((Math.abs((actor.getX() - Engine.engine.getGameAttribute("x of Andy"))) <= Engine.engine.getGameAttribute("areaOfEffect")) && (Math.abs((actor.getY() - Engine.engine.getGameAttribute("Y of Andy"))) <= Engine.engine.getGameAttribute("areaOfEffectY"))))
+						{
+							shoutToScene("_customEvent_" + "AndyDied");
+						}
+						recycleActor(actor);
+					}, actor);
 				}
 			}
 		});
