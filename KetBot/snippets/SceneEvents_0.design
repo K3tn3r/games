@@ -1,34 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
+    <group eventID="16" id="0">
+        <event-actor-region comment="false" x="15" y="15">
+            <group eventID="16" id="-1">
+                <scene-change-color comment="false" x="26" y="42">
+                    <scene eid="2" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val=".5"/>
+                    <color b="0" g="0" id="3" r="0"/>
+                    <int id="4" val="0"/>
+                    <int id="5" val=".5"/>
+                    <color b="0" g="0" id="6" r="0"/>
+                </scene-change-color>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="3" id="1"/>
+            <ACTOR eid="22" id="2"/>
+        </event-actor-region>
+    </group>
+    <group eventID="16" id="-1"/>
     <group eventID="1" id="0">
         <draw comment="false" x="15" y="15">
             <group eventID="1" id="-1">
                 <draw-text comment="false" x="26" y="40">
-                    <int id="0" val="SCORE"/>
-                    <int id="1" val="32"/>
+                    <int id="0" val="DEATH"/>
+                    <int id="1" val="280"/>
                     <int id="2" val="40"/>
                 </draw-text>
                 <draw-text comment="false" x="26" y="60">
-                    <get-game-val-0 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="100"/>
+                    <get-game-val-3 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="345"/>
                     <int id="2" val="40"/>
                 </draw-text>
                 <draw-text comment="false" x="26" y="85">
-                    <int id="0" val="LIFE"/>
-                    <int id="1" val="284"/>
-                    <int id="2" val="40"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="105">
-                    <get-game-val-3 comment="false" id="0" x="0" y="0"/>
-                    <int id="1" val="340"/>
-                    <int id="2" val="40"/>
-                </draw-text>
-                <draw-text comment="false" x="26" y="130">
                     <int id="0" val="TIME"/>
                     <int id="1" val="544"/>
                     <int id="2" val="40"/>
                 </draw-text>
-                <draw-text comment="false" x="26" y="150">
+                <draw-text comment="false" x="26" y="105">
                     <get-game-val-4 comment="false" id="0" x="0" y="0"/>
                     <int id="1" val="600"/>
                     <int id="2" val="40"/>
@@ -36,7 +45,29 @@
             </group>
         </draw>
     </group>
+    <group eventID="1" id="1">
+        <draw-text comment="false" x="439" y="65">
+            <int id="0" val="SCORE"/>
+            <int id="1" val="32"/>
+            <int id="2" val="40"/>
+        </draw-text>
+        <draw-text comment="false" x="439" y="85">
+            <get-game-val-0 comment="false" id="0" x="0" y="0"/>
+            <int id="1" val="100"/>
+            <int id="2" val="40"/>
+        </draw-text>
+    </group>
     <group eventID="1" id="-1"/>
+    <group eventID="19" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="19" id="-1">
+                <set-game-val-3 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-game-val-3>
+            </group>
+        </init>
+    </group>
+    <group eventID="19" id="-1"/>
     <group eventID="5" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="5" id="-1">
@@ -100,42 +131,6 @@
         </event-custom>
     </group>
     <group eventID="11" id="-1"/>
-    <group eventID="12" id="0">
-        <event-custom comment="false" x="15" y="15">
-            <group eventID="12" id="-1">
-                <shout comment="false" x="26" y="40">
-                    <ACTOR eid="21" id="0"/>
-                    <int id="1" val="death1"/>
-                </shout>
-            </group>
-            <int id="0" val="death1"/>
-        </event-custom>
-    </group>
-    <group eventID="12" id="-1"/>
-    <group eventID="13" id="0">
-        <event-custom comment="false" x="15" y="15">
-            <group eventID="13" id="-1">
-                <shout comment="false" x="26" y="40">
-                    <ACTOR eid="21" id="0"/>
-                    <int id="1" val="death2"/>
-                </shout>
-            </group>
-            <int id="0" val="death2"/>
-        </event-custom>
-    </group>
-    <group eventID="13" id="-1"/>
-    <group eventID="14" id="0">
-        <event-custom comment="false" x="15" y="15">
-            <group eventID="14" id="-1">
-                <shout comment="false" x="26" y="40">
-                    <ACTOR eid="19" id="0"/>
-                    <int id="1" val="shot"/>
-                </shout>
-            </group>
-            <int id="0" val="shot"/>
-        </event-custom>
-    </group>
-    <group eventID="14" id="-1"/>
     <group eventID="15" id="0">
         <event-actor-region comment="false" x="15" y="15">
             <group eventID="15" id="-1">
@@ -163,64 +158,4 @@
         </event-actor-region>
     </group>
     <group eventID="15" id="-1"/>
-    <group eventID="16" id="0">
-        <event-actor-region comment="false" x="15" y="15">
-            <group eventID="16" id="-1">
-                <scene-change-color comment="false" x="26" y="42">
-                    <scene eid="2" id="0"/>
-                    <int id="1" val="0"/>
-                    <int id="2" val=".5"/>
-                    <color b="0" g="0" id="3" r="0"/>
-                    <int id="4" val="0"/>
-                    <int id="5" val=".5"/>
-                    <color b="0" g="0" id="6" r="0"/>
-                </scene-change-color>
-            </group>
-            <int id="0" val="0"/>
-            <REGION eid="3" id="1"/>
-            <ACTOR eid="22" id="2"/>
-        </event-actor-region>
-    </group>
-    <group eventID="16" id="-1"/>
-    <group eventID="17" id="0">
-        <event-custom comment="false" x="15" y="15">
-            <group eventID="17" id="-1">
-                <shout comment="false" x="26" y="40">
-                    <ACTOR eid="21" id="0"/>
-                    <int id="1" val="sh0t"/>
-                </shout>
-            </group>
-            <int id="0" val="sh0t"/>
-        </event-custom>
-    </group>
-    <group eventID="17" id="-1"/>
-    <group eventID="18" id="0">
-        <event-custom comment="false" x="15" y="15">
-            <group eventID="18" id="-1">
-                <shout comment="false" x="26" y="40">
-                    <ACTOR eid="15" id="0"/>
-                    <int id="1" val="killBoofer"/>
-                </shout>
-            </group>
-            <int id="0" val="killBoofer"/>
-        </event-custom>
-    </group>
-    <group eventID="18" id="-1"/>
-    <group eventID="19" id="0">
-        <init comment="false" x="15" y="15">
-            <group eventID="19" id="-1">
-                <set-game-val-3 comment="false" x="26" y="40">
-                    <int id="0" val="0"/>
-                </set-game-val-3>
-            </group>
-        </init>
-    </group>
-    <group eventID="19" id="-1"/>
-    <group eventID="20" id="0">
-        <event-custom comment="false" x="15" y="15">
-            <group eventID="20" id="-1"/>
-            <int id="0" val=""/>
-        </event-custom>
-    </group>
-    <group eventID="20" id="-1"/>
 </groups>

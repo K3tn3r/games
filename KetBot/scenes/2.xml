@@ -8,6 +8,7 @@
     <joints/>
     <regions>
         <region b="64" g="64" h="96" id="0" name="Region 0" pts="4,0.0,0.0,0.0,96.0,30.0,96.0,30.0,0.0" r="64" type="box" w="30" x="0" y="351"/>
+        <region b="64" g="64" h="96" id="1" name="Region 1" pts="4,-16.0,48.0,16.0,48.0,16.0,-48.0,-16.0,-48.0" r="64" type="box" w="32" x="6367" y="353"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -53,6 +54,15 @@
         <actor a="0.0" aid="43" c="false" group="4" id="7" name="Blob 43" sx="1.0" sy="1.0" x="2465" y="107" z="0"/>
         <actor a="0.0" aid="44" c="false" group="8" id="59" name="Boofer 44" sx="1.0" sy="1.0" x="2525" y="286" z="0"/>
         <actor a="0.0" aid="46" c="false" group="11" id="95" name="power up J 46" sx="1.0" sy="1.0" x="3835" y="252" z="0"/>
+        <actor a="0.0" aid="47" c="false" group="3" id="83" name="lava 47" sx="1.0" sy="1.0" x="1120" y="443" z="0"/>
+        <actor a="0.0" aid="48" c="false" group="3" id="83" name="lava 48" sx="1.0" sy="1.0" x="1568" y="444" z="0"/>
+        <actor a="0.0" aid="49" c="false" group="3" id="83" name="lava 49" sx="1.0" sy="1.0" x="1728" y="444" z="0"/>
+        <actor a="0.0" aid="50" c="false" group="3" id="83" name="lava 50" sx="1.0" sy="1.0" x="3072" y="444" z="0"/>
+        <actor a="0.0" aid="51" c="false" group="3" id="83" name="lava 51" sx="1.0" sy="1.0" x="3744" y="443" z="0"/>
+        <actor a="0.0" aid="52" c="false" group="3" id="83" name="lava 52" sx="1.0" sy="1.0" x="4864" y="443" z="0"/>
+        <actor a="0.0" aid="53" c="false" group="3" id="83" name="lava 53" sx="1.0" sy="1.0" x="5408" y="443" z="0"/>
+        <actor a="0.0" aid="54" c="false" group="3" id="83" name="lava 54" sx="1.0" sy="1.0" x="5728" y="443" z="0"/>
+        <actor a="0.0" aid="55" c="false" group="3" id="83" name="lava 55" sx="1.0" sy="1.0" x="5888" y="443" z="0"/>
     </actors>
     <snippets/>
     <terrain>

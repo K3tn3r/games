@@ -3,4 +3,5 @@
     <scene desc="" format="3.4.0" id="0" name="level 1"/>
     <scene desc="" format="3.4.0" id="1" name="GAME_OVER"/>
     <scene desc="" format="3.4.0" id="2" name="level 2"/>
+    <scene desc="" format="3.4.0" id="3" name="Level 3"/>
 </scenes>
