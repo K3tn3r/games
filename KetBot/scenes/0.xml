@@ -7,8 +7,8 @@
     </layers>
     <joints/>
     <regions>
-        <region b="64" g="64" h="96" id="3" name="Region 3" pts="4,-16.0,-48.0,16.0,-48.0,16.0,48.0,-16.0,48.0" r="64" type="box" w="32" x="6367" y="352"/>
-        <region b="64" g="64" h="450" id="4" name="Region 4" pts="4,-16.0,225.0,16.0,225.0,16.0,-225.0,-16.0,-225.0" r="64" type="box" w="32" x="3396" y="-1"/>
+        <region b="64" g="64" h="96" id="3" name="Region 3" pts="4,-16.0,48.0,16.0,48.0,16.0,-48.0,-16.0,-48.0" r="64" type="box" w="32" x="6367" y="352"/>
+        <region b="64" g="64" h="450" id="4" name="Region 4" pts="4,-16.0,-225.0,16.0,-225.0,16.0,225.0,-16.0,225.0" r="64" type="box" w="32" x="3396" y="-1"/>
     </regions>
     <terrainRegions/>
     <actors>
@@ -28,7 +28,7 @@
         <actor a="0.0" aid="18" c="false" group="10" id="0" name="bomb 18" sx="1.0" sy="1.0" x="3039" y="412" z="0"/>
         <actor a="0.0" aid="19" c="false" group="10" id="0" name="bomb 19" sx="1.0" sy="1.0" x="4989" y="414" z="0"/>
         <actor a="0.0" aid="20" c="false" group="8" id="59" name="Boofer 20" sx="1.0" sy="1.0" x="5732" y="411" z="0"/>
-        <actor a="0.0" aid="22" c="false" group="5" id="2" name="Andy 22" sx="1.0" sy="1.0" x="4352" y="86" z="0"/>
+        <actor a="0.0" aid="22" c="false" group="5" id="2" name="Andy 22" sx="1.0" sy="1.0" x="286" y="403" z="0"/>
         <actor a="0.0" aid="23" c="false" group="11" id="65" name="power up1 23" sx="1.0" sy="1.0" x="4610" y="92" z="0"/>
         <actor a="0.0" aid="24" c="false" group="7" id="55" name="Booter 24" sx="1.0" sy="1.0" x="6366" y="251" z="0"/>
         <actor a="0.0" aid="25" c="false" group="4" id="7" name="Blob 25" sx="1.0" sy="1.0" x="1783" y="427" z="0"/>
