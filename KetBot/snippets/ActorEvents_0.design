@@ -56,7 +56,13 @@
                                 <int id="1" val="0"/>
                             </collision-bottom>
                         </not>
-                        <get-val-1-2 comment="false" id="1" x="0" y="0"/>
+                        <or comment="false" id="1" x="0" y="0">
+                            <collision-bottom comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <int id="1" val="0"/>
+                            </collision-bottom>
+                            <get-val-1-2 comment="false" id="1" x="0" y="0"/>
+                        </or>
                     </and>
                 </if>
             </group>
@@ -119,18 +125,18 @@
             <group eventID="7" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="7" id="-1">
-                        <set-val-1-5 comment="false" x="37" y="88">
+                        <set-val-1-5 comment="false" x="37" y="93">
                             <true comment="false" id="0" x="0" y="0"/>
                         </set-val-1-5>
-                        <setanim comment="false" x="37" y="113">
+                        <setanim comment="false" x="37" y="118">
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="explosion"/>
                         </setanim>
-                        <dolater comment="false" x="37" y="140">
+                        <dolater comment="false" x="37" y="145">
                             <group eventID="7" id="-1">
-                                <if comment="false" x="48" y="167">
+                                <if comment="false" x="48" y="172">
                                     <group eventID="7" id="-1">
-                                        <scene-shout comment="false" x="59" y="220">
+                                        <scene-shout comment="false" x="59" y="225">
                                             <int id="0" val="AndyDied"/>
                                         </scene-shout>
                                     </group>
@@ -161,7 +167,7 @@
                                         </lesseq>
                                     </and>
                                 </if>
-                                <die comment="false" x="48" y="252">
+                                <die comment="false" x="48" y="257">
                                     <ACTOR eid="this" id="0"/>
                                 </die>
                             </group>
@@ -169,18 +175,32 @@
                             <ACTOR eid="this" id="2"/>
                         </dolater>
                     </group>
-                    <lesseq comment="false" id="0" x="0" y="0">
-                        <abs comment="false" id="0" x="0" y="0">
-                            <minus comment="false" id="0" x="0" y="0">
-                                <get-xy comment="false" id="0" x="0" y="0">
-                                    <ACTOR eid="this" id="0"/>
-                                    <int id="1" val="0"/>
-                                </get-xy>
-                                <get-game-val-1 comment="false" id="1" x="0" y="0"/>
-                            </minus>
-                        </abs>
-                        <get-game-val-2 comment="false" id="1" x="0" y="0"/>
-                    </lesseq>
+                    <or comment="false" id="0" x="0" y="0">
+                        <lesseq comment="false" id="0" x="0" y="0">
+                            <abs comment="false" id="0" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <get-xy comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="0"/>
+                                    </get-xy>
+                                    <get-game-val-1 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                            </abs>
+                            <get-game-val-2 comment="false" id="1" x="0" y="0"/>
+                        </lesseq>
+                        <lesseq comment="false" id="1" x="0" y="0">
+                            <abs comment="false" id="0" x="0" y="0">
+                                <minus comment="false" id="0" x="0" y="0">
+                                    <get-xy comment="false" id="0" x="0" y="0">
+                                        <ACTOR eid="this" id="0"/>
+                                        <int id="1" val="1"/>
+                                    </get-xy>
+                                    <get-game-val-12 comment="false" id="1" x="0" y="0"/>
+                                </minus>
+                            </abs>
+                            <get-game-val-2 comment="false" id="1" x="0" y="0"/>
+                        </lesseq>
+                    </or>
                 </if>
             </group>
         </step>
@@ -190,12 +210,7 @@
             <int id="0" val=""/>
             <int id="1" val="50"/>
         </less>
-        <get-xy comment="false" x="692" y="502">
-            <ACTOR eid="this" id="0"/>
-            <int id="1" val="1"/>
-        </get-xy>
-        <get-game-val-1 comment="false" x="758" y="433"/>
-        <get-game-val-12 comment="false" x="758" y="452"/>
+        <get-game-val-1 comment="false" x="779" y="520"/>
     </group>
     <group eventID="9" id="0">
         <init comment="false" x="15" y="15">
@@ -206,7 +221,7 @@
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="0"/>
                         </get-wh>
-                        <int id="1" val="3"/>
+                        <int id="1" val="3.5"/>
                     </times>
                 </set-game-val-2>
                 <set-game-val-17 comment="false" x="26" y="78">
@@ -215,7 +230,7 @@
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
                         </get-wh>
-                        <int id="1" val="2"/>
+                        <int id="1" val="3"/>
                     </times>
                 </set-game-val-17>
             </group>

@@ -104,8 +104,8 @@ class ActorEvents_0 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		Engine.engine.setGameAttribute("areaOfEffect", ((actor.getWidth()) * 3));
-		Engine.engine.setGameAttribute("areaOfEffectY", ((actor.getHeight()) * 2));
+		Engine.engine.setGameAttribute("areaOfEffect", ((actor.getWidth()) * 3.5));
+		Engine.engine.setGameAttribute("areaOfEffectY", ((actor.getHeight()) * 3));
 		
 		/* ======================== When Updating ========================= */
 		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
@@ -184,7 +184,7 @@ class ActorEvents_0 extends ActorScript
 		{
 			if(wrapper.enabled && sameAsAny(getActorType(2), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				if((!(event.thisFromBottom) && _isalive))
+				if((!(event.thisFromBottom) && (event.thisFromBottom || _isalive)))
 				{
 					event.otherActor.shout("_customEvent_" + "dead");
 					_left = !(_left);
@@ -200,7 +200,7 @@ class ActorEvents_0 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				if((Math.abs((actor.getX() - Engine.engine.getGameAttribute("x of Andy"))) <= Engine.engine.getGameAttribute("areaOfEffect")))
+				if(((Math.abs((actor.getX() - Engine.engine.getGameAttribute("x of Andy"))) <= Engine.engine.getGameAttribute("areaOfEffect")) || (Math.abs((actor.getY() - Engine.engine.getGameAttribute("Y of Andy"))) <= Engine.engine.getGameAttribute("areaOfEffect"))))
 				{
 					_exploding = true;
 					propertyChanged("_exploding", _exploding);
