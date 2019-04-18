@@ -198,7 +198,7 @@
                                     <get-game-val-12 comment="false" id="1" x="0" y="0"/>
                                 </minus>
                             </abs>
-                            <get-game-val-2 comment="false" id="1" x="0" y="0"/>
+                            <get-game-val-17 comment="false" id="1" x="0" y="0"/>
                         </lesseq>
                     </or>
                 </if>
@@ -206,11 +206,11 @@
         </step>
     </group>
     <group eventID="7" id="-1">
+        <get-game-val-1 comment="false" x="779" y="520"/>
         <less comment="false" x="763" y="543">
             <int id="0" val=""/>
             <int id="1" val="50"/>
         </less>
-        <get-game-val-1 comment="false" x="779" y="520"/>
     </group>
     <group eventID="9" id="0">
         <init comment="false" x="15" y="15">
@@ -230,7 +230,7 @@
                             <ACTOR eid="this" id="0"/>
                             <int id="1" val="1"/>
                         </get-wh>
-                        <int id="1" val="3"/>
+                        <int id="1" val="2.5"/>
                     </times>
                 </set-game-val-17>
             </group>

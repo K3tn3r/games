@@ -158,6 +158,7 @@
             <event displayName="bomb" enabled="true" id="6" name="event-collide-actortotype" order="10" repeats="true"/>
             <event displayName="another bullet" enabled="true" id="7" name="event-collide-actortotype" order="6" repeats="true"/>
             <event displayName="tile" enabled="true" id="8" name="event-collide-actortogroup" order="4" repeats="true"/>
+            <event displayName="BookaBoo" enabled="false" id="9" name="event-collide-actortotype" order="11" repeats="true"/>
         </events>
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_2" classname="scripts.SceneEvents_2" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="13" name="SceneEvents_2" oid="-1" package="scripts." sceneid="2" shared="false" type="scene">
@@ -182,6 +183,7 @@
             <event displayName="Turn Timer" enabled="true" id="2" name="event-periodic" order="4" repeats="true"/>
             <event displayName="dead" enabled="true" id="3" name="event-collide-actortotype" order="5" repeats="true"/>
             <event displayName="Updating" enabled="true" id="4" name="step" order="2" repeats="true"/>
+            <event displayName="shot" enabled="false" id="5" name="event-collide-actortotype" order="6" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="83" attachedevent="true" class="scripts.ActorEvents_83" classname="scripts.ActorEvents_83" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="15" name="ActorEvents_83" oid="-1" package="scripts." shared="false" type="actor">

@@ -17,27 +17,27 @@
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="2" fixedrot="true" fric="0.2" gid="5" id="2" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Andy" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="3" static="false">
         <snippets/>
     </actor>
-    <sprite atlasID="0" default="1" defaultAnimation="1" desc="" height="40" id="3" name="Andy" shared="false" width="32">
-        <anim across="3" down="3" durations="100,100,100,100,100,100,100" height="120" id="1" loop="true" name="idle right" numframes="7" originx="16" originy="20" sync="false" version="2" width="96">
-            <poly data="4,3,10,31,10,31,40,3,40" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 0" rest="0.0" sensor="false"/>
+    <sprite atlasID="0" default="11" defaultAnimation="11" desc="" height="40" id="3" name="Andy" shared="false" width="32">
+        <anim across="5" down="4" durations="100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100" height="160" id="9" loop="true" name="dead" numframes="17" originx="16" originy="20" sync="false" version="2" width="160">
+            <poly data="4,0,0,32,0,32,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="dead 2" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="3" down="3" durations="100,100,100,100,100,100,100,100" height="120" id="2" loop="true" name="walk left" numframes="8" originx="16" originy="20" sync="false" version="2" width="96">
-            <poly data="4,1,10,29,10,29,40,1,40" density="0.1" fric="0.2" gid="-1000" id="0" name="walking left" rest="0.0" sensor="false"/>
+        <anim across="3" down="2" durations="100,100,100,100,100,100" height="80" id="10" loop="true" name="idle left" numframes="6" originx="16" originy="20" sync="false" version="2" width="96">
+            <poly data="4,0,0,32,0,32,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="idle left 1" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="3" down="3" durations="100,100,100,100,100,100,100,100" height="120" id="3" loop="true" name="walk right" numframes="8" originx="16" originy="20" sync="false" version="2" width="96">
-            <poly data="4,3,10,31,10,31,40,3,40" density="0.1" fric="0.2" gid="-1000" id="0" name="walking right" rest="0.0" sensor="false"/>
+        <anim across="3" down="2" durations="100,100,100,100,100,100" height="80" id="11" loop="true" name="idle right" numframes="6" originx="16" originy="20" sync="false" version="2" width="96">
+            <poly data="4,0,0,32,0,32,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="idle right 1" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="3" down="2" durations="100,100,100,100,100,100" height="80" id="5" loop="true" name="idle left" numframes="6" originx="16" originy="20" sync="false" version="2" width="96">
-            <poly data="4,1,10,29,10,29,40,1,40" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation 5" rest="0.0" sensor="false"/>
+        <anim across="3" down="2" durations="100,100,100,100,100,100" height="80" id="12" loop="true" name="Jump left" numframes="6" originx="16" originy="20" sync="false" version="2" width="96">
+            <poly data="4,0,0,32,0,32,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="Jump left 1" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="5" down="4" durations="100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100" height="160" id="6" loop="true" name="dead" numframes="17" originx="16" originy="20" sync="false" version="2" width="160">
-            <poly data="4,0,8,32,8,32,40,0,40" density="0.1" fric="0.2" gid="5" id="0" name="dead" rest="0.0" sensor="false"/>
+        <anim across="3" down="2" durations="100,100,100,100,100,100" height="80" id="13" loop="true" name="Jump right" numframes="6" originx="16" originy="20" sync="false" version="2" width="96">
+            <poly data="4,0,0,32,0,32,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="Jump right 1" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="3" down="2" durations="100,100,100,100,100,100" height="80" id="7" loop="true" name="Jump right" numframes="6" originx="16" originy="20" sync="false" version="2" width="96">
-            <poly data="4,0,10,32,10,32,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="jump" rest="0.0" sensor="false"/>
+        <anim across="3" down="3" durations="100,100,100,100,100,100,100,100" height="120" id="14" loop="true" name="walk left" numframes="8" originx="16" originy="20" sync="false" version="2" width="96">
+            <poly data="4,0,0,32,0,32,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="walk left 1" rest="0.0" sensor="false"/>
         </anim>
-        <anim across="3" down="2" durations="100,100,100,100,100,100" height="80" id="8" loop="true" name="Jump left" numframes="6" originx="16" originy="20" sync="false" version="2" width="96">
-            <poly data="4,0,10,32,10,32,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="Jump right" rest="0.0" sensor="false"/>
+        <anim across="3" down="3" durations="100,100,100,100,100,100,100,100" height="120" id="15" loop="true" name="walk right" numframes="8" originx="16" originy="20" sync="false" version="2" width="96">
+            <poly data="4,0,0,32,0,32,40,0,40" density="0.1" fric="0.2" gid="-1000" id="0" name="walk right 1" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <tileset across="1" atlasID="0" desc="" down="1" id="12" name="andy title" oid="-1" shared="false" th="32" tw="32">
@@ -130,7 +130,7 @@
     </actor>
     <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="32" id="82" name="BookaBoo" shared="false" width="32">
         <anim across="2" down="2" durations="100,100,100,100" height="64" id="0" loop="true" name="Jump" numframes="4" originx="16" originy="16" sync="false" version="2" width="64">
-            <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Jump" rest="0.0" sensor="false"/>
+            <poly data="4,1,0,31,0,31,32,1,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Jump" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="1" continuous="true" desc="" eventsnippetid="7" fixedrot="true" fric="0.2" gid="7" id="55" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="Booter" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="56" static="false">
@@ -230,8 +230,8 @@
     <actor adamp="0.0" ascale="true" atlasID="0" bodytype="2" continuous="true" desc="" eventsnippetid="20" fixedrot="false" fric="0.2" gid="11" id="95" ignoreg="false" inertia="1.0" ldamp="0.0" mass="1.0" name="power up J" oid="-1" pausable="true" physicsMode="0" rest="0.0" shared="false" sprite="96" static="false">
         <snippets/>
     </actor>
-    <sprite atlasID="0" default="0" defaultAnimation="0" desc="" height="32" id="96" name="power up J" shared="false" width="32">
-        <anim across="2" down="2" durations="100,100,100,100" height="64" id="0" loop="true" name="Animation" numframes="4" originx="16" originy="16" sync="false" version="2" width="64">
+    <sprite atlasID="0" default="1" defaultAnimation="1" desc="" height="32" id="96" name="power up J" shared="false" width="32">
+        <anim across="2" down="2" durations="100,100,100,100" height="64" id="1" loop="true" name="Animation 1" numframes="4" originx="16" originy="16" sync="false" version="2" width="64">
             <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="Animation" rest="0.0" sensor="false"/>
         </anim>
     </sprite>
