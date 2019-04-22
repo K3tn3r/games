@@ -230,4 +230,50 @@
         </event-collide-actortotype>
     </group>
     <group eventID="12" id="-1"/>
+    <group eventID="13" id="0">
+        <event-collide-actortogroup comment="false" x="15" y="15">
+            <group eventID="13" id="-1">
+                <collision-foreach comment="false" x="26" y="47">
+                    <group eventID="13" id="-1">
+                        <if comment="false" x="37" y="67">
+                            <group eventID="13" id="-1">
+                                <set-val-4-2 comment="false" x="48" y="102">
+                                    <not comment="false" id="0" x="0" y="0">
+                                        <get-val-4-2 comment="false" id="0" x="0" y="0"/>
+                                    </not>
+                                </set-val-4-2>
+                                <set-val-4-6 comment="false" x="48" y="132">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-4-6>
+                                <set-val-4-4 comment="false" x="48" y="157">
+                                    <int id="0" val="3"/>
+                                </set-val-4-4>
+                                <dolater comment="false" x="48" y="177">
+                                    <group eventID="13" id="-1">
+                                        <set-val-4-6 comment="false" x="59" y="204">
+                                            <false comment="false" id="0" x="0" y="0"/>
+                                        </set-val-4-6>
+                                    </group>
+                                    <int id="0" val=".5"/>
+                                    <ACTOR eid="this" id="2"/>
+                                </dolater>
+                            </group>
+                            <and comment="false" id="0" x="0" y="0">
+                                <eq comment="false" id="0" x="0" y="0">
+                                    <tile-data-for-collision comment="false" id="0" x="0" y="0"/>
+                                    <int id="1" val="turn tile"/>
+                                </eq>
+                                <not comment="false" id="1" x="0" y="0">
+                                    <get-val-4-6 comment="false" id="0" x="0" y="0"/>
+                                </not>
+                            </and>
+                        </if>
+                    </group>
+                </collision-foreach>
+            </group>
+            <ACTOR eid="this" id="0"/>
+            <actorgroup eid="1" id="1"/>
+        </event-collide-actortogroup>
+    </group>
+    <group eventID="13" id="-1"/>
 </groups>

@@ -72,7 +72,7 @@
         <init comment="false" x="15" y="15">
             <group eventID="5" id="-1">
                 <set-game-val-4 comment="false" x="26" y="40">
-                    <int id="0" val="120"/>
+                    <int id="0" val="90"/>
                 </set-game-val-4>
             </group>
         </init>

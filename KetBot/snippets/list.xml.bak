@@ -11,12 +11,13 @@
         <blocks/>
         <events>
             <event displayName="turn timer" enabled="true" id="3" name="event-periodic" order="8" repeats="true"/>
-            <event displayName="collision" enabled="true" id="4" name="event-collide-actortotype" order="9" repeats="true"/>
+            <event displayName="collision" enabled="true" id="4" name="event-collide-actortotype" order="10" repeats="true"/>
             <event displayName="turn collision" enabled="true" id="5" name="collide" order="5" repeats="true"/>
-            <event displayName="trigger expolsion" enabled="true" id="7" name="step" order="11" repeats="true"/>
-            <event displayName="areaofeffect" enabled="true" id="9" name="init" order="16" repeats="true"/>
+            <event displayName="trigger expolsion" enabled="true" id="7" name="step" order="12" repeats="true"/>
+            <event displayName="areaofeffect" enabled="true" id="9" name="init" order="17" repeats="true"/>
             <event displayName="walk" enabled="true" id="12" name="step" order="2" repeats="true"/>
-            <event displayName="Shot" enabled="true" id="13" name="event-collide-actortotype" order="14" repeats="true"/>
+            <event displayName="Shot" enabled="true" id="13" name="event-collide-actortotype" order="15" repeats="true"/>
+            <event displayName="turn tile" enabled="true" id="14" name="event-collide-actortogroup" order="9" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="2" attachedevent="true" class="scripts.ActorEvents_2" classname="scripts.ActorEvents_2" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="2" name="ActorEvents_2" oid="-1" package="scripts." shared="false" type="actor">
@@ -72,12 +73,13 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="stuck" hidden="false" id="6" name="_stuck" order="4"/>
         <blocks/>
         <events>
-            <event displayName="turn timer" enabled="true" id="6" name="event-periodic" order="10" repeats="true"/>
+            <event displayName="turn timer" enabled="true" id="6" name="event-periodic" order="8" repeats="true"/>
             <event displayName="turn collision" enabled="true" id="7" name="collide" order="7" repeats="true"/>
             <event displayName="walk" enabled="true" id="9" name="step" order="6" repeats="true"/>
-            <event displayName="death" enabled="true" id="10" name="event-custom" order="13" repeats="true"/>
-            <event displayName="dead" enabled="true" id="11" name="event-collide-actortotype" order="12" repeats="true"/>
-            <event displayName="shot" enabled="true" id="12" name="event-collide-actortotype" order="14" repeats="true"/>
+            <event displayName="death" enabled="true" id="10" name="event-custom" order="14" repeats="true"/>
+            <event displayName="dead" enabled="true" id="11" name="event-collide-actortotype" order="13" repeats="true"/>
+            <event displayName="shot" enabled="true" id="12" name="event-collide-actortotype" order="15" repeats="true"/>
+            <event displayName="turn tile" enabled="true" id="13" name="event-collide-actortogroup" order="11" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="53" attachedevent="true" class="scripts.ActorEvents_53" classname="scripts.ActorEvents_53" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="6" name="ActorEvents_53" oid="-1" package="scripts." shared="false" type="actor">
@@ -93,12 +95,13 @@
             <event displayName="walk" enabled="true" id="2" name="step" order="2" repeats="true"/>
             <event displayName="turn collision1" enabled="true" id="3" name="collide" order="4" repeats="true"/>
             <event displayName="turn timer" enabled="true" id="4" name="event-periodic" order="3" repeats="true"/>
-            <event displayName="death1" enabled="true" id="7" name="event-custom" order="13" repeats="true"/>
-            <event displayName="dead2" enabled="true" id="8" name="event-collide-actortotype" order="8" repeats="true"/>
+            <event displayName="death1" enabled="true" id="7" name="event-custom" order="15" repeats="true"/>
+            <event displayName="dead2" enabled="true" id="8" name="event-collide-actortotype" order="10" repeats="true"/>
             <event displayName="turn collision2" enabled="true" id="10" name="collide" order="5" repeats="true"/>
-            <event displayName="dead1" enabled="true" id="11" name="event-collide-actortotype" order="7" repeats="true"/>
-            <event displayName="death2" enabled="true" id="12" name="event-custom" order="14" repeats="true"/>
-            <event displayName="shot" enabled="true" id="14" name="event-collide-actortotype" order="16" repeats="true"/>
+            <event displayName="dead1" enabled="true" id="11" name="event-collide-actortotype" order="9" repeats="true"/>
+            <event displayName="death2" enabled="true" id="12" name="event-custom" order="16" repeats="true"/>
+            <event displayName="shot" enabled="true" id="14" name="event-collide-actortotype" order="18" repeats="true"/>
+            <event displayName="turn tile 1" enabled="true" id="15" name="event-collide-actortogroup" order="6" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="55" attachedevent="true" class="scripts.ActorEvents_55" classname="scripts.ActorEvents_55" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="7" name="ActorEvents_55" oid="-1" package="scripts." shared="false" type="actor">
@@ -127,10 +130,11 @@
         <events>
             <event displayName="walk" enabled="true" id="1" name="step" order="1" repeats="true"/>
             <event displayName="turn collision" enabled="true" id="2" name="collide" order="2" repeats="true"/>
-            <event displayName="turn timer" enabled="true" id="3" name="event-periodic" order="3" repeats="true"/>
-            <event displayName="dead" enabled="true" id="4" name="event-collide-actortotype" order="4" repeats="true"/>
-            <event displayName="death" enabled="true" id="5" name="event-custom" order="5" repeats="true"/>
-            <event displayName="shot" enabled="true" id="7" name="event-collide-actortotype" order="7" repeats="true"/>
+            <event displayName="turn timer" enabled="false" id="3" name="event-periodic" order="3" repeats="true"/>
+            <event displayName="dead" enabled="true" id="4" name="event-collide-actortotype" order="5" repeats="true"/>
+            <event displayName="death" enabled="true" id="5" name="event-custom" order="6" repeats="true"/>
+            <event displayName="shot" enabled="true" id="7" name="event-collide-actortotype" order="8" repeats="true"/>
+            <event displayName="turn tile" enabled="true" id="8" name="event-collide-actortogroup" order="4" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="65" attachedevent="true" class="scripts.ActorEvents_65" classname="scripts.ActorEvents_65" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="10" name="ActorEvents_65" oid="-1" package="scripts." shared="false" type="actor">
@@ -215,7 +219,7 @@
         <blocks/>
         <events>
             <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
-            <event displayName="Created" enabled="true" id="2" name="init" order="2" repeats="true"/>
+            <event displayName="Time" enabled="true" id="2" name="init" order="2" repeats="true"/>
             <event displayName="Every N secs" enabled="true" id="3" name="event-periodic" order="3" repeats="true"/>
             <event displayName="Custom Event" enabled="true" id="4" name="event-custom" order="4" repeats="true"/>
             <event displayName="Enters Region" enabled="true" id="5" name="event-type-region" order="5" repeats="true"/>

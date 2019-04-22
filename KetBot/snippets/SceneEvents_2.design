@@ -50,7 +50,7 @@
         <init comment="false" x="15" y="15">
             <group eventID="2" id="-1">
                 <set-game-val-4 comment="false" x="26" y="40">
-                    <int id="0" val="120"/>
+                    <int id="0" val="90"/>
                 </set-game-val-4>
                 <set-game-val-11 comment="false" x="26" y="60">
                     <true comment="false" id="0" x="0" y="0"/>

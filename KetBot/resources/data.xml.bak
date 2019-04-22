@@ -101,7 +101,7 @@
         <snippets/>
     </actor>
     <sprite atlasID="0" default="6" defaultAnimation="6" desc="" height="32" id="1" name="bomb" shared="false" width="32">
-        <anim across="5" down="4" durations="100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100" height="128" id="4" loop="true" name="explosion" numframes="19" originx="16" originy="16" sync="false" version="2" width="160">
+        <anim across="4" down="4" durations="100,100,100,100,100,100,100,100,100,100,100,100,100,100,100" height="128" id="4" loop="true" name="explosion" numframes="15" originx="16" originy="16" sync="false" version="2" width="128">
             <poly data="4,0,0,32,0,32,32,0,32" density="0.1" fric="0.2" gid="-1000" id="0" name="explosion" rest="0.0" sensor="false"/>
         </anim>
         <anim across="2" down="2" durations="100,100,100,100" height="64" id="5" loop="true" name="walk right" numframes="4" originx="16" originy="16" sync="false" version="2" width="64">
@@ -263,4 +263,12 @@
         <tile collision="-1" data="" durations="100" frames="0" id="0" order="-1"/>
     </tileset>
     <background atlasID="0" desc="" durations="100" dx="-0.0" dy="-0.0" height="480" id="11" name="top sky" numframes="1" oid="-1" repeats="true" resized="false" shared="false" width="640" xpf="1.0" ypf="1.0"/>
+    <tileset across="3" atlasID="0" desc="" down="2" id="101" name="turn tiles" oid="-1" shared="false" th="32" tw="32">
+        <tile collision="3" data="turn tile" durations="100" frames="0" id="0" order="-1"/>
+        <tile collision="3" data="turn tile" durations="100" frames="1" id="1" order="-1"/>
+        <tile collision="3" data="turn tile" durations="100" frames="2" id="2" order="-1"/>
+        <tile collision="4" data="turn tile" durations="100" frames="3" id="3" order="-1"/>
+        <tile collision="4" data="turn tile" durations="100" frames="4" id="4" order="-1"/>
+        <tile collision="4" data="turn tile" durations="100" frames="5" id="5" order="-1"/>
+    </tileset>
 </pack>
