@@ -1,24 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <groups>
-    <group eventID="16" id="0">
-        <event-actor-region comment="false" x="15" y="15">
-            <group eventID="16" id="-1">
-                <scene-change-color comment="false" x="26" y="42">
-                    <scene eid="2" id="0"/>
-                    <int id="1" val="0"/>
-                    <int id="2" val=".5"/>
-                    <color b="0" g="0" id="3" r="0"/>
-                    <int id="4" val="0"/>
-                    <int id="5" val=".5"/>
-                    <color b="0" g="0" id="6" r="0"/>
-                </scene-change-color>
-            </group>
-            <int id="0" val="0"/>
-            <REGION eid="3" id="1"/>
-            <ACTOR eid="22" id="2"/>
-        </event-actor-region>
-    </group>
-    <group eventID="16" id="-1"/>
     <group eventID="1" id="0">
         <draw comment="false" x="15" y="15">
             <group eventID="1" id="-1">
@@ -58,16 +39,6 @@
         </draw-text>
     </group>
     <group eventID="1" id="-1"/>
-    <group eventID="19" id="0">
-        <init comment="false" x="15" y="15">
-            <group eventID="19" id="-1">
-                <set-game-val-3 comment="false" x="26" y="40">
-                    <int id="0" val="0"/>
-                </set-game-val-3>
-            </group>
-        </init>
-    </group>
-    <group eventID="19" id="-1"/>
     <group eventID="5" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="5" id="-1">
@@ -158,4 +129,127 @@
         </event-actor-region>
     </group>
     <group eventID="15" id="-1"/>
+    <group eventID="16" id="0">
+        <event-actor-region comment="false" x="15" y="15">
+            <group eventID="16" id="-1">
+                <scene-change-color comment="false" x="26" y="42">
+                    <scene eid="2" id="0"/>
+                    <int id="1" val="0"/>
+                    <int id="2" val=".5"/>
+                    <color b="0" g="0" id="3" r="0"/>
+                    <int id="4" val="0"/>
+                    <int id="5" val=".5"/>
+                    <color b="0" g="0" id="6" r="0"/>
+                </scene-change-color>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="3" id="1"/>
+            <ACTOR eid="22" id="2"/>
+        </event-actor-region>
+    </group>
+    <group eventID="16" id="-1"/>
+    <group eventID="19" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="19" id="-1">
+                <set-game-val-3 comment="false" x="26" y="40">
+                    <int id="0" val="0"/>
+                </set-game-val-3>
+            </group>
+        </init>
+    </group>
+    <group eventID="19" id="-1"/>
+    <group eventID="20" id="0">
+        <event-key-press-release comment="false" x="15" y="15">
+            <group eventID="20" id="-1">
+                <scene-reload-color comment="false" x="26" y="42">
+                    <int id="0" val="1"/>
+                    <int id="1" val=".5"/>
+                    <color b="0" g="0" id="2" r="0"/>
+                    <int id="3" val="3"/>
+                    <int id="4" val=".5"/>
+                    <color b="0" g="0" id="5" r="0"/>
+                </scene-reload-color>
+            </group>
+            <control eid="8" id="0"/>
+            <int id="1" val="0"/>
+        </event-key-press-release>
+    </group>
+    <group eventID="20" id="-1"/>
+    <group eventID="23" id="0">
+        <draw comment="false" x="15" y="15">
+            <group eventID="23" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="23" id="-1">
+                        <draw-text comment="false" x="37" y="65">
+                            <int id="0" val="Press &amp;quot;R&amp;quot; to retry/restart"/>
+                            <int id="1" val="160"/>
+                            <int id="2" val="240"/>
+                        </draw-text>
+                        <draw-text comment="false" x="37" y="85">
+                            <int id="0" val="Press &amp;quot;P&amp;quot; to pause/unpause"/>
+                            <int id="1" val="160"/>
+                            <int id="2" val="260"/>
+                        </draw-text>
+                    </group>
+                    <get-val-3-1 comment="false" id="0" x="0" y="0"/>
+                </if>
+            </group>
+        </draw>
+    </group>
+    <group eventID="23" id="-1"/>
+    <group eventID="24" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="24" id="-1">
+                <dolater comment="false" x="26" y="40">
+                    <group eventID="24" id="-1">
+                        <set-val-3-1 comment="false" x="37" y="67">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-3-1>
+                    </group>
+                    <int id="0" val="1"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+                <dolater comment="false" x="26" y="104">
+                    <group eventID="24" id="-1">
+                        <set-val-3-1 comment="false" x="37" y="131">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-3-1>
+                    </group>
+                    <int id="0" val="5"/>
+                    <ACTOR eid="lastcreated" id="2"/>
+                </dolater>
+            </group>
+        </init>
+    </group>
+    <group eventID="24" id="-1"/>
+    <group eventID="25" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="25" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="25" id="-1">
+                        <if comment="false" x="37" y="73">
+                            <group eventID="25" id="-1">
+                                <pause-unpause comment="false" x="48" y="98">
+                                    <int id="0" val="1"/>
+                                </pause-unpause>
+                            </group>
+                            <is-paused comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <else comment="false" x="37" y="137">
+                            <group eventID="25" id="-1">
+                                <pause-unpause comment="false" x="48" y="157">
+                                    <int id="0" val="0"/>
+                                </pause-unpause>
+                            </group>
+                        </else>
+                    </group>
+                    <keystate comment="false" id="0" x="0" y="0">
+                        <int id="0" val="1"/>
+                        <control eid="9" id="1"/>
+                    </keystate>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="25" id="-1"/>
 </groups>

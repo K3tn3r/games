@@ -79,4 +79,51 @@
         </event-type-region>
     </group>
     <group eventID="5" id="-1"/>
+    <group eventID="6" id="0">
+        <event-key-press-release comment="false" x="15" y="15">
+            <group eventID="6" id="-1">
+                <scene-reload-color comment="false" x="26" y="42">
+                    <int id="0" val="1"/>
+                    <int id="1" val=".5"/>
+                    <color b="0" g="0" id="2" r="0"/>
+                    <int id="3" val="3"/>
+                    <int id="4" val=".5"/>
+                    <color b="0" g="0" id="5" r="0"/>
+                </scene-reload-color>
+            </group>
+            <control eid="8" id="0"/>
+            <int id="1" val="0"/>
+        </event-key-press-release>
+    </group>
+    <group eventID="6" id="-1"/>
+    <group eventID="7" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="7" id="-1">
+                        <if comment="false" x="37" y="73">
+                            <group eventID="7" id="-1">
+                                <pause-unpause comment="false" x="48" y="98">
+                                    <int id="0" val="1"/>
+                                </pause-unpause>
+                            </group>
+                            <is-paused comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <else comment="false" x="37" y="137">
+                            <group eventID="7" id="-1">
+                                <pause-unpause comment="false" x="48" y="157">
+                                    <int id="0" val="0"/>
+                                </pause-unpause>
+                            </group>
+                        </else>
+                    </group>
+                    <keystate comment="false" id="0" x="0" y="0">
+                        <int id="0" val="1"/>
+                        <control eid="9" id="1"/>
+                    </keystate>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="7" id="-1"/>
 </groups>
