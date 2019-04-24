@@ -56,18 +56,18 @@
         <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="draw" hidden="false" id="1" name="_draw" order="0"/>
         <blocks/>
         <events>
-            <event displayName=" drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
-            <event displayName="Time" enabled="true" id="5" name="init" order="14" repeats="true"/>
-            <event displayName="Time-1" enabled="true" id="6" name="event-periodic" order="26" repeats="true"/>
-            <event displayName="Game Over" enabled="false" id="8" name="step" order="13" repeats="true"/>
-            <event displayName="AndyDied" enabled="true" id="11" name="event-custom" order="27" repeats="true"/>
-            <event displayName="checkpiont" enabled="false" id="15" name="event-actor-region" order="12" repeats="true"/>
             <event displayName="level 2" enabled="true" id="16" name="event-actor-region" order="35" repeats="true"/>
+            <event displayName=" drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
             <event displayName="lives" enabled="false" id="19" name="init" order="22" repeats="true"/>
             <event displayName="retry/restart" enabled="true" id="20" name="event-key-press-release" order="7" repeats="true"/>
+            <event displayName="Time" enabled="true" id="5" name="init" order="14" repeats="true"/>
+            <event displayName="Time-1" enabled="true" id="6" name="event-periodic" order="26" repeats="true"/>
             <event displayName="Drawing2" enabled="true" id="23" name="draw" order="3" repeats="true"/>
+            <event displayName="Game Over" enabled="false" id="8" name="step" order="13" repeats="true"/>
             <event displayName="Draw?" enabled="true" id="24" name="init" order="2" repeats="true"/>
             <event displayName="pause?" enabled="true" id="25" name="step" order="8" repeats="true"/>
+            <event displayName="AndyDied" enabled="true" id="11" name="event-custom" order="27" repeats="true"/>
+            <event displayName="checkpiont" enabled="false" id="15" name="event-actor-region" order="12" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="7" attachedevent="true" class="scripts.ActorEvents_7" classname="scripts.ActorEvents_7" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="4" name="ActorEvents_7" oid="-1" package="scripts." shared="false" type="actor">
