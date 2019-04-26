@@ -158,16 +158,15 @@
                 </if>
                 <else-if comment="false" x="26" y="124">
                     <group eventID="4" id="-1">
-                        <shout comment="false" x="37" y="167">
-                            <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="dead"/>
-                        </shout>
-                        <set-val-9-2 comment="false" x="37" y="199">
+                        <scene-shout comment="false" x="37" y="167">
+                            <int id="0" val="AndyDied"/>
+                        </scene-shout>
+                        <set-val-9-2 comment="false" x="37" y="187">
                             <not comment="false" id="0" x="0" y="0">
                                 <get-val-9-2 comment="false" id="0" x="0" y="0"/>
                             </not>
                         </set-val-9-2>
-                        <set-val-9-4 comment="false" x="37" y="229">
+                        <set-val-9-4 comment="false" x="37" y="217">
                             <int id="0" val="3"/>
                         </set-val-9-4>
                     </group>

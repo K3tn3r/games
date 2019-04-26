@@ -54,14 +54,15 @@
         <actor a="0.0" aid="47" c="false" group="13" id="81" name="BookaBoo 47" sx="1.0" sy="1.0" x="5504" y="438" z="0"/>
         <actor a="0.0" aid="48" c="false" group="13" id="81" name="BookaBoo 48" sx="1.0" sy="1.0" x="5792" y="438" z="0"/>
         <actor a="0.0" aid="49" c="false" group="8" id="59" name="Boofer 49" sx="1.0" sy="1.0" x="612" y="352" z="0"/>
-        <actor a="0.0" aid="50" c="false" group="8" id="59" name="Boofer 50" sx="1.0" sy="1.0" x="1248" y="414" z="0"/>
+        <actor a="0.0" aid="50" c="false" group="8" id="59" name="Boofer 50" sx="1.0" sy="1.0" x="1218" y="415" z="0"/>
         <actor a="0.0" aid="51" c="false" group="10" id="0" name="Bomb 51" sx="1.0" sy="1.0" x="2306" y="414" z="0"/>
         <actor a="0.0" aid="52" c="false" group="8" id="59" name="Boofer 52" sx="1.0" sy="1.0" x="2562" y="412" z="0"/>
-        <actor a="0.0" aid="53" c="false" group="8" id="59" name="Boofer 53" sx="1.0" sy="1.0" x="4649" y="415" z="0"/>
         <actor a="0.0" aid="54" c="false" group="8" id="59" name="Boofer 54" sx="1.0" sy="1.0" x="6202" y="413" z="0"/>
-        <actor a="0.0" aid="55" c="false" group="6" id="53" name="Bloock 55" sx="1.0" sy="1.0" x="1691" y="380" z="0"/>
         <actor a="0.0" aid="56" c="false" group="6" id="53" name="Bloock 56" sx="1.0" sy="1.0" x="2177" y="127" z="0"/>
         <actor a="0.0" aid="57" c="false" group="6" id="53" name="Bloock 57" sx="1.0" sy="1.0" x="5663" y="381" z="0"/>
+        <actor a="0.0" aid="58" c="false" group="14" id="102" name="Burdle 58" sx="1.0" sy="1.0" x="1667" y="411" z="0"/>
+        <actor a="0.0" aid="59" c="false" group="14" id="102" name="Burdle 59" sx="1.0" sy="1.0" x="4807" y="189" z="0"/>
+        <actor a="0.0" aid="60" c="false" group="14" id="102" name="Burdle 60" sx="1.0" sy="1.0" x="4604" y="413" z="0"/>
     </actors>
     <snippets/>
     <terrain>

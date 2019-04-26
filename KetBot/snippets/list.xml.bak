@@ -85,7 +85,6 @@
             <event displayName="dead" enabled="true" id="11" name="event-collide-actortotype" order="14" repeats="true"/>
             <event displayName="shot" enabled="true" id="12" name="event-collide-actortotype" order="16" repeats="true"/>
             <event displayName="turn tile" enabled="true" id="13" name="event-collide-actortogroup" order="12" repeats="true"/>
-            <event displayName="Updating" enabled="true" id="14" name="step" order="6" repeats="true"/>
         </events>
     </snippet>
     <snippet actorid="53" attachedevent="true" class="scripts.ActorEvents_53" classname="scripts.ActorEvents_53" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="6" name="ActorEvents_53" oid="-1" package="scripts." shared="false" type="actor">
@@ -229,10 +228,29 @@
             <event displayName="Drawing" enabled="true" id="1" name="draw" order="1" repeats="true"/>
             <event displayName="Time" enabled="true" id="2" name="init" order="6" repeats="true"/>
             <event displayName="Every N secs" enabled="true" id="3" name="event-periodic" order="7" repeats="true"/>
-            <event displayName="Custom Event" enabled="true" id="4" name="event-custom" order="8" repeats="true"/>
+            <event displayName="AndyDied" enabled="true" id="4" name="event-custom" order="8" repeats="true"/>
             <event displayName="Enters Region" enabled="true" id="5" name="event-type-region" order="9" repeats="true"/>
             <event displayName="retry/restart" enabled="true" id="6" name="event-key-press-release" order="2" repeats="true"/>
             <event displayName="Pause?" enabled="true" id="7" name="step" order="3" repeats="true"/>
+        </events>
+    </snippet>
+    <snippet actorid="102" attachedevent="true" class="scripts.ActorEvents_102" classname="scripts.ActorEvents_102" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="23" name="ActorEvents_102" oid="-1" package="scripts." shared="false" type="actor">
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="left" hidden="false" id="1" name="_left" order="0"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="stuck" hidden="false" id="2" name="_stuck" order="1"/>
+        <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="isAlive" hidden="false" id="3" name="_isAlive" order="2"/>
+        <boolean default="true" defaultValue="true" desc="" dropdown="" fullname="Spikes?" hidden="false" id="4" name="_Spikes" order="3"/>
+        <number default="10" defaultValue="10" desc="" dropdown="" fullname="speed" hidden="false" id="5" name="_speed" order="4"/>
+        <number default="0" defaultValue="0" desc="" dropdown="" fullname="turn timer" hidden="false" id="6" name="_turntimer" order="5"/>
+        <boolean default="false" defaultValue="false" desc="" dropdown="" fullname="shot" hidden="false" id="7" name="_shot" order="6"/>
+        <blocks/>
+        <events>
+            <event displayName="Walk" enabled="true" id="1" name="step" order="1" repeats="true"/>
+            <event displayName="turn collision" enabled="true" id="2" name="collide" order="2" repeats="true"/>
+            <event displayName="turn timer" enabled="true" id="3" name="event-periodic" order="3" repeats="true"/>
+            <event displayName="turn tile" enabled="true" id="4" name="event-collide-actortogroup" order="4" repeats="true"/>
+            <event displayName="dead?" enabled="true" id="5" name="event-collide-actortotype" order="5" repeats="true"/>
+            <event displayName="death" enabled="true" id="6" name="event-custom" order="7" repeats="true"/>
+            <event displayName="shot" enabled="true" id="7" name="event-collide-actortotype" order="6" repeats="true"/>
         </events>
     </snippet>
 </pack>

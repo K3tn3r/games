@@ -248,28 +248,6 @@
             </group>
         </init>
     </group>
-    <group eventID="9" id="8">
-        <set-game-val-22 comment="false" x="159" y="335">
-            <times comment="false" id="0" x="0" y="0">
-                <get-wh comment="false" id="0" x="0" y="0">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="1"/>
-                </get-wh>
-                <int id="1" val="2"/>
-            </times>
-        </set-game-val-22>
-    </group>
-    <group eventID="9" id="9">
-        <set-game-val-23 comment="false" x="156" y="265">
-            <times comment="false" id="0" x="0" y="0">
-                <get-wh comment="false" id="0" x="0" y="0">
-                    <ACTOR eid="this" id="0"/>
-                    <int id="1" val="1"/>
-                </get-wh>
-                <int id="1" val="2"/>
-            </times>
-        </set-game-val-23>
-    </group>
     <group eventID="9" id="-1"/>
     <group eventID="12" id="0">
         <step comment="false" x="15" y="15">

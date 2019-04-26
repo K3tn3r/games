@@ -218,16 +218,15 @@
                 </if>
                 <else-if comment="false" x="26" y="156">
                     <group eventID="8" id="-1">
-                        <shout comment="false" x="37" y="199">
-                            <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="dead"/>
-                        </shout>
-                        <set-val-6-2 comment="false" x="37" y="231">
+                        <scene-shout comment="false" x="37" y="199">
+                            <int id="0" val="AndyDied"/>
+                        </scene-shout>
+                        <set-val-6-2 comment="false" x="37" y="219">
                             <not comment="false" id="0" x="0" y="0">
                                 <get-val-6-2 comment="false" id="0" x="0" y="0"/>
                             </not>
                         </set-val-6-2>
-                        <set-val-6-4 comment="false" x="37" y="261">
+                        <set-val-6-4 comment="false" x="37" y="249">
                             <int id="0" val="3"/>
                         </set-val-6-4>
                     </group>
@@ -320,16 +319,15 @@
                 </if>
                 <else-if comment="false" x="26" y="156">
                     <group eventID="11" id="-1">
-                        <shout comment="false" x="37" y="199">
-                            <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="dead"/>
-                        </shout>
-                        <set-val-6-2 comment="false" x="37" y="231">
+                        <scene-shout comment="false" x="37" y="199">
+                            <int id="0" val="AndyDied"/>
+                        </scene-shout>
+                        <set-val-6-2 comment="false" x="37" y="219">
                             <not comment="false" id="0" x="0" y="0">
                                 <get-val-6-2 comment="false" id="0" x="0" y="0"/>
                             </not>
                         </set-val-6-2>
-                        <set-val-6-4 comment="false" x="37" y="261">
+                        <set-val-6-4 comment="false" x="37" y="249">
                             <int id="0" val="3"/>
                         </set-val-6-4>
                     </group>

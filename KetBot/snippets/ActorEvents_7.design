@@ -178,7 +178,7 @@
                     <group eventID="11" id="-1">
                         <shout comment="false" x="31" y="164">
                             <collide-actor-of-type comment="false" id="0" x="0" y="0"/>
-                            <int id="1" val="dead"/>
+                            <int id="1" val="AndyDied"/>
                         </shout>
                         <set-val-4-2 comment="false" x="31" y="196">
                             <not comment="false" id="0" x="0" y="0">
@@ -276,20 +276,4 @@
         </event-collide-actortogroup>
     </group>
     <group eventID="13" id="-1"/>
-    <group eventID="14" id="0">
-        <step comment="false" x="15" y="15">
-            <group eventID="14" id="-1">
-                <if comment="false" x="26" y="40">
-                    <group eventID="14" id="-1">
-                        <stop comment="false" x="37" y="70"/>
-                    </group>
-                    <and comment="false" id="0" x="0" y="0">
-                        <get-game-val-21 comment="false" id="0" x="0" y="0"/>
-                        <is-paused comment="false" id="1" x="0" y="0"/>
-                    </and>
-                </if>
-            </group>
-        </step>
-    </group>
-    <group eventID="14" id="-1"/>
 </groups>
