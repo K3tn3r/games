@@ -251,9 +251,18 @@
             <event displayName="turn timer" enabled="true" id="3" name="event-periodic" order="4" repeats="true"/>
             <event displayName="turn tile" enabled="true" id="4" name="event-collide-actortogroup" order="5" repeats="true"/>
             <event displayName="dead?" enabled="true" id="5" name="event-collide-actortotype" order="6" repeats="true"/>
-            <event displayName="death" enabled="true" id="6" name="event-custom" order="8" repeats="true"/>
+            <event displayName="death" enabled="true" id="6" name="event-custom" order="10" repeats="true"/>
             <event displayName="shot" enabled="true" id="7" name="event-collide-actortotype" order="7" repeats="true"/>
             <event displayName="turn collision2" enabled="true" id="8" name="collide" order="3" repeats="true"/>
+            <event displayName="shot2" enabled="true" id="9" name="event-collide-actortotype" order="8" repeats="true"/>
         </events>
+    </snippet>
+    <snippet attachedevent="true" class="scripts.SceneEvents_4" classname="scripts.SceneEvents_4" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="25" name="SceneEvents_4" oid="-1" package="scripts." sceneid="4" shared="false" type="scene">
+        <blocks/>
+        <events/>
+    </snippet>
+    <snippet actorid="109" attachedevent="true" class="scripts.ActorEvents_109" classname="scripts.ActorEvents_109" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="26" name="ActorEvents_109" oid="-1" package="scripts." shared="false" type="actor">
+        <blocks/>
+        <events/>
     </snippet>
 </pack>
