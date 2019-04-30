@@ -69,21 +69,36 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_7 extends ActorScript
+class ActorEvents_53 extends ActorScript
 {
 	public var _speed:Float;
 	public var _left:Bool;
 	public var _turntimer:Float;
-	public var _isalive:Bool;
+	public var _Isalive1:Bool;
+	public var _Isalive2:Bool;
+	public var _speed2:Float;
 	public var _stuck:Bool;
 	
 	/* ========================= Custom Event ========================= */
-	public function _customEvent_Blobdeath():Void
+	public function _customEvent_death1():Void
 	{
-		_isalive = false;
-		propertyChanged("_isalive", _isalive);
-		actor.setAnimation("" + "dead");
-		runLater(1000 * .8, function(timeTask:TimedTask):Void
+		_Isalive1 = false;
+		propertyChanged("_Isalive1", _Isalive1);
+		actor.setAnimation("" + "dead1");
+		runLater(1000 * .5, function(timeTask:TimedTask):Void
+		{
+			_Isalive2 = true;
+			propertyChanged("_Isalive2", _Isalive2);
+		}, actor);
+	}
+	
+	/* ========================= Custom Event ========================= */
+	public function _customEvent_death2():Void
+	{
+		_Isalive2 = false;
+		propertyChanged("_Isalive2", _Isalive2);
+		actor.setAnimation("" + "dead2");
+		runLater(1000 * .5, function(timeTask:TimedTask):Void
 		{
 			recycleActor(actor);
 		}, actor);
@@ -99,8 +114,12 @@ class ActorEvents_7 extends ActorScript
 		_left = false;
 		nameMap.set("turn timer", "_turntimer");
 		_turntimer = 0.0;
-		nameMap.set("is alive", "_isalive");
-		_isalive = true;
+		nameMap.set("Is alive1", "_Isalive1");
+		_Isalive1 = true;
+		nameMap.set("Is alive2", "_Isalive2");
+		_Isalive2 = false;
+		nameMap.set("speed2", "_speed2");
+		_speed2 = 10.0;
 		nameMap.set("stuck", "_stuck");
 		_stuck = false;
 		
@@ -114,28 +133,55 @@ class ActorEvents_7 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				if(actor.isOnScreen())
+				if((_left && _Isalive1))
 				{
-					if((_left && _isalive))
-					{
-						actor.setXVelocity(_speed);
-						actor.setAnimation("" + "walk right");
-					}
-					else if((!(_left) && _isalive))
-					{
-						actor.setXVelocity(-(_speed));
-						actor.setAnimation("" + "walk left");
-					}
+					actor.setXVelocity(-(_speed));
+					actor.setAnimation("" + "walk left");
+				}
+				else if((!(_left) && _Isalive1))
+				{
+					actor.setXVelocity(_speed);
+					actor.setAnimation("" + "walk right");
+				}
+				else if((_left && _Isalive2))
+				{
+					actor.setXVelocity(-(_speed2));
+					actor.setAnimation("" + "dead1 walk left");
+				}
+				else if((!(_left) && _Isalive2))
+				{
+					actor.setXVelocity(_speed2);
+					actor.setAnimation("" + "dead1 walk right");
 				}
 			}
 		});
+		
+		/* ======================= Every N seconds ======================== */
+		runPeriodically(1000 * 1, function(timeTask:TimedTask):Void
+		{
+			if(wrapper.enabled)
+			{
+				if(actor.isOnScreen())
+				{
+					_turntimer = asNumber((_turntimer - 1));
+					propertyChanged("_turntimer", _turntimer);
+					if((_turntimer <= 0))
+					{
+						_left = !(_left);
+						propertyChanged("_left", _left);
+						_turntimer = asNumber(3);
+						propertyChanged("_turntimer", _turntimer);
+					}
+				}
+			}
+		}, actor);
 		
 		/* ======================== Something Else ======================== */
 		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				if((((event.thisFromRight || event.thisFromLeft) && _isalive) && !(_stuck)))
+				if((((event.thisFromRight || event.thisFromLeft) && _Isalive1) && !(_stuck)))
 				{
 					_left = !(_left);
 					propertyChanged("_left", _left);
@@ -152,22 +198,27 @@ class ActorEvents_7 extends ActorScript
 			}
 		});
 		
-		/* ======================= Every N seconds ======================== */
-		runPeriodically(1000 * 1, function(timeTask:TimedTask):Void
+		/* ======================== Something Else ======================== */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
 		{
 			if(wrapper.enabled)
 			{
-				_turntimer = asNumber((_turntimer - 1));
-				propertyChanged("_turntimer", _turntimer);
-				if((_turntimer <= 0))
+				if((((event.thisFromRight || event.thisFromLeft) && _Isalive2) && !(_stuck)))
 				{
 					_left = !(_left);
 					propertyChanged("_left", _left);
+					_stuck = true;
+					propertyChanged("_stuck", _stuck);
 					_turntimer = asNumber(3);
 					propertyChanged("_turntimer", _turntimer);
+					runLater(1000 * .5, function(timeTask:TimedTask):Void
+					{
+						_stuck = false;
+						propertyChanged("_stuck", _stuck);
+					}, actor);
 				}
 			}
-		}, actor);
+		});
 		
 		/* ======================= Member of Group ======================== */
 		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
@@ -199,11 +250,33 @@ class ActorEvents_7 extends ActorScript
 		{
 			if(wrapper.enabled && sameAsAny(getActorType(2), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				if((event.thisFromTop && _isalive))
+				if((event.thisFromTop && _Isalive1))
 				{
-					actor.shout("_customEvent_" + "Blobdeath");
+					actor.shout("_customEvent_" + "death1");
+					event.otherActor.shout("_customEvent_" + "killBlock1");
 				}
-				else if((!(event.thisFromTop) && _isalive))
+				else if((!(event.thisFromTop) && _Isalive1))
+				{
+					shoutToScene("_customEvent_" + "AndyDied");
+					_left = !(_left);
+					propertyChanged("_left", _left);
+					_turntimer = asNumber(3);
+					propertyChanged("_turntimer", _turntimer);
+				}
+			}
+		});
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(2), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				if((event.thisFromTop && _Isalive2))
+				{
+					actor.shout("_customEvent_" + "death2");
+					event.otherActor.shout("_customEvent_" + "killBloock2");
+				}
+				else if((!(event.thisFromTop) && _Isalive2))
 				{
 					shoutToScene("_customEvent_" + "AndyDied");
 					_left = !(_left);
@@ -219,12 +292,20 @@ class ActorEvents_7 extends ActorScript
 		{
 			if(wrapper.enabled && sameAsAny(getActorType(77), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				_isalive = false;
-				propertyChanged("_isalive", _isalive);
-				actor.setAnimation("" + "dead");
-				runLater(1000 * .8, function(timeTask:TimedTask):Void
+				_Isalive1 = false;
+				propertyChanged("_Isalive1", _Isalive1);
+				actor.setAnimation("" + "dead1");
+				runLater(1000 * .5, function(timeTask:TimedTask):Void
 				{
-					recycleActor(actor);
+					_Isalive2 = true;
+					propertyChanged("_Isalive2", _Isalive2);
+					_Isalive2 = false;
+					propertyChanged("_Isalive2", _Isalive2);
+					actor.setAnimation("" + "dead2");
+					runLater(1000 * .5, function(timeTask:TimedTask):Void
+					{
+						recycleActor(actor);
+					}, actor);
 				}, actor);
 			}
 		});

@@ -230,7 +230,7 @@
             <event displayName="Time" enabled="true" id="2" name="init" order="6" repeats="true"/>
             <event displayName="Every N secs" enabled="true" id="3" name="event-periodic" order="7" repeats="true"/>
             <event displayName="AndyDied" enabled="true" id="4" name="event-custom" order="8" repeats="true"/>
-            <event displayName="Enters Region" enabled="true" id="5" name="event-type-region" order="9" repeats="true"/>
+            <event displayName="BOSS" enabled="true" id="5" name="event-type-region" order="9" repeats="true"/>
             <event displayName="retry/restart" enabled="true" id="6" name="event-key-press-release" order="2" repeats="true"/>
             <event displayName="Pause?" enabled="true" id="7" name="step" order="3" repeats="true"/>
         </events>
@@ -259,7 +259,13 @@
     </snippet>
     <snippet attachedevent="true" class="scripts.SceneEvents_4" classname="scripts.SceneEvents_4" desc="Scene Specific Events" description="Scene Specific Events" design="true" drawOrder="0" id="25" name="SceneEvents_4" oid="-1" package="scripts." sceneid="4" shared="false" type="scene">
         <blocks/>
-        <events/>
+        <events>
+            <event displayName="death count" enabled="true" id="1" name="draw" order="1" repeats="true"/>
+            <event displayName="restart" enabled="true" id="2" name="event-key-press-release" order="2" repeats="true"/>
+            <event displayName="Pause" enabled="true" id="3" name="step" order="3" repeats="true"/>
+            <event displayName="Time" enabled="true" id="4" name="init" order="4" repeats="true"/>
+            <event displayName="AndyDied" enabled="true" id="5" name="event-custom" order="5" repeats="true"/>
+        </events>
     </snippet>
     <snippet actorid="109" attachedevent="true" class="scripts.ActorEvents_109" classname="scripts.ActorEvents_109" desc="Actor Specific Events" description="Actor Specific Events" design="true" drawOrder="0" id="26" name="ActorEvents_109" oid="-1" package="scripts." shared="false" type="actor">
         <blocks/>

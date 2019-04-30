@@ -125,6 +125,16 @@
                     <int id="1" val="on ground?"/>
                     <false comment="false" id="2" x="0" y="0"/>
                 </actor-set-prop>
+                <set-xy comment="false" x="26" y="146">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="0"/>
+                    <get-game-val-23 comment="false" id="2" x="0" y="0"/>
+                </set-xy>
+                <set-xy comment="false" x="26" y="178">
+                    <ACTOR eid="this" id="0"/>
+                    <int id="1" val="1"/>
+                    <get-game-val-24 comment="false" id="2" x="0" y="0"/>
+                </set-xy>
             </group>
         </init>
     </group>
@@ -688,15 +698,22 @@
             <group eventID="18" id="-1">
                 <if comment="false" x="26" y="40">
                     <group eventID="18" id="-1">
-                        <shout comment="false" x="37" y="70">
-                            <ACTOR eid="this" id="0"/>
-                            <int id="1" val="dead"/>
-                        </shout>
+                        <if comment="false" x="37" y="70">
+                            <group eventID="18" id="-1">
+                                <shout comment="false" x="48" y="100">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="dead"/>
+                                </shout>
+                            </group>
+                            <lesseq comment="false" id="0" x="0" y="0">
+                                <get-game-val-4 comment="false" id="0" x="0" y="0"/>
+                                <int id="1" val="0"/>
+                            </lesseq>
+                        </if>
                     </group>
-                    <lesseq comment="false" id="0" x="0" y="0">
-                        <get-game-val-4 comment="false" id="0" x="0" y="0"/>
-                        <int id="1" val="0"/>
-                    </lesseq>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-22 comment="false" id="0" x="0" y="0"/>
+                    </not>
                 </if>
             </group>
         </step>

@@ -69,21 +69,26 @@ import com.stencyl.graphics.shaders.BloomShader;
 
 
 
-class ActorEvents_7 extends ActorScript
+class ActorEvents_102 extends ActorScript
 {
-	public var _speed:Float;
 	public var _left:Bool;
-	public var _turntimer:Float;
-	public var _isalive:Bool;
 	public var _stuck:Bool;
+	public var _isAlive:Bool;
+	public var _Spikes:Bool;
+	public var _speed:Float;
+	public var _turntimer:Float;
+	public var _shot:Bool;
+	public var _IsAlive2:Bool;
 	
 	/* ========================= Custom Event ========================= */
-	public function _customEvent_Blobdeath():Void
+	public function _customEvent_Burdledeath():Void
 	{
-		_isalive = false;
-		propertyChanged("_isalive", _isalive);
+		_isAlive = false;
+		propertyChanged("_isAlive", _isAlive);
+		_IsAlive2 = false;
+		propertyChanged("_IsAlive2", _IsAlive2);
 		actor.setAnimation("" + "dead");
-		runLater(1000 * .8, function(timeTask:TimedTask):Void
+		runLater(1000 * .5, function(timeTask:TimedTask):Void
 		{
 			recycleActor(actor);
 		}, actor);
@@ -93,16 +98,22 @@ class ActorEvents_7 extends ActorScript
 	public function new(dummy:Int, actor:Actor, dummy2:Engine)
 	{
 		super(actor);
-		nameMap.set("speed", "_speed");
-		_speed = 5.0;
 		nameMap.set("left", "_left");
 		_left = false;
-		nameMap.set("turn timer", "_turntimer");
-		_turntimer = 0.0;
-		nameMap.set("is alive", "_isalive");
-		_isalive = true;
 		nameMap.set("stuck", "_stuck");
 		_stuck = false;
+		nameMap.set("isAlive", "_isAlive");
+		_isAlive = true;
+		nameMap.set("Spikes?", "_Spikes");
+		_Spikes = true;
+		nameMap.set("speed", "_speed");
+		_speed = 10.0;
+		nameMap.set("turn timer", "_turntimer");
+		_turntimer = 0.0;
+		nameMap.set("shot", "_shot");
+		_shot = false;
+		nameMap.set("IsAlive2", "_IsAlive2");
+		_IsAlive2 = false;
 		
 	}
 	
@@ -114,17 +125,30 @@ class ActorEvents_7 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				if(actor.isOnScreen())
+				if(_isAlive)
 				{
-					if((_left && _isalive))
+					if(_left)
 					{
 						actor.setXVelocity(_speed);
 						actor.setAnimation("" + "walk right");
 					}
-					else if((!(_left) && _isalive))
+					else if(!(_left))
 					{
 						actor.setXVelocity(-(_speed));
 						actor.setAnimation("" + "walk left");
+					}
+				}
+				else if(_IsAlive2)
+				{
+					if(_left)
+					{
+						actor.setXVelocity(_speed);
+						actor.setAnimation("" + "walk right2");
+					}
+					else if(!(_left))
+					{
+						actor.setXVelocity(-(_speed));
+						actor.setAnimation("" + "walk left2");
 					}
 				}
 			}
@@ -135,13 +159,35 @@ class ActorEvents_7 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				if((((event.thisFromRight || event.thisFromLeft) && _isalive) && !(_stuck)))
+				if((((event.thisFromRight || event.thisFromLeft) && _isAlive) && !(_stuck)))
 				{
 					_left = !(_left);
 					propertyChanged("_left", _left);
 					_stuck = true;
 					propertyChanged("_stuck", _stuck);
-					_turntimer = asNumber(3);
+					_turntimer = asNumber(5);
+					propertyChanged("_turntimer", _turntimer);
+					runLater(1000 * .5, function(timeTask:TimedTask):Void
+					{
+						_stuck = false;
+						propertyChanged("_stuck", _stuck);
+					}, actor);
+				}
+			}
+		});
+		
+		/* ======================== Something Else ======================== */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if((((event.thisFromRight || event.thisFromLeft) && _IsAlive2) && !(_stuck)))
+				{
+					_left = !(_left);
+					propertyChanged("_left", _left);
+					_stuck = true;
+					propertyChanged("_stuck", _stuck);
+					_turntimer = asNumber(5);
 					propertyChanged("_turntimer", _turntimer);
 					runLater(1000 * .5, function(timeTask:TimedTask):Void
 					{
@@ -157,14 +203,17 @@ class ActorEvents_7 extends ActorScript
 		{
 			if(wrapper.enabled)
 			{
-				_turntimer = asNumber((_turntimer - 1));
-				propertyChanged("_turntimer", _turntimer);
-				if((_turntimer <= 0))
+				if(actor.isOnScreen())
 				{
-					_left = !(_left);
-					propertyChanged("_left", _left);
-					_turntimer = asNumber(3);
+					_turntimer = asNumber((_turntimer - 1));
 					propertyChanged("_turntimer", _turntimer);
+					if((_turntimer <= 0))
+					{
+						_left = !(_left);
+						propertyChanged("_left", _left);
+						_turntimer = asNumber(5);
+						propertyChanged("_turntimer", _turntimer);
+					}
 				}
 			}
 		}, actor);
@@ -182,7 +231,7 @@ class ActorEvents_7 extends ActorScript
 						propertyChanged("_left", _left);
 						_stuck = true;
 						propertyChanged("_stuck", _stuck);
-						_turntimer = asNumber(3);
+						_turntimer = asNumber(5);
 						propertyChanged("_turntimer", _turntimer);
 						runLater(1000 * .5, function(timeTask:TimedTask):Void
 						{
@@ -199,17 +248,27 @@ class ActorEvents_7 extends ActorScript
 		{
 			if(wrapper.enabled && sameAsAny(getActorType(2), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				if((event.thisFromTop && _isalive))
+				if((_Spikes && _isAlive))
 				{
-					actor.shout("_customEvent_" + "Blobdeath");
+					if((!(event.thisFromBottom) || event.thisFromBottom))
+					{
+						shoutToScene("_customEvent_" + "AndyDied");
+					}
 				}
-				else if((!(event.thisFromTop) && _isalive))
+				else if((!(_Spikes) && _IsAlive2))
 				{
-					shoutToScene("_customEvent_" + "AndyDied");
-					_left = !(_left);
-					propertyChanged("_left", _left);
-					_turntimer = asNumber(3);
-					propertyChanged("_turntimer", _turntimer);
+					if(event.thisFromTop)
+					{
+						actor.shout("_customEvent_" + "Burdledeath");
+					}
+					else if(!(event.thisFromTop))
+					{
+						shoutToScene("_customEvent_" + "AndyDied");
+						_left = !(_left);
+						propertyChanged("_left", _left);
+						_turntimer = asNumber(5);
+						propertyChanged("_turntimer", _turntimer);
+					}
 				}
 			}
 		});
@@ -219,13 +278,28 @@ class ActorEvents_7 extends ActorScript
 		{
 			if(wrapper.enabled && sameAsAny(getActorType(77), event.otherActor.getType(),event.otherActor.getGroup()))
 			{
-				_isalive = false;
-				propertyChanged("_isalive", _isalive);
-				actor.setAnimation("" + "dead");
-				runLater(1000 * .8, function(timeTask:TimedTask):Void
+				_Spikes = false;
+				propertyChanged("_Spikes", _Spikes);
+				_isAlive = false;
+				propertyChanged("_isAlive", _isAlive);
+				actor.setAnimation("" + "Spike loss");
+				runLater(1000 * .5, function(timeTask:TimedTask):Void
 				{
-					recycleActor(actor);
+					_IsAlive2 = true;
+					propertyChanged("_IsAlive2", _IsAlive2);
 				}, actor);
+				if((!(_Spikes) && _IsAlive2))
+				{
+					_isAlive = false;
+					propertyChanged("_isAlive", _isAlive);
+					_IsAlive2 = false;
+					propertyChanged("_IsAlive2", _IsAlive2);
+					actor.setAnimation("" + "dead");
+					runLater(1000 * .5, function(timeTask:TimedTask):Void
+					{
+						recycleActor(actor);
+					}, actor);
+				}
 			}
 		});
 		

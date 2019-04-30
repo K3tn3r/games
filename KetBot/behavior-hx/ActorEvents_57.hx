@@ -86,7 +86,7 @@ class ActorEvents_57 extends ActorScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		actor.applyImpulse(-1, 0, 30);
+		actor.applyImpulse(-1, 0, 20);
 		
 		/* ======================== Specific Actor ======================== */
 		addActorPositionListener(actor, function(enteredScreen:Bool, exitedScreen:Bool, enteredScene:Bool, exitedScene:Bool, list:Array<Dynamic>):Void

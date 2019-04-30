@@ -8,7 +8,7 @@
                     <int id="1" val="1"/>
                     <int id="2" val="-1"/>
                     <int id="3" val="0"/>
-                    <int id="4" val="30"/>
+                    <int id="4" val="20"/>
                 </push-shove>
             </group>
         </init>
