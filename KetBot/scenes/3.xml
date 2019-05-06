@@ -7,11 +7,12 @@
     </layers>
     <joints/>
     <regions>
-        <region b="64" g="64" h="96" id="0" name="Region 0" pts="4,-16.0,-48.0,16.0,-48.0,16.0,48.0,-16.0,48.0" r="64" type="box" w="32" x="6365" y="353"/>
+        <region b="64" g="64" h="96" id="0" name="Region 0" pts="4,-16.0,48.0,16.0,48.0,16.0,-48.0,-16.0,-48.0" r="64" type="box" w="32" x="6365" y="353"/>
+        <region b="64" g="64" h="320" id="1" name="Region 1" pts="4,-32.0,160.0,32.0,160.0,32.0,-160.0,-32.0,-160.0" r="64" type="box" w="64" x="2752" y="0"/>
     </regions>
     <terrainRegions/>
     <actors>
-        <actor a="0.0" aid="1" c="false" group="5" id="2" name="Andy 1" sx="1.0" sy="1.0" x="1" y="405" z="0"/>
+        <actor a="0.0" aid="1" c="false" group="5" id="2" name="Andy 1" sx="1.0" sy="1.0" x="10" y="400" z="0"/>
         <actor a="0.0" aid="2" c="false" group="10" id="0" name="Bomb 2" sx="1.0" sy="1.0" x="634" y="319" z="0"/>
         <actor a="0.0" aid="3" c="false" group="10" id="0" name="Bomb 3" sx="1.0" sy="1.0" x="1567" y="222" z="0"/>
         <actor a="0.0" aid="5" c="false" group="10" id="0" name="Bomb 5" sx="1.0" sy="1.0" x="5029" y="189" z="0"/>
@@ -65,7 +66,7 @@
         <actor a="0.0" aid="58" c="false" group="14" id="102" name="Burdle 58" sx="1.0" sy="1.0" x="1667" y="411" z="0"/>
         <actor a="0.0" aid="59" c="false" group="14" id="102" name="Burdle 59" sx="1.0" sy="1.0" x="4807" y="189" z="0"/>
         <actor a="0.0" aid="60" c="false" group="14" id="102" name="Burdle 60" sx="1.0" sy="1.0" x="4604" y="413" z="0"/>
-        <actor a="0.0" aid="61" c="false" group="3" id="97" name="Power Up2 61" sx="1.0" sy="1.0" x="6035" y="411" z="0"/>
+        <actor a="0.0" aid="61" c="false" group="11" id="97" name="Power Up2 61" sx="1.0" sy="1.0" x="2773" y="283" z="0"/>
     </actors>
     <snippets/>
     <terrain>

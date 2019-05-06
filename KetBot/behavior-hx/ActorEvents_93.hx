@@ -136,6 +136,71 @@ class ActorEvents_93 extends ActorScript
 			}
 		});
 		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(7), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				Engine.engine.setGameAttribute("N of Bullet", (Engine.engine.getGameAttribute("N of Bullet") - 1));
+				runLater(1000 * .01, function(timeTask:TimedTask):Void
+				{
+					recycleActor(actor);
+				}, actor);
+			}
+		});
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(53), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				Engine.engine.setGameAttribute("N of Bullet", (Engine.engine.getGameAttribute("N of Bullet") - 1));
+				runLater(1000 * .01, function(timeTask:TimedTask):Void
+				{
+					recycleActor(actor);
+				}, actor);
+			}
+		});
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(59), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				Engine.engine.setGameAttribute("N of Bullet", (Engine.engine.getGameAttribute("N of Bullet") - 1));
+				runLater(1000 * .01, function(timeTask:TimedTask):Void
+				{
+					recycleActor(actor);
+				}, actor);
+			}
+		});
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(0), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				Engine.engine.setGameAttribute("N of Bullet", (Engine.engine.getGameAttribute("N of Bullet") - 1));
+				runLater(1000 * .01, function(timeTask:TimedTask):Void
+				{
+					recycleActor(actor);
+				}, actor);
+			}
+		});
+		
+		/* ======================== Actor of Type ========================= */
+		addCollisionListener(actor, function(event:Collision, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled && sameAsAny(getActorType(102), event.otherActor.getType(),event.otherActor.getGroup()))
+			{
+				Engine.engine.setGameAttribute("N of Bullet", (Engine.engine.getGameAttribute("N of Bullet") - 1));
+				runLater(1000 * .01, function(timeTask:TimedTask):Void
+				{
+					recycleActor(actor);
+				}, actor);
+			}
+		});
+		
 	}
 	
 	override public function forwardMessage(msg:String)

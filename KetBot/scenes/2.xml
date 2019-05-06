@@ -7,8 +7,9 @@
     </layers>
     <joints/>
     <regions>
-        <region b="64" g="64" h="96" id="0" name="Region 0" pts="4,30.0,0.0,30.0,96.0,0.0,96.0,0.0,0.0" r="64" type="box" w="30" x="0" y="351"/>
-        <region b="64" g="64" h="96" id="1" name="Region 1" pts="4,-16.0,-48.0,16.0,-48.0,16.0,48.0,-16.0,48.0" r="64" type="box" w="32" x="6367" y="353"/>
+        <region b="64" g="64" h="96" id="0" name="Region 0" pts="4,0.0,0.0,0.0,96.0,30.0,96.0,30.0,0.0" r="64" type="box" w="30" x="0" y="351"/>
+        <region b="64" g="64" h="96" id="1" name="Region 1" pts="4,-16.0,48.0,16.0,48.0,16.0,-48.0,-16.0,-48.0" r="64" type="box" w="32" x="6367" y="353"/>
+        <region b="64" g="64" h="445" id="2" name="Region 2" pts="4,32.0,0.0,32.0,445.0,0.0,445.0,0.0,0.0" r="64" type="box" w="32" x="1983" y="2"/>
     </regions>
     <terrainRegions/>
     <actors>

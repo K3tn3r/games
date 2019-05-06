@@ -188,4 +188,48 @@
         </step>
     </group>
     <group eventID="11" id="-1"/>
+    <group eventID="12" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="12" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="12" id="-1">
+                        <set-game-val-23 comment="false" x="37" y="70">
+                            <int id="0" val="20"/>
+                        </set-game-val-23>
+                        <set-game-val-24 comment="false" x="37" y="90">
+                            <int id="0" val="400"/>
+                        </set-game-val-24>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-14 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+                <else-if comment="false" x="26" y="122">
+                    <group eventID="12" id="-1">
+                        <set-game-val-23 comment="false" x="37" y="147">
+                            <int id="0" val="1900"/>
+                        </set-game-val-23>
+                        <set-game-val-24 comment="false" x="37" y="167">
+                            <int id="0" val="275"/>
+                        </set-game-val-24>
+                    </group>
+                    <get-game-val-14 comment="false" id="0" x="0" y="0"/>
+                </else-if>
+            </group>
+        </step>
+    </group>
+    <group eventID="12" id="-1"/>
+    <group eventID="13" id="0">
+        <event-type-region comment="false" x="15" y="15">
+            <group eventID="13" id="-1">
+                <set-game-val-14 comment="false" x="26" y="47">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-game-val-14>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="2" id="1"/>
+            <actortype eid="2" id="2"/>
+        </event-type-region>
+    </group>
+    <group eventID="13" id="-1"/>
 </groups>

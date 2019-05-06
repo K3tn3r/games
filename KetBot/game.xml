@@ -149,12 +149,11 @@
     </attcats>
     <props/>
     <attributes>
-        <number cid="-1" id="23" name="Spawn X" save="true" value="0.0"/>
+        <number cid="-1" id="23" name="Spawn X" save="true" value="315"/>
         <text cid="-1" id="8" name="debug" save="true" value="0"/>
         <boolean cid="-1" id="21" name="Pause" save="true" value="false"/>
-        <boolean cid="-1" id="15" name="checkpiont 1" save="true" value="false"/>
         <number cid="-1" id="2" name="areaOfEffect" save="true" value="0.0"/>
-        <number cid="-1" id="24" name="Spawn Y" save="true" value="0.0"/>
+        <number cid="-1" id="24" name="Spawn Y" save="true" value="270"/>
         <number cid="-1" id="3" name="Lives" save="true" value="0.0"/>
         <number cid="-1" id="4" name="Time" save="true" value="0.0"/>
         <number cid="-1" id="17" name="areaOfEffectY" save="true" value="0.0"/>

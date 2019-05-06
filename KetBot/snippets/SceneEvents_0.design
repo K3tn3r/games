@@ -23,22 +23,27 @@
                     <int id="1" val="600"/>
                     <int id="2" val="40"/>
                 </draw-text>
+                <draw-text comment="false" x="26" y="130">
+                    <get-game-val-14 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="32"/>
+                    <int id="2" val="40"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="155">
+                    <get-game-val-23 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="100"/>
+                    <int id="2" val="100"/>
+                </draw-text>
+                <draw-text comment="false" x="26" y="180">
+                    <get-game-val-24 comment="false" id="0" x="0" y="0"/>
+                    <int id="1" val="100"/>
+                    <int id="2" val="80"/>
+                </draw-text>
             </group>
         </draw>
     </group>
-    <group eventID="1" id="1">
-        <draw-text comment="false" x="439" y="65">
-            <int id="0" val="SCORE"/>
-            <int id="1" val="32"/>
-            <int id="2" val="40"/>
-        </draw-text>
-        <draw-text comment="false" x="439" y="85">
-            <get-game-val-0 comment="false" id="0" x="0" y="0"/>
-            <int id="1" val="100"/>
-            <int id="2" val="40"/>
-        </draw-text>
+    <group eventID="1" id="-1">
+        <get-game-val-0 comment="false" x="563" y="115"/>
     </group>
-    <group eventID="1" id="-1"/>
     <group eventID="5" id="0">
         <init comment="false" x="15" y="15">
             <group eventID="5" id="-1">
@@ -252,4 +257,55 @@
         </step>
     </group>
     <group eventID="25" id="-1"/>
+    <group eventID="26" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="26" id="-1"/>
+        </step>
+    </group>
+    <group eventID="26" id="-1"/>
+    <group eventID="27" id="0">
+        <event-type-region comment="false" x="15" y="15">
+            <group eventID="27" id="-1">
+                <set-game-val-14 comment="false" x="26" y="47">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-game-val-14>
+                <set-game-val-23 comment="false" x="26" y="72">
+                    <int id="0" val="4010"/>
+                </set-game-val-23>
+                <set-game-val-24 comment="false" x="26" y="92">
+                    <int id="0" val="250"/>
+                </set-game-val-24>
+            </group>
+            <int id="0" val="0"/>
+            <REGION eid="5" id="1"/>
+            <actortype eid="2" id="2"/>
+        </event-type-region>
+    </group>
+    <group eventID="27" id="-1"/>
+    <group eventID="28" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="28" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="28" id="-1">
+                        <set-game-val-23 comment="false" x="37" y="70">
+                            <int id="0" val="315"/>
+                        </set-game-val-23>
+                        <set-game-val-24 comment="false" x="37" y="90">
+                            <int id="0" val="200"/>
+                        </set-game-val-24>
+                    </group>
+                    <not comment="false" id="0" x="0" y="0">
+                        <get-game-val-14 comment="false" id="0" x="0" y="0"/>
+                    </not>
+                </if>
+            </group>
+        </init>
+    </group>
+    <group eventID="28" id="3">
+        <else-if comment="false" x="75" y="280">
+            <group eventID="28" id="-1"/>
+            <get-game-val-14 comment="false" id="0" x="0" y="0"/>
+        </else-if>
+    </group>
+    <group eventID="28" id="-1"/>
 </groups>
